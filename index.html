@@ -28,7 +28,7 @@
         <div class="stripe bg-black"></div>
       </div>
       <h2
-        class="font-narrow font-700 tracking-widest text-white text-4xl px-4 py-2 sm:text-5xl sm:px-8 sm:py-4 sm:tracking-[1rem]"
+        class="font-narrow font-700 tracking-widest text-white text-2xl px-4 py-2 sm:text-4xl sm:px-8 sm:py-4 sm:tracking-[1rem]"
       >
         METAGAMES
       </h2>
@@ -44,31 +44,38 @@
 
     <!-- Navbar -->
     <nav
-      class="nav from-blue-900 to-blue bg-linear-to-r p-2 lg:px-12 2xl:px-24 text-sky flex justify-between items-center gap-x-4 relative"
+      class="nav from-blue-900 to-blue bg-linear-to-r px-2 lg:px-12 2xl:px-24 text-sky flex justify-between items-center lg:gap-x-4 2xl:gap-x-16 relative"
     >
       <!-- Nav Logo -->
       <img
         src="src/assets/images/eswf-metagames-logo.png"
         alt="ESWF MetaGames Logo"
-        class="nav-logo w-18 h-18 shrink-0"
+        class="nav-logo size-15 shrink-0"
       />
 
-      <!-- Nav Links -->
+      <!-- Nav Links + CTA wrapper -->
       <div
         id="nav-links"
-        class="hidden absolute top-full left-0 right-0 z-50 flex-col gap-2 p-2 from-blue-900 to-blue bg-linear-to-r lg:static lg:flex lg:flex-row lg:flex-wrap lg:items-center lg:gap-x-4 lg:gap-y-2 lg:p-0 lg:bg-none lg:bg-transparent"
+        class="hidden absolute top-full left-0 right-0 z-50 flex-col gap-2 p-2 from-blue-900 to-blue bg-linear-to-r lg:static lg:flex lg:flex-row lg:items-center lg:gap-x-1 lg:py-1 lg:bg-none lg:bg-transparent lg:flex-1"
       >
-        <a href="#" class="nav-link active">Home</a>
-        <a href="#" class="nav-link">What Are MetaGames</a>
-        <a href="#" class="nav-link">News &amp; Updates</a>
-        <a href="#" class="nav-link">Sports &amp; Games</a>
-        <a href="#" class="nav-link">Meta Movement</a>
-        <a href="#" class="nav-link">Emblem &amp; Meaning</a>
-        <a href="#" class="nav-link">Official Theme Song</a>
-        <a href="#" class="nav-link lg:mr-4">Host Nation</a>
+        <!-- Links -->
+        <div
+          class="flex flex-col gap-1 lg:flex-row lg:flex-wrap lg:items-center lg:gap-x-2 lg:gap-y-2"
+        >
+          <a href="#" class="nav-link active">Home</a>
+          <a href="#" class="nav-link">What Are MetaGames</a>
+          <a href="#" class="nav-link">News &amp; Updates</a>
+          <a href="#" class="nav-link">Sports &amp; Games</a>
+          <a href="#" class="nav-link">Meta Movement</a>
+          <a href="#" class="nav-link">Emblem &amp; Meaning</a>
+          <a href="#" class="nav-link">Official Theme Song</a>
+          <a href="#" class="nav-link">Host Nation</a>
+        </div>
+
+        <!-- CTA -->
         <a
           href="#"
-          class="cta-btn bg-rose text-2xl font-light py-2 px-4 rounded-lg lg:ml-auto hover:bg-red"
+          class="cta-btn bg-rose text-md font-light py-2 px-4 rounded-lg lg:ml-auto hover:bg-red shrink-0"
           >Join MetaGames</a
         >
       </div>
@@ -78,8 +85,8 @@
         id="hamburger-btn"
         class="ml-auto cursor-pointer bg-transparent border-none p-0 lg:hidden"
       >
-        <i id="icon-open" class="ph ph-list text-sky text-5xl"></i>
-        <i id="icon-close" class="ph ph-x text-sky text-5xl hidden"></i>
+        <i id="icon-open" class="ph ph-list text-sky text-3xl"></i>
+        <i id="icon-close" class="ph ph-x text-sky text-3xl hidden"></i>
       </button>
     </nav>
 

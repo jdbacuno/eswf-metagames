@@ -22,9 +22,13 @@
 }
 
 .stripe {
-  @apply h-3 flex-1 sm:h-5;
+  @apply h-2 flex-1 sm:h-4;
 }
 
 .nav-link {
-  @apply block py-1 px-2 text-xl rounded-md hover:bg-white hover:text-blue;
+  @apply block py-1 px-2 rounded-md hover:bg-white hover:text-blue;
+}
+
+.active {
+  @apply bg-white text-blue;
 }
