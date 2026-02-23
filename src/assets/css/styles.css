@@ -2,6 +2,9 @@
 @import 'tailwindcss';
 
 @theme {
+  /* ─── Breakpoint ─────────────────────────────────────────── */
+  --breakpoint-3xl: 120rem;
+
   /* ─── Fonts ─────────────────────────────────────────── */
   --font-sans: 'Calibri', ui-sans-serif, system-ui, sans-serif;
   --font-narrow: 'Oswald', 'Arial Narrow', ui-sans-serif, sans-serif;
@@ -15,6 +18,7 @@
   --color-yellow: #f6d52d;
   --color-rose: #f33847;
   --color-red: #ff0000;
+  --color-dark-blue: #005292;
 }
 
 .stripes {
@@ -26,9 +30,32 @@
 }
 
 .nav-link {
-  @apply block py-1 px-2 rounded-md hover:bg-white hover:text-blue;
+  @apply block py-1 px-2 rounded-md hover:bg-white hover:text-blue sm:text-lg xl:text-sm 2xl:text-lg 3xl:text-xl;
 }
 
 .active {
   @apply bg-white text-blue;
+}
+
+.card {
+  @apply flex flex-col justify-between items-center rounded-2xl gap-3 p-4 bg-white 3xl:gap-6;
+}
+
+.card-btn {
+  @apply block text-center text-lg py-2 px-4 w-full rounded-xl bg-blue text-white sm:text-2xl md:text-lg md:h-18 md:flex md:items-center md:justify-center lg:h-auto xl:text-2xl;
+}
+
+.motto {
+  @apply text-center px-5 py-2 sm:text-xl sm:font-bold sm:px-8 sm:py-4 md:px-10 md:py-2 md:text-lg lg:px-12 lg:text-2xl xl:text-3xl xl:px-16 2xl:px-20 2xl:py-4 3xl:px-24 3xl:py-6 3xl:text-5xl;
+}
+
+@layer utilities {
+  .scrollbar-hidden::-webkit-scrollbar {
+    display: none;
+  }
+
+  .scrollbar-hidden {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
 }

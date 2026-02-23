@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="scrollbar-hidden scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -44,23 +44,23 @@
 
     <!-- Navbar -->
     <nav
-      class="nav from-blue-900 to-blue bg-linear-to-r px-2 lg:px-12 2xl:px-24 text-sky flex justify-between items-center lg:gap-x-4 2xl:gap-x-16 relative"
+      class="nav from-blue-900 to-blue bg-linear-to-r px-2 text-sky flex justify-between items-center relative xl:px-12 xl:gap-x-4 xl:text-[0.91rem] 2xl:gap-x-12 2xl:text-lg 3xl:px-18 3xl:gap-x-16 3xl:text-xl"
     >
       <!-- Nav Logo -->
       <img
         src="src/assets/images/eswf-metagames-logo.png"
         alt="ESWF MetaGames Logo"
-        class="nav-logo size-15 shrink-0"
+        class="nav-logo size-15 shrink-0 2xl:size-18"
       />
 
       <!-- Nav Links + CTA wrapper -->
       <div
         id="nav-links"
-        class="hidden absolute top-full left-0 right-0 z-50 flex-col gap-2 p-2 from-blue-900 to-blue bg-linear-to-r lg:static lg:flex lg:flex-row lg:items-center lg:gap-x-1 lg:py-1 lg:bg-none lg:bg-transparent lg:flex-1"
+        class="hidden absolute top-full left-0 right-0 z-50 flex-col gap-2 p-2 from-blue-900 to-blue bg-linear-to-r xl:static xl:flex xl:flex-row xl:items-center xl:gap-x-1 xl:py-1 xl:bg-none xl:bg-transparent xl:flex-1"
       >
         <!-- Links -->
         <div
-          class="flex flex-col gap-1 lg:flex-row lg:flex-wrap lg:items-center lg:gap-x-2 lg:gap-y-2"
+          class="flex flex-col gap-1 xl:flex-row xl:flex-wrap xl:items-center xl:gap-x-2 xl:gap-y-2 3xl:gap-x-4"
         >
           <a href="#" class="nav-link active">Home</a>
           <a href="#" class="nav-link">What Are MetaGames</a>
@@ -75,7 +75,7 @@
         <!-- CTA -->
         <a
           href="#"
-          class="cta-btn bg-rose text-md font-light py-2 px-4 rounded-lg lg:ml-auto hover:bg-red shrink-0"
+          class="cta-btn bg-rose text-md font-light py-2 px-4 rounded-lg hover:bg-red shrink-0 lg:text-xl xl:ml-auto 3xl:text-2xl"
           >Join MetaGames</a
         >
       </div>
@@ -83,12 +83,123 @@
       <!-- Hamburger Button (mobile only) -->
       <button
         id="hamburger-btn"
-        class="ml-auto cursor-pointer bg-transparent border-none p-0 lg:hidden"
+        class="ml-auto cursor-pointer bg-transparent border-none p-0 xl:hidden"
       >
         <i id="icon-open" class="ph ph-list text-sky text-3xl"></i>
         <i id="icon-close" class="ph ph-x text-sky text-3xl hidden"></i>
       </button>
     </nav>
+
+    <main>
+      <section
+        class="relative flex flex-col justify-center items-center pt-10 pb-14 bg-[url(/src/assets/images/eswf-metagames-event.png)] bg-cover bg-no-repeat bg-center text-sky 3xl:pt-12 3xl:pb-20"
+      >
+        <!-- Gradient overlay -->
+        <div
+          class="absolute inset-0 bg-linear-to-b from-blue-950/90 to-black/90"
+        ></div>
+
+        <!-- Content sits above the overlay -->
+        <div class="relative z-10 flex flex-col items-center">
+          <div class="leading-text text-center">
+            <h1
+              class="font-bold text-2xl border-b border-b-white sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl"
+            >
+              Welcome to the MetaGames
+            </h1>
+            <p
+              class="text-sm mt-1 italic font-semibold sm:text-xl md:text-3xl lg:text-4xl"
+            >
+              Where Sports, Games, and Digital Worlds Unite
+            </p>
+          </div>
+
+          <p
+            class="text text-sm text-center mt-3 w-80 sm:text-lg sm:w-120 md:text-xl md:w-150 lg:text-2xl lg:w-180 xl:w-200 xl:mt-6 3xl:mt-8"
+          >
+            MetaGames is a global movement that brings together traditional
+            sports, esports, digital sports, and virtual experiences into one
+            unified international event.
+          </p>
+
+          <div
+            class="cards grid grid-cols gap-6 px-4 mt-6 w-full sm:px-8 md:grid-cols-3 2xl:w-[90%] 3xl:mt-16 3xl:w-[70%]"
+          >
+            <div class="card">
+              <img
+                src="src/assets/images/eswf-metagames-logo.png"
+                alt="ESWF MetaGames Logo"
+                class="size-60 md:size-30 xl:size-50"
+              />
+              <a href="#" class="card-btn">Learn What MetaGames Is</a>
+            </div>
+
+            <div class="card">
+              <img
+                src="src/assets/images/vr-games.png"
+                alt="Kids playing VR games"
+                class="h-60 w-full md:h-30 xl:h-50"
+              />
+              <a href="#" class="card-btn">Explore Sports & Games</a>
+            </div>
+
+            <div class="card">
+              <img
+                src="src/assets/images/jigsaw-puzzle.png"
+                alt="Jigsaw Puzzle"
+                class="h-60 w-full md:h-30 xl:h-50"
+              />
+              <a href="#" class="card-btn">Join the Movement</a>
+            </div>
+          </div>
+
+          <article
+            class="mt-8 relative bg-blue mx-4 rounded-2xl overflow-hidden sm:mx-8 2xl:w-[90%] 3xl:w-[75%]"
+          >
+            <!-- gradient -->
+            <div
+              class="absolute inset-0 bg-linear-to-b from-dark-blue via-dark-blue to-transparent z-10 md:bg-linear-to-r lg:from-65% lg:to-90% xl:from-70% 2xl:from-75% 3xl:from-70%"
+            ></div>
+
+            <div class="relative">
+              <div class="flex flex-col md:flex-row">
+                <div
+                  class="text z-20 relative p-4 sm:p-6 md:pt-8 md:pl-8 md:pb-10 3xl:pt-16 3xl:pb-18 3xl:px-16"
+                >
+                  <h4
+                    class="text-2xl font-bold sm:text-3xl md:text-2xl lg:text-3xl xl:text-4xl 3xl:text-5xl"
+                  >
+                    What are MetaGames?
+                  </h4>
+                  <p
+                    class="mt-2 text-xl sm:text-2xl md:mt-4 md:text-lg lg:text-xl xl:text-2xl"
+                  >
+                    MetaGames is not just one sport or one game. It is a
+                    combination of physical sports, esports, mindgames, and
+                    digital competitions happening together under one global
+                    platform.
+                  </p>
+                </div>
+
+                <img
+                  src="src/assets/images/man-with-vr.png"
+                  alt="Man with VR"
+                  class="w-full h-60 object-cover md:h-auto md:w-1/2 md:self-stretch md:object-cover lg:h-60 3xl:h-80"
+                />
+              </div>
+            </div>
+          </article>
+          <div
+            class="absolute bottom-0 left-0 right-0 translate-y-1/2 flex justify-center items-center z-20"
+          >
+            <div class="motto bg-green">LIFE</div>
+            <div class="motto bg-blue">TIME</div>
+            <div class="motto bg-yellow">GAME</div>
+            <div class="motto bg-rose">META</div>
+          </div>
+        </div>
+      </section>
+    </main>
 
     <script>
       const btn = document.getElementById('hamburger-btn');
