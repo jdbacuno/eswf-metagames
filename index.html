@@ -92,11 +92,11 @@
 
     <main>
       <section
-        class="relative flex flex-col justify-center items-center pt-10 pb-14 bg-[url(/src/assets/images/eswf-metagames-event.png)] bg-cover bg-no-repeat bg-center text-sky 3xl:pt-12 3xl:pb-20"
+        class="relative flex flex-col justify-center items-center pt-10 pb-14 bg-[url(/src/assets/images/eswf-metagames-event.png)] bg-cover bg-no-repeat bg-center text-sky 2xl:pb-20 3xl:pt-12 3xl:pb-24"
       >
         <!-- Gradient overlay -->
         <div
-          class="absolute inset-0 bg-linear-to-b from-blue-950/90 to-black/90"
+          class="absolute inset-0 bg-linear-to-b from-blue-950/90 to-primary"
         ></div>
 
         <!-- Content sits above the overlay -->
@@ -199,6 +199,39 @@
           </div>
         </div>
       </section>
+
+      <!-- Infinite Marquee Banner -->
+      <section
+        class="self-end z-50 bg-black text-sky text-lg font-bold py-3 overflow-hidden sm:text-xl sm:py-4 md:text-2xl md:py-6 lg:text-3xl lg:py-8 xl:text-4xl"
+      >
+        <div
+          class="flex w-max animate-[marquee_30s_linear_infinite] hover:[animation-play-state:paused]"
+        >
+          <div class="flex items-center whitespace-nowrap pr-1">
+            <p>&bull; Mastering the MetaGames of Life, One Move at a Time</p>
+          </div>
+          <div
+            class="flex items-center whitespace-nowrap pr-1"
+            aria-hidden="true"
+          >
+            <p>&bull; Mastering the MetaGames of Life, One Move at a Time</p>
+          </div>
+          <div
+            class="flex items-center whitespace-nowrap pr-1"
+            aria-hidden="true"
+          >
+            <p>&bull; Mastering the MetaGames of Life, One Move at a Time</p>
+          </div>
+          <div
+            class="flex items-center whitespace-nowrap pr-1"
+            aria-hidden="true"
+          >
+            <p>&bull; Mastering the MetaGames of Life, One Move at a Time</p>
+          </div>
+        </div>
+      </section>
+
+      <section></section>
     </main>
 
     <script>
