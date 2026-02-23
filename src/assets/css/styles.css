@@ -30,7 +30,11 @@
 }
 
 .nav-link {
-  @apply block py-1 px-2 rounded-md text-lg hover:bg-white hover:text-blue sm:text-lg xl:text-sm 2xl:text-lg 3xl:text-xl;
+  @apply block py-1 px-2 rounded-md text-lg 
+         hover:bg-white hover:text-blue 
+         focus:bg-white focus:text-blue 
+         active:bg-white active:text-blue 
+         sm:text-lg xl:text-sm 2xl:text-lg 3xl:text-xl;
 }
 
 .active {
