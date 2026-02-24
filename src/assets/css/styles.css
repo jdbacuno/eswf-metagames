@@ -53,6 +53,42 @@
   @apply text-center px-5 py-2 sm:text-xl sm:font-bold sm:px-8 sm:py-4 md:px-10 md:py-2 md:text-lg lg:px-12 lg:text-2xl xl:text-3xl xl:px-16 2xl:px-20 2xl:py-4 3xl:px-24 3xl:py-6 3xl:text-5xl;
 }
 
+.slider-prev-btn {
+  @apply absolute left-2 top-1/2 -translate-y-1/2 z-20 bg-sky hover:bg-blue text-blue hover:text-sky size-10 p-3 flex items-center justify-center rounded-full lg:left-5 xl:left-8 xl:size-15 2xl:size-18;
+}
+
+.slider-next-btn {
+  @apply absolute right-2 top-1/2 -translate-y-1/2 z-20 bg-sky hover:bg-blue text-blue hover:text-sky size-10 p-3 flex items-center justify-center rounded-full lg:right-5 xl:right-8 xl:size-15 2xl:size-18;
+}
+
+.sports-slider-card {
+  @apply relative w-full h-auto overflow-hidden shrink-0 px-6 py-4 sm:text-left sm:px-16 sm:py-8 lg:px-20 lg:py-16 xl:px-28 2xl:px-36 2xl:py-32;
+}
+
+.sports-slider-card img {
+  @apply absolute inset-0 w-full h-full object-cover;
+}
+
+.sports-slider-card .gradient-overlay {
+  @apply absolute inset-0 bg-linear-to-b from-blue to-black/70 sm:bg-linear-to-r sm:from-blue sm:to-transparent sm:from-40%;
+}
+
+.sports-slider-card .content {
+  @apply relative z-10 h-full flex flex-col justify-center items-center text-center sm:text-left sm:items-start;
+}
+
+.sports-slider-card h4 {
+  @apply text-lg font-bold sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-7xl;
+}
+
+.sports-slider-card p {
+  @apply text-sm w-60 sm:text-lg sm:w-full md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl;
+}
+
+.sports-slider-card button {
+  @apply mt-5 cursor-pointer bg-white hover:bg-blue text-blue hover:text-white px-3 py-1 text-lg rounded-xl sm:mt-8 sm:w-50 md:text-xl md:py-2 lg:mt-12 xl:mt-16 xl:px-5 xl:py-3 xl:text-2xl xl:w-70 2xl:mt-36 2xl:text-3xl 2xl:w-90;
+}
+
 @layer utilities {
   .scrollbar-hidden::-webkit-scrollbar {
     display: none;
