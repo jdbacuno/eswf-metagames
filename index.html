@@ -44,7 +44,7 @@
 
     <!-- Navbar -->
     <nav
-      class="nav from-blue-900 to-blue bg-linear-to-r px-2 text-sky flex justify-between items-center relative xl:px-12 xl:gap-x-4 xl:text-[0.91rem] 2xl:gap-x-12 2xl:text-lg 3xl:px-18 3xl:gap-x-16 3xl:text-xl"
+      class="nav from-blue-900 to-blue bg-linear-to-r px-2 text-sky flex justify-between items-center relative sticky top-0 z-50 xl:px-12 xl:gap-x-4 xl:text-[0.91rem] 2xl:gap-x-12 2xl:text-lg 3xl:px-18 3xl:gap-x-16 3xl:text-xl"
     >
       <!-- Nav Logo -->
       <img
@@ -62,14 +62,37 @@
         <div
           class="flex flex-col gap-1 xl:flex-row xl:flex-wrap xl:items-center xl:gap-x-2 xl:gap-y-2 3xl:gap-x-4"
         >
-          <a href="#" class="nav-link active">Home</a>
-          <a href="#" class="nav-link">What Are MetaGames</a>
-          <a href="#" class="nav-link">News &amp; Updates</a>
-          <a href="#" class="nav-link">Sports &amp; Games</a>
-          <a href="#" class="nav-link">Meta Movement</a>
-          <a href="#" class="nav-link">Emblem &amp; Meaning</a>
-          <a href="#" class="nav-link">Official Theme Song</a>
-          <a href="#" class="nav-link">Host Nation</a>
+          <a href="#home" class="nav-link active" data-section="home">Home</a>
+          <a
+            href="#what-are-metagames"
+            class="nav-link"
+            data-section="what-are-metagames"
+            >What Are MetaGames</a
+          >
+          <a href="#news-updates" class="nav-link" data-section="news-updates"
+            >News &amp; Updates</a
+          >
+          <a href="#sports-games" class="nav-link" data-section="sports-games"
+            >Sports &amp; Games</a
+          >
+          <a href="#meta-movement" class="nav-link" data-section="meta-movement"
+            >Meta Movement</a
+          >
+          <a
+            href="#emblem-meaning"
+            class="nav-link"
+            data-section="emblem-meaning"
+            >Emblem &amp; Meaning</a
+          >
+          <a
+            href="#official-theme-song"
+            class="nav-link"
+            data-section="official-theme-song"
+            >Official Theme Song</a
+          >
+          <a href="#host-nations" class="nav-link" data-section="host-nations"
+            >Host Nation</a
+          >
         </div>
 
         <!-- CTA -->
@@ -93,6 +116,7 @@
     <main>
       <!-- HERO -->
       <section
+        id="home"
         class="relative flex flex-col justify-center items-center pt-10 pb-14 bg-[url(/src/assets/images/eswf-metagames-event.webp)] bg-cover bg-no-repeat bg-center text-sky 2xl:pb-20 3xl:pt-12 3xl:pb-24"
       >
         <!-- Gradient overlay -->
@@ -155,6 +179,7 @@
           </div>
 
           <article
+            id="what-are-metagames"
             class="mt-8 relative bg-blue mx-4 rounded-2xl overflow-hidden sm:mx-8 2xl:w-[90%] 3xl:w-[75%]"
           >
             <!-- gradient -->
@@ -234,6 +259,7 @@
 
       <!-- NEWS & UPDATES -->
       <section
+        id="news-updates"
         class="px-4 py-2 bg-primary text-sky xl:px-8 xl:py-10 2xl:px-12 2xl:py-16 3xl:py-18"
       >
         <h3 class="text-3xl font-bold lg:text-4xl 2xl:text-5xl">
@@ -247,7 +273,7 @@
       </section>
 
       <!-- SPORTS & GAMES -->
-      <section class="bg-primary text-sky py-2 relative">
+      <section id="sports-games" class="bg-primary text-sky py-2 relative">
         <h3
           class="px-4 text-3xl font-bold lg:text-4xl 2xl:text-5xl xl:px-8 2xl:px-12"
         >
@@ -325,7 +351,10 @@
       </section>
 
       <!-- THE META MOVEMENT -->
-      <section class="bg-primary text-sky pt-2 pb-8 relative">
+      <section
+        id="meta-movement"
+        class="bg-primary text-sky pt-2 pb-8 relative"
+      >
         <div class="flex justify-between items-center">
           <h3
             class="px-4 text-3xl font-bold lg:text-4xl 2xl:text-5xl xl:px-8 2xl:px-12"
@@ -459,6 +488,7 @@
 
       <!-- METAGAMES EMBLEM & SYMBOLISM -->
       <section
+        id="emblem-meaning"
         class="bg-primary text-sky pt-4 pb-8 relative lg:pt-10 lg:pb-22 xl:pb-26 2xl:pb-28"
       >
         <h3
@@ -599,6 +629,7 @@
 
       <!-- OFFICIAL THEME SONG -->
       <section
+        id="official-theme-song"
         class="px-4 pt-2 pb-6 bg-primary text-sky xl:px-8 xl:py-10 2xl:px-12 2xl:py-16 3xl:py-18"
       >
         <h3 class="text-3xl font-bold lg:text-4xl 2xl:text-5xl">
@@ -630,7 +661,7 @@
             </div>
 
             <div
-              class="lyrics custom-scroll overflow-y-auto h-80 flex flex-col gap-4 md:gap-6 md:w-[90%] lg:h-70 lg:w-[80%] 2xl:w-[90%] 2xl:h-90 3xl:h-120 3xl:gap-8 3xl:w-[90%]"
+              class="lyrics custom-scroll overflow-y-auto h-80 flex flex-col gap-4 md:gap-6 md:w-[95%] lg:h-70 lg:w-[80%] 2xl:w-[90%] 2xl:h-90 3xl:h-120 3xl:gap-8 3xl:w-[90%]"
             >
               <div class="stanza">
                 <h5>Verse 1</h5>
@@ -725,6 +756,7 @@
       </section>
 
       <section
+        id="host-nations"
         class="px-4 py-2 bg-primary text-sky xl:px-8 xl:py-10 2xl:px-12 2xl:py-16 3xl:py-18"
       >
         <h3 class="mt-4 text-3xl font-bold lg:text-4xl 2xl:text-5xl">
@@ -867,42 +899,42 @@
               class="grid grid-cols-2 gap-y-2 gap-x-8 sm:gap-x-12 lg:grid-cols-3 xl:gap-x-16 2xl:gap-y-4 2xl:gap-x-20 3xl:gap-x-28"
             >
               <a
-                href="#"
+                href="#home"
                 class="text-white/90 hover:text-white transition-colors text-sm sm:text-base xl:text-lg 2xl:text-xl 3xl:text-2xl"
                 >Home</a
               >
               <a
-                href="#"
+                href="#sports-games"
                 class="text-white/90 hover:text-white transition-colors text-sm sm:text-base xl:text-lg 2xl:text-xl 3xl:text-2xl"
                 >Sports &amp; Games</a
               >
               <a
-                href="#"
+                href="#official-theme-song"
                 class="text-white/90 hover:text-white transition-colors text-sm sm:text-base xl:text-lg 2xl:text-xl 3xl:text-2xl"
                 >Official Theme Song</a
               >
               <a
-                href="#"
+                href="#what-are-metagames"
                 class="text-white/90 hover:text-white transition-colors text-sm sm:text-base xl:text-lg 2xl:text-xl 3xl:text-2xl"
                 >What Are MetaGames</a
               >
               <a
-                href="#"
+                href="#meta-movement"
                 class="text-white/90 hover:text-white transition-colors text-sm sm:text-base xl:text-lg 2xl:text-xl 3xl:text-2xl"
                 >Meta Movement</a
               >
               <a
-                href="#"
+                href="#host-nations"
                 class="text-white/90 hover:text-white transition-colors text-sm sm:text-base xl:text-lg 2xl:text-xl 3xl:text-2xl"
                 >Host Nations</a
               >
               <a
-                href="#"
+                href="#news-updates"
                 class="text-white/90 hover:text-white transition-colors text-sm sm:text-base xl:text-lg 2xl:text-xl 3xl:text-2xl"
                 >News &amp; Updates</a
               >
               <a
-                href="#"
+                href="#emblem-meaning"
                 class="text-white/90 hover:text-white transition-colors text-sm sm:text-base xl:text-lg 2xl:text-xl 3xl:text-2xl"
                 >Emblem &amp; Meaning</a
               >

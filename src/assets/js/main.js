@@ -13,6 +13,51 @@ btn.addEventListener('click', () => {
   iconClose.classList.toggle('hidden', !isOpen);
 });
 
+// Close mobile menu when a nav link is clicked
+document.querySelectorAll('.nav-link').forEach((link) => {
+  link.addEventListener('click', () => {
+    if (isOpen) {
+      isOpen = false;
+      navLinks.classList.add('hidden');
+      navLinks.classList.remove('flex');
+      iconOpen.classList.remove('hidden');
+      iconClose.classList.add('hidden');
+    }
+  });
+});
+
+// Active Nav Link Scrollspy
+const navLinkEls = document.querySelectorAll('.nav-link[data-section]');
+
+function setActiveLink(sectionId) {
+  navLinkEls.forEach((link) => {
+    const isActive = link.dataset.section === sectionId;
+    link.classList.toggle('active', isActive);
+  });
+}
+
+const sectionIds = Array.from(navLinkEls).map((link) => link.dataset.section);
+
+const observerOptions = {
+  root: null,
+  // Fire when section crosses the top 20% of viewport (nav area)
+  rootMargin: '-10% 0px -80% 0px',
+  threshold: 0,
+};
+
+const sectionObserver = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      setActiveLink(entry.target.id);
+    }
+  });
+}, observerOptions);
+
+sectionIds.forEach((id) => {
+  const el = document.getElementById(id);
+  if (el) sectionObserver.observe(el);
+});
+
 // Sports & Games Slider
 const slider = document.getElementById('sports-slider');
 const leftBtn = document.getElementById('slider-left');
