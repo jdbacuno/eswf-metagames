@@ -14,7 +14,7 @@
       type="text/css"
       href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/fill/style.css"
     />
-    <link rel="stylesheet" crossorigin href="/eswf-metagames/assets/index-C_YXtnv2.css">
+    <link rel="stylesheet" crossorigin href="/eswf-metagames/assets/index-DBXwuMMv.css">
   </head>
   <body>
     <!-- Top Banner -->
@@ -321,7 +321,7 @@
         </div>
       </section>
 
-      <section class="bg-primary text-sky py-2 relative">
+      <section class="bg-primary text-sky pt-2 pb-8 relative">
         <div class="flex justify-between items-center">
           <h3
             class="px-4 text-3xl font-bold lg:text-4xl 2xl:text-5xl xl:px-8 2xl:px-12"
@@ -445,92 +445,43 @@
           </div>
         </div>
       </section>
+
+      <section
+        class="flex flex-col gap-2 from-blue-900 to-blue bg-linear-to-r text-sky p-4 md:flex-row md:items-center md:justify-center md:gap-4 xl:px-8 xl:py-4 xl:gap-8 2xl:px-12"
+      >
+        <h3 class="text-3xl font-bold lg:text-4xl 2xl:text-5xl">It's for:</h3>
+        <div
+          class="flex items-center flex-wrap gap-2 text-2xl font-bold md:gap-3 lg:text-4xl xl:gap-4 2xl:text-5xl 3xl:gap-8"
+        >
+          <h5
+            class="py-1 px-3 rounded-lg bg-white text-blue xl:px-6 xl:py-2 3xl:px-10 3xl:py-4 3xl:rounded-2xl"
+          >
+            Athletes
+          </h5>
+          <h5
+            class="py-1 px-3 rounded-lg bg-white text-blue xl:px-6 xl:py-2 3xl:px-10 3xl:py-4 3xl:rounded-2xl"
+          >
+            Gamers
+          </h5>
+          <h5
+            class="py-1 px-3 rounded-lg bg-white text-blue xl:px-6 xl:py-2 3xl:px-10 3xl:py-4 3xl:rounded-2xl"
+          >
+            Students
+          </h5>
+          <h5
+            class="py-1 px-3 rounded-lg bg-white text-blue xl:px-6 xl:py-2 3xl:px-10 3xl:py-4 3xl:rounded-2xl"
+          >
+            Professionals
+          </h5>
+          <h5
+            class="py-1 px-3 rounded-lg bg-white text-blue xl:px-6 xl:py-2 3xl:px-10 3xl:py-4 3xl:rounded-2xl"
+          >
+            Nations
+          </h5>
+        </div>
+      </section>
     </main>
 
-    <script>
-      // Mobile Menu
-      const btn = document.getElementById('hamburger-btn');
-      const navLinks = document.getElementById('nav-links');
-      const iconOpen = document.getElementById('icon-open');
-      const iconClose = document.getElementById('icon-close');
-      let isOpen = false;
-
-      btn.addEventListener('click', () => {
-        isOpen = !isOpen;
-        navLinks.classList.toggle('hidden', !isOpen);
-        navLinks.classList.toggle('flex', isOpen);
-        iconOpen.classList.toggle('hidden', isOpen);
-        iconClose.classList.toggle('hidden', !isOpen);
-      });
-
-      // Sports & Games Slider
-      // Sports & Games Slider
-      const slider = document.getElementById('sports-slider');
-      const leftBtn = document.getElementById('slider-left');
-      const rightBtn = document.getElementById('slider-right');
-      const dotsContainer = document.getElementById('slider-dots');
-
-      const slides = document.querySelectorAll('.sports-slider-card');
-      const totalSlides = slides.length;
-
-      let currentIndex = 0;
-
-      function updateSlider() {
-        const slideWidth = slider.clientWidth;
-        slider.scrollTo({
-          left: slideWidth * currentIndex,
-          behavior: 'smooth',
-        });
-
-        document.querySelectorAll('.slider-dot').forEach((dot, index) => {
-          dot.classList.toggle('active', index === currentIndex);
-        });
-      }
-
-      // Create dots dynamically
-      slides.forEach((_, index) => {
-        const dot = document.createElement('div');
-        dot.classList.add('slider-dot');
-        if (index === 0) dot.classList.add('active');
-
-        dot.addEventListener('click', () => {
-          currentIndex = index;
-          updateSlider();
-        });
-
-        dotsContainer.appendChild(dot);
-      });
-
-      // Next Button
-      rightBtn.addEventListener('click', () => {
-        if (currentIndex === totalSlides - 1) {
-          currentIndex = 0; // go to first
-        } else {
-          currentIndex++;
-        }
-        updateSlider();
-      });
-
-      // Prev Button
-      leftBtn.addEventListener('click', () => {
-        if (currentIndex === 0) {
-          currentIndex = totalSlides - 1; // go to last
-        } else {
-          currentIndex--;
-        }
-        updateSlider();
-      });
-
-      //  sync dots when user scrolls manually
-      slider.addEventListener('scroll', () => {
-        const slideWidth = slider.clientWidth;
-        const index = Math.round(slider.scrollLeft / slideWidth);
-        currentIndex = index;
-
-        document.querySelectorAll('.slider-dot').forEach((dot, i) => {
-          dot.classList.toggle('active', i === currentIndex);
-        });
-      });
-    </script>
+    <script src="src/assets/js/main.js"></script>
   </body>
 </html>
