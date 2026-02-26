@@ -1,0 +1,2082 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --dark-navy:  #141B25;
+    --white:      #ffffff;
+    --black:      #000000;
+    --green:      #31AA68;
+    --blue:       #217EC7;
+    --yellow:     #F6D52D;
+    --red:        #F33847;
+    --slate:      #434850;
+    --light-blue: #EEF7FE;
+    --btn-red:    #ff0000;
+}
+
+body {
+    font-family: 'Calibri', 'Carlito', 'Trebuchet MS', sans-serif;
+    background: var(--dark-navy);
+    color: var(--white);
+}
+
+/* ============================================================
+   HERO SECTION
+   ============================================================ */
+
+.hero {
+    position: relative;
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    text-align: center;
+}
+
+/* Background image */
+.hero-bg-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+}
+
+.hero-bg-overlay img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    display: block;
+}
+
+/* Dark gradient overlay — transparent at top, full dark navy at bottom */
+.hero-bg-overlay::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to bottom,
+        rgba(20, 27, 37, 0)    0%,
+        rgba(20, 27, 37, 0)   0%,
+        rgba(20, 27, 37, 0.6) 0%,
+        rgba(20, 27, 37, 1)  100%
+    );
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 780px;
+    width: 100%;
+    padding: 100px 24px 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Heading */
+.hero-heading {
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+    font-weight: 800;
+    color: var(--white);
+    line-height: 1.15;
+    letter-spacing: 0.01em;
+    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.5);
+}
+
+/* Decorative line below heading */
+.hero-heading::after {
+    content: '';
+    display: block;
+    width: 500px;
+    height: 2px;
+    background: var(--white);
+    margin: 10px auto 0;
+    opacity: 0.75;
+}
+
+/* Tagline */
+.hero-tagline {
+    font-size: clamp(0.95rem, 1.8vw, 1.15rem);
+    font-style: italic;
+    font-weight: 600;
+    color: var(--white);
+    letter-spacing: 0.02em;
+    margin-top: 2px;
+}
+
+/* Description */
+.hero-description {
+    font-size: clamp(0.82rem, 1.4vw, 0.93rem);
+    color: rgba(255, 255, 255, 0.88);
+    max-width: 480px;
+    line-height: 1.4;
+    text-align: center;
+    margin-top: 2px;
+}
+
+/* Quick-Access Cards */
+.hero-cards {
+    display: flex;
+    gap: 70px;
+    margin-top: 28px;
+    justify-content: center;
+    flex-wrap: nowrap;
+    width: 150%;
+}
+
+.hero-card {
+    background: var(--white);
+    border-radius: 10px;
+    flex: 1;
+    max-width: 365px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.45);
+}
+
+.hero-card__figure {
+    width: 100%;
+    padding: 24px 20px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--white);
+    min-height: 185px;
+}
+
+.hero-card__img {
+    max-width: 100%;
+    max-height: 145px;
+    object-fit: contain;
+    display: block;
+}
+
+.btn-card {
+    display: block;
+    width: calc(100% - 24px);
+    margin: 0 12px 12px;
+    padding: 11px 12px;
+    background: var(--blue);
+    color: var(--white);
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-align: center;
+    text-decoration: none;
+    letter-spacing: 0.01em;
+    border-radius: 10px;
+    transition: background 0.2s ease;
+}
+
+.btn-card:hover {
+    background: #1a6aab;
+}
+
+
+/* Waht are MetaGames */
+
+.what-are-metagames {
+    background: var(--dark-navy);
+    padding: 0 40px 50px;
+}
+
+.wam-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+/* The blue rounded card */
+.wam-inner {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    background: linear-gradient(
+        to right,
+        #0d2a5e 0%,
+        #1565c0 30%,
+        #1e88e5 45%,
+        rgba(30, 136, 229, 0) 55%,
+        rgba(30, 136, 229, 0) 100%
+    );
+    border-radius: 16px;
+    overflow: hidden;
+    min-height: 220px;
+    position: relative;
+}
+
+/* Background image layer — right half only */
+.wam-background {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    margin: 0;
+}
+
+.wam-bg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: right center;
+    display: block;
+    opacity: 0.5;
+    -webkit-mask-image: linear-gradient(
+        to right,
+        transparent 0%,
+        transparent 40%,
+        black 60%,
+        black 100%
+    );
+    mask-image: linear-gradient(
+        to right,
+        transparent 0%,
+        transparent 40%,
+        black 60%,
+        black 100%
+    );
+}
+
+/* Text block */
+.wam-text {
+    flex: 1;
+    min-width: 0;
+    padding: 40px 36px 40px 44px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+}
+
+.wam-title {
+    font-size: clamp(1.3rem, 2.5vw, 1.8rem);
+    font-weight: 800;
+    color: var(--white);
+    margin-bottom: 12px;
+    line-height: 1.2;
+}
+
+.wam-description {
+    font-size: clamp(0.82rem, 1.4vw, 0.93rem);
+    color: rgba(255, 255, 255, 0.92);
+    line-height: 1.6;
+    max-width: 400px;
+}
+
+/* VR image — flush to right, bleeds to bottom */
+.wam-visual {
+    flex-shrink: 0;
+    width: 340px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    position: relative;
+    z-index: 1;
+    overflow: visible;
+    margin-right: 70px;
+}
+
+.wam-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: left center;
+    display: block;
+    border-radius: 0 16px 16px 0;
+    filter: drop-shadow(-12px 0px 16px rgba(0, 0, 0, 0.6));
+}
+
+/* Pillars */
+.pillars {
+    display: flex;
+    max-width: 800px;
+    margin: -25px auto 0;
+    overflow: hidden;
+    position: relative;
+    z-index: 2;
+}
+
+.pillar {
+    flex: 1;
+    padding: 18px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pillar__label {
+    font-size: clamp(0.95rem, 2vw, 1.3rem);
+    font-weight: 900;
+    color: var(--white);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.infinite-slide-loop {
+    background: var(--black);
+    overflow: hidden;
+    padding: 5px 0;
+    white-space: nowrap;
+}
+
+.infinite-slide-loop p {
+    display: inline-block;
+    animation: marquee 20s linear infinite;
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--white);
+    letter-spacing: 0.03rem;
+}
+
+.infinite-slide-loop p::after {
+    content: ' \2022  Mastering the MetaGames of Life, One Move at a Time. \2022  Mastering the MetaGames of Life, One Move at a Time. \2022  Mastering the MetaGames of Life, One Move at a Time. \2022 ';;
+}
+
+@keyframes marquee {
+    from {
+        transform: translateX(100vw);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+/*Animations*/
+
+@keyframes fadeSlideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Hero content — staggered fade-slide-up on load */
+.hero-heading {
+    animation: fadeSlideUp 0.7s ease both;
+    animation-delay: 0.1s;
+}
+
+.hero-tagline {
+    animation: fadeSlideUp 0.7s ease both;
+    animation-delay: 0.25s;
+}
+
+.hero-description {
+    animation: fadeSlideUp 0.7s ease both;
+    animation-delay: 0.4s;
+}
+
+.hero-cards {
+    animation: fadeSlideUp 0.7s ease both;
+    animation-delay: 0.55s;
+}
+
+/* Individual cards stagger */
+.hero-card:nth-child(1) { animation: fadeSlideUp 0.6s ease both; animation-delay: 0.55s; }
+.hero-card:nth-child(2) { animation: fadeSlideUp 0.6s ease both; animation-delay: 0.7s;  }
+.hero-card:nth-child(3) { animation: fadeSlideUp 0.6s ease both; animation-delay: 0.85s; }
+
+/* WAM section — scroll reveal */
+.wam-inner {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.wam-inner.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.pillars {
+    opacity: 0;
+    transform: translateY(16px);
+    transition: opacity 0.5s ease 0.25s, transform 0.5s ease 0.25s;
+}
+
+.pillars.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Card hover lift */
+.hero-card {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.hero-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* Individual pillar colors */
+.pillar:nth-child(1) { background: var(--green); }
+.pillar:nth-child(2) { background: var(--blue);  }
+.pillar:nth-child(3) { background: var(--yellow); }
+.pillar:nth-child(3) .pillar__label { color: var(--dark-navy); }
+.pillar:nth-child(4) { background: var(--red);   }
+
+/*Responsive */
+/* Large Desktop (1200px+) */
+@media (min-width: 1200px) {
+    .hero-cards {
+        gap: 32px;
+        width: 100%;
+    }
+}
+
+/* ── Desktop / Laptop (1024px) ── */
+@media (max-width: 1024px) {
+    .hero-content {
+        max-width: 680px;
+        padding: 80px 24px 40px;
+    }
+
+    .hero-cards {
+        gap: 16px;
+        width: 100%;
+    }
+
+    .hero-card {
+        max-width: 260px;
+    }
+
+    .hero-heading::after {
+        width: 320px;
+    }
+
+    .wam-inner {
+        min-height: 200px;
+    }
+
+    .wam-text {
+        padding: 32px 24px 32px 32px;
+    }
+
+    .wam-visual {
+        width: 280px;
+        margin-right: 20px;
+    }
+
+    .pillars {
+        max-width: 860px;
+    }
+}
+
+/* ── Tablet (768px) ── */
+@media (max-width: 768px) {
+    /* Hero */
+    .hero {
+        min-height: auto;
+    }
+
+    .hero-content {
+        max-width: 100%;
+        padding: 80px 20px 36px;
+        gap: 10px;
+    }
+
+    .hero-heading::after {
+        width: 200px;
+    }
+
+    .hero-cards {
+        gap: 12px;
+        width: 100%;
+        flex-wrap: nowrap;
+    }
+
+    .hero-card {
+        max-width: none;
+    }
+
+    .hero-card__figure {
+        min-height: 140px;
+        padding: 16px 12px 12px;
+    }
+
+    .hero-card__img {
+        max-height: 100px;
+    }
+
+    .btn-card {
+        font-size: 0.75rem;
+        padding: 9px 8px;
+    }
+
+    /* WAM */
+    .what-are-metagames {
+        padding: 10px 20px 0;
+    }
+
+    .wam-inner {
+        flex-direction: column;
+        min-height: auto;
+        border-radius: 12px;
+    }
+
+    .wam-text {
+        padding: 28px 24px 20px;
+    }
+
+    .wam-visual {
+        width: 100%;
+        height: 220px;
+        margin-right: 0;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .wam-img {
+        width: auto;
+        height: 100%;
+        object-fit: contain;
+        border-radius: 0 0 12px 12px;
+    }
+
+    /* Pillars */
+    .pillars {
+        max-width: 100%;
+        margin: -10px auto 0;
+    }
+
+    .pillar {
+        padding: 14px 0;
+    }
+
+    .pillar__label {
+        font-size: 0.85rem;
+        letter-spacing: 0.06em;
+    }
+
+    /* Marquee */
+    .infinite-slide-loop p {
+        font-size: 1.4rem;
+    }
+}
+
+/* ── Mobile Large (480px) ── */
+@media (max-width: 480px) {
+    /* Hero */
+    .hero-content {
+        padding: 70px 16px 28px;
+    }
+
+    .hero-heading::after {
+        width: 140px;
+    }
+
+    .hero-cards {
+        gap: 8px;
+        flex-wrap: nowrap;
+    }
+
+    .hero-card__figure {
+        min-height: 110px;
+        padding: 12px 8px 10px;
+    }
+
+    .hero-card__img {
+        max-height: 80px;
+    }
+
+    .btn-card {
+        font-size: 0.68rem;
+        padding: 8px 6px;
+        width: calc(100% - 12px);
+        margin: 0 6px 8px;
+    }
+
+    /* WAM */
+    .what-are-metagames {
+        padding: 8px 12px 0;
+    }
+
+    .wam-text {
+        padding: 22px 18px 16px;
+    }
+
+    .wam-visual {
+        height: 180px;
+    }
+
+    /* Pillars */
+    .pillars {
+        margin: -8px auto 0;
+    }
+
+    .pillar {
+        padding: 12px 0;
+    }
+
+    .pillar__label {
+        font-size: 0.75rem;
+        letter-spacing: 0.04em;
+    }
+
+    /* Marquee */
+    .infinite-slide-loop p {
+        font-size: 1.1rem;
+    }
+}
+
+/* ── Mobile Small (360px) ── */
+@media (max-width: 360px) {
+    .hero-cards {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero-card {
+        width: 100%;
+        max-width: 280px;
+        flex: none;
+    }
+
+    .pillar__label {
+        font-size: 0.65rem;
+    }
+}
+
+/* News and Update */
+
+.news-and-update {
+    background: var(--dark-navy);
+    padding: 40px 0 50px;
+}
+
+.news-containter {
+    max-width: 1020px;
+    margin: 0 auto;
+}
+
+.news-header {
+    font-size: clamp(1.4rem, 3vw, 2rem);
+    font-weight: 800;
+    color: var(--white);
+    margin-bottom: 20px;
+    padding-left: 40px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.news-header.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.news-containter img {
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+    border-radius: 12px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.7s ease 0.2s, transform 0.7s ease 0.2s;
+}
+
+.news-containter img.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ── News & Updates Responsive ── */
+@media (max-width: 1024px) {
+    .news-and-update {
+        padding: 36px 32px 44px;
+    }
+}
+
+@media (max-width: 768px) {
+    .news-and-update {
+        padding: 28px 20px 36px;
+    }
+
+    .news-containter img {
+        border-radius: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .news-and-update {
+        padding: 24px 14px 28px;
+    }
+
+    .news-containter img {
+        border-radius: 8px;
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+    }
+}
+
+@media (max-width: 360px) {
+    .news-and-update {
+        padding: 20px 10px 24px;
+    }
+}
+
+/* Sports and Games Section */
+
+.sports-and-games {
+    background: var(--dark-navy);
+    padding: 40px 0 50px;
+}
+
+.sports-games-container {
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.sports-header {
+    font-size: clamp(1.4rem, 3vw, 2rem);
+    font-weight: 800;
+    color: var(--white);
+    margin-bottom: 20px;
+    padding-left: 40px;
+}
+
+/* ── Carousel ── */
+.sports-carousel {
+    position: relative;
+    overflow: hidden;
+    border-radius: 0;
+    width: 100%;
+}
+
+.sports-carousel__track {
+    display: flex;
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    will-change: transform;
+}
+
+/* ── Slide ── */
+.sports-slide {
+    min-width: 100%;
+    display: flex;
+    align-items: stretch;
+    position: relative;
+    height: 260px;
+    background: linear-gradient(
+        to right,
+        #0d2a5e 0%,
+        #1565c0 30%,
+        #1e88e5 45%,
+        rgba(30, 136, 229, 0.5) 52%,
+        rgba(30, 136, 229, 0.15) 58%,
+        rgba(30, 136, 229, 0) 65%,
+        rgba(30, 136, 229, 0) 100%
+    );
+    overflow: hidden;
+}
+
+/* Left content */
+.sports-slide__content {
+    flex: 0 0 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 32px 24px 32px 80px;
+    position: relative;
+    z-index: 1;
+}
+
+.sports-slide__title {
+    font-size: clamp(1.3rem, 2.5vw, 1.9rem);
+    font-weight: 800;
+    color: var(--white);
+    margin-bottom: 8px;
+    line-height: 1.2;
+}
+
+.sports-slide__subtitle {
+    font-size: clamp(0.8rem, 1.4vw, 0.95rem);
+    color: rgba(255, 255, 255, 0.85);
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+.btn-sports-details {
+    display: inline-block;
+    padding: 9px 24px;
+    border: 2px solid var(--white);
+    color: var(--white);
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 6px;
+    background: transparent;
+    transition: background 0.2s ease, color 0.2s ease;
+    width: fit-content;
+}
+
+.btn-sports-details:hover {
+    background: var(--white);
+    color: var(--blue);
+}
+
+/* Right image */
+.sports-slide__figure {
+    flex: 0 0 50%;
+    margin: 0;
+    overflow: hidden;
+    position: relative;
+}
+
+.sports-slide__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    -webkit-mask-image: linear-gradient(
+        to right,
+        transparent 0%,
+        rgba(0, 0, 0, 0.3) 10%,
+        black 25%,
+        black 100%
+    );
+    mask-image: linear-gradient(
+        to right,
+        transparent 0%,
+        rgba(0, 0, 0, 0.3) 10%,
+        black 25%,
+        black 100%
+    );
+}
+
+/* ── Prev / Next Buttons ── */
+.sports-carousel__btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    background: rgba(255, 255, 255, 0.15);
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    color: var(--white);
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    line-height: 1;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s ease;
+    backdrop-filter: blur(4px);
+}
+
+.sports-carousel__btn:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.sports-carousel__btn--prev { left: 14px; }
+.sports-carousel__btn--next { right: 14px; }
+
+/* ── Dot Indicators ── */
+.sports-carousel__dots {
+    position: absolute;
+    bottom: 14px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+    z-index: 10;
+}
+
+.sports-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    border: none;
+    background: rgba(255, 255, 255, 0.4);
+    cursor: pointer;
+    padding: 0;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.sports-dot.active {
+    background: var(--white);
+    transform: scale(1.3);
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+    .sports-and-games {
+        padding: 28px 0 36px;
+    }
+
+    .sports-header {
+        padding-left: 20px;
+    }
+
+    .sports-slide {
+        height: 220px;
+        flex-direction: row;
+    }
+
+    .sports-slide__content {
+        flex: 0 0 55%;
+        padding: 20px 16px 20px 56px;
+        justify-content: center;
+    }
+
+    .sports-slide__figure {
+        flex: 0 0 45%;
+    }
+
+    .sports-carousel__btn--prev { left: 8px; }
+    .sports-carousel__btn--next { right: 8px; }
+}
+
+@media (max-width: 480px) {
+    .sports-and-games {
+        padding: 24px 0 28px;
+    }
+
+    .sports-header {
+        padding-left: 14px;
+    }
+
+    .sports-slide {
+        height: 180px;
+        flex-direction: row;
+    }
+
+    .sports-slide__content {
+        flex: 0 0 60%;
+        padding: 16px 12px 16px 50px;
+    }
+
+    .sports-slide__figure {
+        flex: 0 0 40%;
+    }
+
+    .sports-slide__title {
+        font-size: 1rem;
+    }
+
+    .sports-slide__subtitle {
+        font-size: 0.75rem;
+        margin-bottom: 12px;
+    }
+
+    .btn-sports-details {
+        padding: 7px 16px;
+        font-size: 0.78rem;
+    }
+
+    .sports-carousel__btn {
+        width: 28px;
+        height: 28px;
+        font-size: 1rem;
+    }
+
+    .sports-carousel__btn--prev { left: 6px; }
+    .sports-carousel__btn--next { right: 6px; }
+}
+
+@media (max-width: 360px) {
+    .sports-slide {
+        height: 160px;
+    }
+
+    .sports-slide__content {
+        flex: 0 0 65%;
+        padding: 12px 8px 12px 44px;
+    }
+
+    .sports-slide__figure {
+        flex: 0 0 35%;
+    }
+}
+
+/* Meta Movement */
+
+.meta-movement {
+    background: var(--dark-navy);
+}
+
+/* ── Header with colored bar ── */
+.meta-movement__header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 40px 0;
+}
+
+.meta-movement__title {
+    font-size: clamp(1rem, 2vw, 1.3rem);
+    font-weight: 800;
+    color: var(--white);
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.meta-movement__bar {
+    display: flex;
+    flex: 1;
+    height: 15px;
+    overflow: hidden;
+    gap: 3px;
+}
+
+.bar-segment {
+    flex: 1;
+}
+
+.bar-segment--green  { background: var(--green); }
+.bar-segment--blue   { background: var(--blue); }
+.bar-segment--yellow { background: var(--yellow); }
+.bar-segment--red    { background: var(--red); }
+.bar-segment--white  { background: var(--white); }
+.bar-segment--black  { background: var(--black); }
+
+/* ── Container ── */
+.meta-movement__container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 24px 40px 32px;
+}
+
+/* ── Subtitle ── */
+.meta-movement__subtitle {
+    font-size: clamp(1.1rem, 2.2vw, 1.5rem);
+    font-weight: 800;
+    color: var(--white);
+    margin-bottom: 20px;
+}
+
+/* ── Carousel ── */
+.meta-carousel {
+    position: relative;
+}
+
+.meta-carousel__track {
+    display: flex;
+    overflow: hidden;
+}
+
+.meta-slide {
+    min-width: 100%;
+    display: none;
+}
+
+.meta-slide.active {
+    display: block;
+}
+
+/* ── Grid layout ── */
+.meta-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    height: 380px;
+}
+
+.meta-grid__right {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+/* ── Cards ── */
+.meta-card {
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    background: #1e2a3a;
+}
+
+/* Large card */
+.meta-card--large {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.meta-card--large .meta-card__figure {
+    flex: 1;
+    overflow: hidden;
+}
+
+.meta-card--large .meta-card__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.meta-card--large .meta-card__caption {
+    padding: 14px 16px;
+    background: var(--white);
+}
+
+.meta-card--large .meta-card__title {
+    color: var(--blue);
+}
+
+.meta-card--large .meta-card__desc {
+    color: var(--blue);
+}
+
+/* Small cards */
+.meta-card--small {
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+}
+
+.meta-card--small .meta-card__figure {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+.meta-card--small .meta-card__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.meta-card--small .meta-card__caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 10px 12px;
+    background: linear-gradient(to top, rgba(0,0,0,0.75) 0%, transparent 100%);
+}
+
+/* Card titles */
+.meta-card__title {
+    font-size: clamp(0.82rem, 1.3vw, 0.95rem);
+    font-weight: 700;
+    color: var(--white);
+    line-height: 1.3;
+}
+
+.meta-card__title--highlight {
+    color: var(--blue);
+}
+
+.meta-card__desc {
+    font-size: clamp(0.72rem, 1.1vw, 0.82rem);
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.5;
+    margin-top: 5px;
+}
+
+/* View More card */
+.meta-card--view-more {
+    background: var(--blue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.meta-card__view-more-link {
+    font-size: clamp(1rem, 1.8vw, 1.3rem);
+    font-weight: 800;
+    color: var(--white);
+    text-decoration: none;
+    transition: opacity 0.2s ease;
+}
+
+.meta-card__view-more-link:hover {
+    opacity: 0.8;
+}
+
+/* ── Prev / Next Buttons ── */
+.meta-carousel__btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    background: rgba(255, 255, 255, 0.15);
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    color: var(--white);
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s ease;
+    backdrop-filter: blur(4px);
+}
+
+.meta-carousel__btn:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.meta-carousel__btn--prev { left: -52px; }
+.meta-carousel__btn--next { right: -52px; }
+
+/* ── Audience Bar ── */
+.meta-movement__audience {
+    background: var(--blue);
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 16px 40px;
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.audience-label {
+    font-size: clamp(0.9rem, 1.6vw, 1.05rem);
+    font-weight: 800;
+    color: var(--white);
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.audience-nav {
+    display: flex;
+    gap: 12px;
+    flex: 1; /* This tells the nav to take up all available horizontal space */
+    justify-content: space-between; /* This spreads the buttons out evenly */
+}
+
+.audience-btn {
+    display: inline-block;
+    flex: 1; /* This tells each button to grow equally to fill the space */
+    padding: 7px 0; /* Vertical padding only, width is handled by flex */
+    border: 2px solid var(--white);
+    border-radius: 6px;
+    color: var(--white);
+    font-size: clamp(0.8rem, 1.3vw, 0.92rem);
+    font-weight: 600;
+    text-decoration: none;
+    text-align: center;
+    white-space: nowrap;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+.audience-btn:hover {
+    background: var(--white);
+    color: var(--blue);
+}
+
+/* ── Responsive ── */
+
+/* Tablet and Small Laptops */
+@media (max-width: 1024px) {
+    .meta-carousel__btn--prev { left: -12px; }
+    .meta-carousel__btn--next { right: -12px; }
+}
+
+/* Tablets and Mobile Landscape */
+@media (max-width: 768px) {
+    /* 1. HIDE CAROUSEL BUTTONS */
+    .meta-carousel__btn {
+        display: none;
+    }
+
+    .meta-movement__header {
+        padding: 16px 20px 0;
+    }
+
+    .meta-movement__container {
+        padding: 20px 20px 28px;
+    }
+
+    /* Stack grid for better visibility */
+    .meta-grid {
+        grid-template-columns: 1fr;
+        height: auto;
+    }
+
+    .meta-card--large {
+        height: 260px;
+    }
+
+    .meta-grid__right {
+        grid-template-columns: 1fr 1fr;
+        height: 260px;
+    }
+
+    /* 2. FOOTER BUTTONS: Fill remaining space */
+    .audience-nav {
+        flex: 1;
+        display: flex;
+        gap: 8px;
+        flex-wrap: wrap; /* Safety for long text */
+    }
+
+    .audience-btn {
+        flex: 1; /* Each button grows equally to fill the bar */
+        padding: 8px 10px;
+        white-space: nowrap;
+        text-align: center;
+    }
+}
+
+/* Mobile Portrait */
+@media (max-width: 480px) {
+    .meta-movement__header {
+        padding: 14px 14px 0;
+    }
+
+    .meta-movement__container {
+        padding: 16px 14px 24px;
+    }
+
+    .meta-card--large {
+        height: 220px;
+    }
+
+    .meta-grid__right {
+        height: 220px;
+    }
+
+    /* 3. FOOTER MOBILE: Stack and Fill */
+    .meta-movement__audience {
+        flex-direction: column; /* Label on top, buttons below */
+        align-items: flex-start;
+        padding: 16px 20px;
+        gap: 12px;
+    }
+
+    .audience-label {
+        width: 100%;
+        flex-shrink: 0;
+    }
+
+    .audience-nav {
+        width: 100%;
+        gap: 8px;
+    }
+
+    .audience-btn {
+        /* Fills space: 2 buttons per row */
+        flex: 1 1 calc(50% - 8px); 
+        padding: 10px 4px;
+        font-size: 0.75rem;
+        white-space: normal; /* Allows long words to wrap inside button */
+    }
+}
+
+/* MetaGames Emblems */
+.emblems__container {
+    max-width: 1100px;
+    margin: 60px auto;
+    padding: 0 40px;
+}
+
+.emblems__title {
+    font-size: 1.8rem;
+    font-weight: 800;
+    margin-bottom: 40px;
+}
+
+/* Layout Wrapper for Overlap */
+.emblems__wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-top: 50px;
+    padding-left: 200px; /* Moves the blue bar start point to the right */
+}
+
+.wheel-container {
+    position: absolute;
+    left: 0; /* Keeps the wheel on the far left of the 80px padding */
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* THE WHEEL (Pure CSS) */
+.wheel {
+    width: 260px;
+    height: 260px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: conic-gradient(
+        var(--green) 0deg 51.4deg,
+        var(--blue) 51.4deg 102.8deg,
+        var(--yellow) 102.8deg 154.2deg,
+        var(--red) 154.2deg 205.6deg,
+        var(--white) 205.6deg 257deg,
+        var(--black) 257deg 308.4deg,
+        var(--slate) 308.4deg 360deg
+    );
+    box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+    transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    transform-origin: center center;
+}
+
+.wheel__inner {
+    width: 120px;
+    height: 120px;
+    background: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid #000;
+}
+
+.wheel-pointer {
+    width: 0;
+    height: 0;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-left: 20px solid white;
+    margin-left: -10px; /* Pulls it slightly over the wheel edge for a cleaner look */
+    z-index: 11;
+    filter: drop-shadow(-2px 0 2px rgba(0,0,0,0.2)); /* Optional: adds depth */
+}
+
+.wheel__logo {
+    width: 75%;
+    height: auto;
+    transform: rotate(-60deg);
+}
+
+/* THE BLUE CARD */
+.emblems__card {
+    background: linear-gradient(90deg, #0b437b 0%, #1e73be 100%);
+    border-radius: 15px;
+    /* REDUCE WIDTH: This prevents it from stretching to the edge */
+    width: 85%; 
+    /* Adjust padding: More on the left to clear the wheel */
+    padding: 40px 60px 40px 140px; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 180px;
+    box-sizing: border-box;
+    transition: background 0.5s ease, color 0.5s ease;
+}
+
+.emblems__color-name {
+    font-size: 2.2rem;
+    margin: 0;
+}
+
+.emblems__description {
+    font-size: 1.1rem;
+    opacity: 0.9;
+    margin-bottom: 15px;
+}
+
+.emblems__motto {
+    font-style: italic;
+    font-size: 1.1rem;
+    margin-top: 10px;
+}
+
+/* BUTTONS */
+.emblems__nav {
+    display: flex;
+    gap: 10px;
+}
+
+.emblems__btn {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: 2px solid white;
+    background: transparent;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+}
+
+.emblems__btn:hover {
+    background: white;
+    color: var(--blue);
+}
+
+/* --- Responsive Design --- */
+
+/* Tablets & Small Laptops (under 1024px) */
+@media (max-width: 1024px) {
+    .emblems__wrapper {
+        padding-left: 140px; /* Reduce side padding slightly */
+    }
+    
+    .emblems__card {
+        width: 95%; /* Take up more horizontal space */
+        padding: 40px 40px 40px 140px;
+    }
+
+    .wheel {
+        width: 220px; /* Slightly smaller wheel */
+        height: 220px;
+    }
+}
+
+/* Mobile & Small Tablets (under 768px) */
+@media (max-width: 768px) {
+    .emblems__wrapper {
+        flex-direction: column;
+        padding-left: 0;
+        margin-top: 20px;
+    }
+
+    .wheel-container {
+        position: relative; /* Remove absolute positioning */
+        top: 0;
+        transform: none;
+        margin-bottom: -60px; /* Create overlap with the card below */
+        justify-content: center;
+        width: 100%;
+    }
+
+    /* Point the arrow downward on mobile instead of right */
+    .wheel-pointer {
+        transform: rotate(90deg);
+        margin-left: 0;
+        margin-top: -10px;
+        position: absolute;
+        bottom: -15px;
+        left: calc(50% - 10px);
+    }
+
+    .wheel {
+        width: 200px;
+        height: 200px;
+    }
+
+    .wheel__logo {
+        transform: rotate(210deg);
+    }
+
+    .emblems__card {
+        width: 100%;
+        padding: 80px 20px 30px; /* Large top padding to account for overlapping wheel */
+        flex-direction: column;
+        text-align: center;
+        min-height: auto;
+    }
+
+    .emblems__color-name {
+        font-size: 1.8rem;
+    }
+
+    .emblems__nav {
+        margin-top: 25px;
+        justify-content: center;
+    }
+}
+
+/* Extra Small Phones (under 480px) */
+@media (max-width: 480px) {
+    .emblems__title {
+        font-size: 1.4rem;
+        text-align: center;
+    }
+
+    .emblems__motto {
+        font-size: 1rem;
+    }
+    
+    .wheel {
+        width: 180px;
+        height: 180px;
+    }
+
+    .wheel__inner {
+        width: 90px;
+        height: 90px;
+    }
+}
+
+/* --- Official Theme Song Section --- */
+.theme-song {
+    padding: 60px 20px;
+    background-color: var(--dark-navy); /* Base dark background from your root */
+    color: var(--white);
+}
+
+.theme-song__container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.theme-song__title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+.theme-song__content {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr; /* Video takes slightly more space */
+    gap: 40px;
+    align-items: start;
+}
+
+/* Left Side: Video Container */
+.theme-song__visual {
+    width: 100%;
+}
+
+.theme-song__video-wrapper {
+    position: relative;
+    width: 100%;
+    border-radius: 15px;
+    overflow: hidden;
+    background: #000;
+    aspect-ratio: 16 / 9;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.theme-song__video-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.8; /* Dimmed to make play button pop */
+}
+
+/* Right Side: Lyrics Styling */
+.theme-song__details {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.theme-song__ost-title {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 4px;
+}
+
+.theme-song__subtitle {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.theme-song__lyrics {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.lyrics__verse h4 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: var(--white);
+}
+
+.lyrics__verse p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.8); /* Slightly dimmed text for better hierarchy */
+    font-weight: 400;
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 900px) {
+    .theme-song__content {
+        grid-template-columns: 1fr; /* Stack on tablet/mobile */
+        gap: 30px;
+    }
+
+    .theme-song__title {
+        text-align: center;
+    }
+
+    .theme-song__ost-title, 
+    .theme-song__subtitle {
+        text-align: center;
+    }
+
+    .theme-song__lyrics {
+        text-align: center;
+    }
+}
+
+/* --- Lyrics Scroll Container --- */
+.theme-song__lyrics-scroll {
+    max-height: 350px; 
+    overflow-y: auto;
+    padding-right: 20px; 
+}
+
+/* --- Custom Scrollbar Styling (Webkit Browsers) --- */
+
+/* 1. The Track (Background) */
+.theme-song__lyrics-scroll::-webkit-scrollbar {
+    width: 12px; 
+}
+
+.theme-song__lyrics-scroll::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.05); 
+    border-radius: 10px;
+}
+
+/* 2. The Handle (The grey pill shown in your image) */
+.theme-song__lyrics-scroll::-webkit-scrollbar-thumb {
+    background: #7a7a7a; 
+    border-radius: 10px;
+    border: 3px solid transparent; 
+    background-clip: content-box;
+}
+
+.theme-song__lyrics-scroll::-webkit-scrollbar-thumb:hover {
+    background: #999999; 
+}
+
+/* Firefox Support */
+.theme-song__lyrics-scroll {
+    scrollbar-width: thin;
+    scrollbar-color: #7a7a7a transparent;
+}
+
+/* --- Host Nations & Partners --- */
+/* Section Container */
+.host-section {
+    width: 100%;
+    overflow-x: hidden; /* Prevents accidental horizontal scrolling */
+}
+
+/* Full-width Title with Blue Background */
+.host-section__header {
+    background-color: #217EC7; /* Blue background fill */
+    width: 100%;
+    padding: 15px 0;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.host-section__title {
+    color: #ffffff;
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+/* Content Container with side spacing */
+.host-section__container {
+    max-width: 1200px; /* Limits content width */
+    margin: 0 auto;    /* Centers the section */
+    padding: 0 40px;   /* Space on both sides */
+}
+
+/* Host Cities Label */
+.host-cities__label {
+    color: #ffffff;
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+/* 2-Column Grid for Host Cities */
+.host-cities__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two equal columns */
+    gap: 30px; /* Space between cards */
+    margin-bottom: 50px;
+}
+
+.host-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px; /* Rounded corners as seen in the image */
+    display: block;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Partners Block */
+.partners-block {
+    background-color: #ffffff;
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    padding: 20px 0;
+    text-align: center;
+    overflow-x: hidden; /* Prevent horizontal scroll on some mobile browsers */
+}
+
+.partners__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px; /* Prevents logos from touching screen edges on mobile */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.partners__title {
+    color: #000000;
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 10px; /* Slight breathing room for the title */
+}
+
+.partners__logos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px; /* Default gap */
+    flex-wrap: wrap;
+}
+
+.partners__logos img {
+    height: auto;
+    max-height: 80px; /* Keeps logos uniform */
+    width: auto;      /* Let width be proportional to height */
+    max-width: 180px; /* Prevents any single logo from becoming huge */
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+/* --- Responsive Media Queries --- */
+
+/* For Tablets (approx 768px and below) */
+@media (max-width: 992px) {
+    .partners__logos {
+        gap: 30px;
+    }
+    .partners__logos img {
+        max-height: 60px;
+    }
+}
+
+/* For Mobile Phones (approx 480px and below) */
+@media (max-width: 480px) {
+    .partners__logos {
+        gap: 20px; /* Tighter gap for small screens */
+    }
+    
+    .partners__logos img {
+        max-height: 50px; /* Smaller logos for mobile */
+        /* Optional: set to 30-40% if you want 2 logos per row on mobile */
+        max-width: 40%; 
+    }
+    
+    .partners__title {
+        font-size: 1.1rem;
+    }
+}
+
+/* --- Main Footer --- */
+.main-footer {
+    width: 100%;
+}
+
+/* Blue Navigation Bar */
+.footer-top {
+    background-color: #217ec7;
+    padding: 30px 60px;
+    color: #ffffff;
+}
+
+.footer-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer__branding {
+    padding-left: 100px;
+    flex-shrink: 0;
+}
+
+.footer__branding img {
+    width: 100px;
+}
+
+/* Flex container for the three columns of links */
+.footer__links-wrapper {
+    display: flex;
+    gap: 60px;
+    padding-right: 100px;
+}
+
+.footer-column h4 {
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-column ul li {
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+.footer-column ul li a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+/* ── Responsive ── */
+@media (max-width: 1024px) {
+    .footer-top {
+        padding: 28px 40px;
+    }
+
+    .footer__branding {
+        padding-left: 0;
+    }
+
+    .footer__links-wrapper {
+        gap: 40px;
+        padding-right: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer-top {
+        padding: 24px 24px;
+    }
+
+    .footer-flex {
+        flex-direction: column;
+        align-items: center;
+        gap: 24px;
+        text-align: center;
+    }
+
+    .footer__branding {
+        padding-left: 0;
+    }
+
+    .footer__links-wrapper {
+        gap: 32px;
+        padding-right: 0;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .footer-column {
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-top {
+        padding: 20px 16px;
+    }
+
+    .footer-flex {
+        gap: 20px;
+    }
+
+    .footer__links-wrapper {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+    }
+
+    .footer-column {
+        flex: 1 1 calc(50% - 20px);
+        min-width: 120px;
+        text-align: center;
+    }
+
+    .footer-column h4 {
+        display: block;
+        margin-bottom: 5px;
+        font-size: 0.9rem;
+    }
+
+    .footer-column ul li {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 360px) {
+    .footer__links-wrapper {
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+    }
+
+    .footer-column {
+        flex: none;
+        width: 100%;
+    }
+}
+/* Black Bottom Bar */
+.footer-bottom {
+    background-color: #1a1a1a; /* Dark black/grey */
+    padding: 10px 60px;
+    color: #cccccc;
+    font-size: 0.75rem;
+}
+
+.footer-bottom-flex {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* --- Responsive Layout --- */
+@media (max-width: 768px) {
+    .host-cities__grid {
+        grid-template-columns: 1fr; /* Stack images on mobile */
+    }
+
+    .footer-flex {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 30px;
+    }
+
+    .footer__links-wrapper {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .no-title {
+        margin-top: 0;
+    }
+
+    .footer-bottom-flex {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+}
