@@ -1,1509 +1,728 @@
-<<<<<<< HEAD
 <!doctype html>
-<html lang="en" class="scrollbar-hidden scroll-smooth">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ESWF</title>
+    <title>MetaGames</title>
+    <link rel="stylesheet" href="style.css" />
+
+    <!--Home Content Style-->
+    <link rel="stylesheet" href="home-content.css" />
+
+    <!--Font Awesom-->
     <link
       rel="stylesheet"
-      type="text/css"
-      href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/fill/style.css"
-    />
-    <link rel="stylesheet" href="src/assets/css/styles.css" />
   </head>
   <body>
-    <!-- Top Banner -->
-    <div class="banner bg-primary flex justify-between items-center flex-wrap">
-      <div class="stripes">
-        <div class="stripe bg-green"></div>
-        <div class="stripe bg-blue"></div>
-        <div class="stripe bg-yellow"></div>
-        <div class="stripe bg-rose"></div>
-        <div class="stripe bg-white"></div>
-        <div class="stripe bg-black"></div>
-      </div>
-      <h2
-        class="font-narrow font-700 tracking-widest text-white text-2xl px-4 py-2 sm:text-4xl sm:px-8 sm:py-4 sm:tracking-[1rem]"
-      >
-        METAGAMES
-      </h2>
-      <div class="stripes">
-        <div class="stripe bg-green"></div>
-        <div class="stripe bg-blue"></div>
-        <div class="stripe bg-yellow"></div>
-        <div class="stripe bg-rose"></div>
-        <div class="stripe bg-white"></div>
-        <div class="stripe bg-black"></div>
-      </div>
-    </div>
-
-    <!-- Navbar -->
-    <nav
-      class="nav from-blue-900 to-blue bg-linear-to-r px-2 text-sky flex justify-between items-center relative sticky top-0 z-50 xl:px-12 xl:gap-x-4 xl:text-[0.91rem] 2xl:gap-x-12 2xl:text-lg 3xl:px-18 3xl:gap-x-16 3xl:text-xl"
-    >
-      <!-- Nav Logo -->
-      <img
-        src="src/assets/images/eswf-metagames-logo.webp"
-        alt="ESWF MetaGames Logo"
-        class="nav-logo size-15 shrink-0 2xl:size-18"
-      />
-
-      <!-- Nav Links + CTA wrapper -->
-      <div
-        id="nav-links"
-        class="hidden absolute top-full left-0 right-0 z-50 flex-col gap-2 p-2 from-blue-900 to-blue bg-linear-to-r xl:static xl:flex xl:flex-row xl:items-center xl:gap-x-1 xl:py-1 xl:bg-none xl:bg-transparent xl:flex-1"
-      >
-        <!-- Links -->
-        <div
-          class="flex flex-col gap-1 xl:flex-row xl:flex-wrap xl:items-center xl:gap-x-2 xl:gap-y-2 3xl:gap-x-4"
-        >
-          <a href="#home" class="nav-link active" data-section="home">Home</a>
-          <a
-            href="#what-are-metagames"
-            class="nav-link"
-            data-section="what-are-metagames"
-            >What Are MetaGames</a
-          >
-          <a href="#news-updates" class="nav-link" data-section="news-updates"
-            >News &amp; Updates</a
-          >
-          <a href="#sports-games" class="nav-link" data-section="sports-games"
-            >Sports &amp; Games</a
-          >
-          <a href="#meta-movement" class="nav-link" data-section="meta-movement"
-            >Meta Movement</a
-          >
-          <a
-            href="#emblem-meaning"
-            class="nav-link"
-            data-section="emblem-meaning"
-            >Emblem &amp; Meaning</a
-          >
-          <a
-            href="#official-theme-song"
-            class="nav-link"
-            data-section="official-theme-song"
-            >Official Theme Song</a
-          >
-          <a href="#host-nations" class="nav-link" data-section="host-nations"
-            >Host Nation</a
-          >
+    <!-- Top Banner-->
+    <header class="top-banner">
+      <div class="banner-stripes-wrap">
+        <div class="stripe-group left">
+          <span></span><span></span><span></span><span></span><span></span
+          ><span></span>
         </div>
-
-        <!-- CTA -->
-        <a
-          href="#"
-          class="cta-btn bg-rose text-lg font-light py-2 px-4 rounded-lg hover:bg-red focus:bg-red shrink-0 lg:text-xl xl:ml-auto 3xl:text-2xl"
-          >Join MetaGames</a
-        >
+        <div class="stripe-group right">
+          <span></span><span></span><span></span><span></span><span></span
+          ><span></span>
+        </div>
       </div>
+      <h1 class="banner-title">MetaGames</h1>
+    </header>
 
-      <!-- Hamburger Button (mobile only) -->
-      <button
-        id="hamburger-btn"
-        class="ml-auto cursor-pointer bg-transparent border-none p-0 xl:hidden"
-      >
-        <i id="icon-open" class="ph ph-list text-sky text-3xl"></i>
-        <i id="icon-close" class="ph ph-x text-sky text-3xl hidden"></i>
-      </button>
+    <!--Navbar-->
+    <nav class="navbar" id="navbar">
+      <div class="nav-inner">
+        <a href="#" class="nav-logo">
+          <img
+            src="assets/eswf-metagames-logo.png"
+            alt="logo"
+            class="logo-img"
+          />
+        </a>
+
+        <ul class="nav-links" id="navLinks">
+          <li class="close-item">
+            <button class="hamburger" id="hamburger" aria-label="Close menu">
+              <i class="fa-solid fa-xmark"></i>
+            </button>
+          </li>
+          <li><a href="#main-content" class="active">Home</a></li>
+          <li><a href="#what-are-metagames">What Are MetaGames</a></li>
+          <li><a href="#news-and-update">News &amp; Updates</a></li>
+          <li><a href="#sports-and-games">Sports &amp; Games</a></li>
+          <li><a href="#meta-movement">Meta Movement</a></li>
+          <li><a href="#metagames-emblems">Emblem &amp; Meaning</a></li>
+          <li><a href="#theme-song">Official Theme Song</a></li>
+          <li><a href="#host-section">Host Nations</a></li>
+          <li class="join-item">
+            <a href="#" class="btn-join-mobile">Join MetaGames</a>
+          </li>
+        </ul>
+
+        <a href="#" class="btn-join">Join MetaGames</a>
+
+        <button class="menu-open-btn" id="menuOpenBtn" aria-label="Open menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
     </nav>
 
-    <main>
-      <!-- HERO -->
-      <section
-        id="home"
-        class="relative flex flex-col justify-center items-center pt-10 pb-14 bg-[url(/src/assets/images/eswf-metagames-event.webp)] bg-cover bg-no-repeat bg-center text-sky 2xl:pb-20 3xl:pt-12 3xl:pb-24"
-      >
-        <!-- Gradient overlay -->
-        <div
-          class="absolute inset-0 bg-linear-to-b from-blue-950/90 to-primary"
-        ></div>
+    <!--Main Content-->
+    <main id="main-content">
+      <!--Hero Section-->
+      <section class="hero" aria-labelledby="hero-heading">
+        <div class="hero-bg-overlay" aria-hidden="true">
+          <img src="assets/Esports-arena-screens.webp" alt="" />
+        </div>
 
-        <!-- Content sits above the overlay -->
-        <div class="relative z-10 flex flex-col items-center">
-          <div class="leading-text text-center">
-            <h1
-              class="font-bold text-3xl border-b border-b-white sm:text-5xl md:text-5xl lg:text-6xl xl:text-7xl"
-            >
-              Welcome to the MetaGames
-            </h1>
-            <p
-              class="text-lg mt-1 italic font-semibold sm:text-2xl md:text-3xl lg:text-4xl"
-            >
-              Where Sports, Games, and Digital Worlds Unite
-            </p>
-          </div>
-
-          <p
-            class="text text-md text-center mt-3 w-90 sm:text-xl sm:w-140 md:text-xl md:w-150 lg:text-2xl lg:w-180 xl:w-200 xl:mt-6 3xl:mt-8"
-          >
+        <div class="hero-content">
+          <h2 class="hero-heading" id="hero-title">Welcome to the MetaGames</h2>
+          <p class="hero-tagline">
+            <em>Where Sports, Games, and Digital Worlds Unite</em>
+          </p>
+          <p class="hero-description">
             MetaGames is a global movement that brings together traditional
             sports, esports, digital sports, and virtual experiences into one
             unified international event.
           </p>
 
-          <div
-            class="cards grid grid-cols gap-6 px-4 mt-6 w-full sm:px-8 md:grid-cols-3 2xl:w-[90%] 3xl:mt-16 3xl:w-[70%]"
-          >
-            <div class="card">
-              <img
-                src="src/assets/images/eswf-metagames-logo.webp"
-                alt="ESWF MetaGames Logo"
-                class="size-60 sm:size-80 md:size-30 xl:size-50"
-              />
-              <a href="#" class="card-btn">Learn What MetaGames Is</a>
-            </div>
-
-            <div class="card">
-              <img
-                src="src/assets/images/vr-games.webp"
-                alt="Kids playing VR games"
-                class="h-60 w-full sm:h-80 md:h-30 xl:h-50"
-              />
-              <a href="#" class="card-btn">Explore Sports & Games</a>
-            </div>
-
-            <div class="card">
-              <img
-                src="src/assets/images/jigsaw-puzzle.webp"
-                alt="Jigsaw Puzzle"
-                class="h-60 w-full sm:h-80 md:h-30 xl:h-50"
-              />
-              <a href="#" class="card-btn">Join the Movement</a>
-            </div>
-          </div>
-
-          <article
-            id="what-are-metagames"
-            class="mt-8 relative bg-blue mx-4 rounded-2xl overflow-hidden sm:mx-8 2xl:w-[90%] 3xl:w-[75%]"
-          >
-            <!-- gradient -->
-            <div
-              class="absolute inset-0 bg-linear-to-b from-dark-blue via-dark-blue to-transparent z-10 md:bg-linear-to-r lg:from-65% lg:to-90% xl:from-70% 2xl:from-75% 3xl:from-70%"
-            ></div>
-
-            <div class="relative">
-              <div class="flex flex-col md:flex-row">
-                <div
-                  class="text z-20 relative p-4 sm:p-6 md:pt-8 md:pl-8 md:pb-10 3xl:pt-16 3xl:pb-18 3xl:px-16"
-                >
-                  <h4
-                    class="text-2xl font-bold sm:text-3xl md:text-2xl lg:text-3xl xl:text-4xl 3xl:text-5xl"
-                  >
-                    What are MetaGames?
-                  </h4>
-                  <p
-                    class="mt-2 text-xl sm:text-2xl md:mt-4 md:text-lg lg:text-xl xl:text-2xl"
-                  >
-                    MetaGames is not just one sport or one game. It is a
-                    combination of physical sports, esports, mindgames, and
-                    digital competitions happening together under one global
-                    platform.
-                  </p>
-                </div>
-
+          <!--Quick Access Cards-->
+          <div class="hero-cards" role="list">
+            <article class="hero-card" role="listitem">
+              <figure class="hero-card__figure">
                 <img
-                  src="src/assets/images/woman-with-vr.webp"
-                  alt="Man with VR"
-                  class="w-full h-60 object-cover md:h-auto md:w-1/2 md:self-stretch md:object-cover lg:h-60 3xl:h-80"
+                  src="assets/eswf-metagames-logo.png"
+                  alt=""
+                  class="hero-card__img"
                 />
-              </div>
-            </div>
-          </article>
-          <div
-            class="absolute bottom-0 left-0 right-0 translate-y-1/2 flex justify-center items-center z-20"
-          >
-            <div class="motto bg-green">LIFE</div>
-            <div class="motto bg-blue">TIME</div>
-            <div class="motto bg-yellow">GAME</div>
-            <div class="motto bg-rose">META</div>
+              </figure>
+              <a href="#What-are-metagames" class="btn-card"
+                >Learn What MetaGames</a
+              >
+            </article>
+
+            <article class="hero-card" role="listitem">
+              <figure class="hero-card__figure">
+                <img
+                  src="assets/Untitled design - 2025-12-20T143313.530.png"
+                  alt=""
+                  class="hero-card__img"
+                />
+              </figure>
+              <a href="" class="btn-card">Explore Sports &amp; Games</a>
+            </article>
+
+            <article class="hero-card" role="listitem">
+              <figure class="hero-card__figure">
+                <img src="assets/puzzle.png" alt="" class="hero-card__img" />
+              </figure>
+              <a href="" class="btn-card">Join the Movement</a>
+            </article>
           </div>
         </div>
       </section>
 
-      <!-- Infinite Marquee Banner -->
+      <!--What Are MetaGames Section-->
+
       <section
-        class="self-end z-50 bg-black text-sky text-lg font-bold py-3 overflow-hidden sm:text-xl sm:py-4 md:text-2xl md:py-6 lg:text-3xl lg:py-8 xl:text-4xl"
+        class="what-are-metagames"
+        id="what-are-metagames"
+        aria-labelledby="wam-heading"
       >
-        <div
-          class="flex w-max animate-[marquee_30s_linear_infinite] hover:[animation-play-state:paused]"
-        >
-          <div class="flex items-center whitespace-nowrap pr-1">
-            <p>&bull; Mastering the MetaGames of Life, One Move at a Time</p>
+        <div class="wam-container">
+          <div class="wam-inner">
+            <div class="wam-text">
+              <h2 id="wam-heading" class="wam-title">What are MetaGames?</h2>
+              <p class="wam-description">
+                MetaGames is not just one sport or one game. It is a combination
+                of physical sports, esports, mind games, and digital
+                competitions happening together under one global platform.
+              </p>
+            </div>
+
+            <figure class="wam-background">
+              <img
+                src="assets/WAM-background.webp"
+                alt="Athlete wearing an illuminated VR headset"
+                class="wam-bg"
+              />
+            </figure>
+
+            <figure class="wam-visual" aria-label="Person wearing a VR headset">
+              <img
+                src="assets/vr-headset2.png"
+                alt="Athlete wearing an illuminated VR headset"
+                class="wam-img"
+              />
+            </figure>
           </div>
-          <div
-            class="flex items-center whitespace-nowrap pr-1"
-            aria-hidden="true"
-          >
-            <p>&bull; Mastering the MetaGames of Life, One Move at a Time</p>
+
+          <!-- LIFE · TIME · GAME · META Pillars -->
+          <div class="pillars" role="list" aria-label="MetaGames pillars">
+            <div class="pillar pillar--life" role="listitem">
+              <span class="pillar__label">LIFE</span>
+            </div>
+            <div class="pillar pillar--time" role="listitem">
+              <span class="pillar__label">TIME</span>
+            </div>
+            <div class="pillar pillar--game" role="listitem">
+              <span class="pillar__label">GAME</span>
+            </div>
+            <div class="pillar pillar--meta" role="listitem">
+              <span class="pillar__label">META</span>
+            </div>
           </div>
-          <div
-            class="flex items-center whitespace-nowrap pr-1"
-            aria-hidden="true"
-          >
-            <p>&bull; Mastering the MetaGames of Life, One Move at a Time</p>
-          </div>
-          <div
-            class="flex items-center whitespace-nowrap pr-1"
-            aria-hidden="true"
-          >
-            <p>&bull; Mastering the MetaGames of Life, One Move at a Time</p>
-          </div>
+          <!-- /.pillars -->
+        </div>
+        <!-- /.wam-container -->
+      </section>
+
+      <!--Infinite Slide Loop-->
+      <section class="infinite-slide-loop" id="infinite-slide-loop">
+        <p>Mastering the MetaGames of Life, One Move at a Time.</p>
+      </section>
+
+      <!--News and Update-->
+      <section class="news-and-update" id="news-and-update">
+        <h1 class="news-header">News &amp; Updates</h1>
+        <div class="news-containter">
+          <img src="assets/News-and-Update.PNG" alt="" />
         </div>
       </section>
 
-      <!-- NEWS & UPDATES -->
+      <!--Sports and Games-->
       <section
-        id="news-updates"
-        class="px-4 py-2 bg-primary text-sky xl:px-8 xl:py-10 2xl:px-12 2xl:py-16 3xl:py-18"
+        class="sports-and-games"
+        id="sports-and-games"
+        aria-labelledby="sports-heading"
       >
-        <h3 class="text-3xl font-bold lg:text-4xl 2xl:text-5xl">
-          News &amp; Updates
-        </h3>
-        <img
-          src="src/assets/images/news-image-enhanced.webp"
-          alt="News Feed Image"
-          class="mt-4 w-full h-auto object-cover xl:mt-8 2xl:px-12 3xl:px-16"
-        />
-      </section>
+        <div class="sports-games-container">
+          <h2 class="sports-header" id="sports-heading">Sports &amp; Games</h2>
 
-      <!-- SPORTS & GAMES -->
-      <section id="sports-games" class="bg-primary text-sky py-2 relative">
-        <h3
-          class="px-4 text-3xl font-bold lg:text-4xl 2xl:text-5xl xl:px-8 2xl:px-12"
-        >
-          Sports &amp; Games
-        </h3>
-
-        <div class="mt-4 xl:mt-8">
-          <!-- Slider Track -->
+          <!--Carousel Wrapper-->
           <div
-            id="sports-slider"
-            class="relative flex overflow-x-auto scroll-smooth scrollbar-hidden snap-x snap-mandatory"
+            class="sports-carousel"
+            aria-labelledby="Sports and Games Carousel"
           >
-            <!-- Card 1 -->
-            <div class="sports-slider-card">
-              <img src="src/assets/images/basketball.webp" />
-              <div class="gradient-overlay"></div>
-              <div class="content">
-                <h4>Sports &amp; Games</h4>
-                <p>Physical &amp; Olympic-style sports</p>
-                <button>View Details</button>
-              </div>
-            </div>
-
-            <!-- Card 2 -->
-            <div class="sports-slider-card">
-              <img src="src/assets/images/chess.webp" />
-              <div class="gradient-overlay"></div>
-              <div class="content">
-                <h4>Mind Sports</h4>
-                <p>Chess, Scrabble, Sudoku, etc.</p>
-                <button>View Details</button>
-              </div>
-            </div>
-
-            <!-- Card 3 -->
-            <div class="sports-slider-card">
-              <img src="src/assets/images/esports.webp" />
-              <div class="gradient-overlay"></div>
-              <div class="content">
-                <h4>Electronic Sports (Esports)</h4>
-                <p>MOBA, FPS, RTS, Fighting Games, BR, MMORPG</p>
-                <button>View Details</button>
-              </div>
-            </div>
-
-            <!-- Card 4 -->
-            <div class="sports-slider-card">
-              <img src="src/assets/images/classroom.webp" />
-              <div class="gradient-overlay"></div>
-              <div class="content">
-                <h4>Digital &amp; Virtual Sports</h4>
-                <p>Digital Motorsports</p>
-                <p>Digital Combat</p>
-                <p>Digital VR &amp; AR Sports</p>
-                <button>View Details</button>
-              </div>
-            </div>
-          </div>
-
-          <!-- Left Arrow -->
-          <button id="slider-left" class="slider-prev-btn">
-            <i class="ph ph-caret-left text-2xl 2xl:text-4xl"></i>
-          </button>
-          <!-- Right Arrow -->
-          <button id="slider-right" class="slider-next-btn">
-            <i class="ph ph-caret-right text-2xl 2xl:text-4xl"></i>
-          </button>
-
-          <!-- Slider Dots -->
-          <div
-            id="slider-dots"
-            class="flex justify-center items-center gap-3 mt-6 pb-4"
-          ></div>
-        </div>
-      </section>
-
-      <!-- THE META MOVEMENT -->
-      <section
-        id="meta-movement"
-        class="bg-primary text-sky pt-2 pb-8 relative"
-      >
-        <div class="flex justify-between items-center">
-          <h3
-            class="px-4 text-3xl font-bold lg:text-4xl 2xl:text-5xl xl:px-8 2xl:px-12"
-          >
-            The Meta Movement
-          </h3>
-          <div class="stripes lg:px-4 xl:px-8">
-            <div class="stripe bg-green"></div>
-            <div class="stripe bg-blue"></div>
-            <div class="stripe bg-yellow"></div>
-            <div class="stripe bg-rose"></div>
-            <div class="stripe bg-white"></div>
-            <div class="stripe bg-black"></div>
-          </div>
-        </div>
-
-        <div
-          class="relative content px-4 lg:px-8 xl:px-18 xl:mt-4 2xl:px-30 3xl:px-32"
-        >
-          <h4 class="text-lg py-2 lg:text-2xl xl:text-3xl xl:py-4 2xl:text-4xl">
-            The Rise of the Meta Movement (2025-2027)
-          </h4>
-          <div class="grid grid-cols-1 gap-4 lg:grid-cols-2 2xl:gap-8">
-            <div class="left-grid">
+            <!--Track (slide move inside here)-->
+            <div class="sports-carousel__track">
+              <!--Slide 1-->
               <article
-                class="rounded-lg overflow-hidden h-full bg-white text-blue xl:rounded-2xl"
+                class="sports-slide active"
+                aria-label="Physical & Olympic-style sports"
               >
-                <img
-                  src="src/assets/images/smartwatch.webp"
-                  alt="Smartwatch worn around the wrist"
-                  class="object-cover h-auto w-full aspect-3/2"
-                />
-                <div class="p-4 xl:p-6 2xl:p-8">
-                  <h5
-                    class="font-bold text-lg sm:text-xl lg:text-2xl 2xl:text-3xl 3xl:text-4xl"
-                  >
-                    Physical Fitness
-                  </h5>
-                  <p class="sm:text-lg lg:text-xl 2xl:text-2xl 2xl:mt-2">
-                    Promoting healthy, active lifestyle through sports and
-                    movement, encouraging people of all ages to stay strong,
-                    energized, and well.
+                <div class="sports-slide__content">
+                  <h3 class="sports-slide__title">Sports &amp; Games</h3>
+                  <p class="sports-slide__subtitle">
+                    Physical &amp; Olympic-style sports
                   </p>
+                  <a href="#" class="btn-sports-details">View Details</a>
                 </div>
-              </article>
-            </div>
-
-            <div class="right-grid grid grid-cols-2 gap-2 sm:gap-4 2xl:gap-8">
-              <article class="metamovement-article">
-                <img
-                  src="src/assets/images/man-with-vr-glasses.webp"
-                  alt="Man with VR glasses"
-                />
-                <div
-                  class="pt-1 pb-3 px-2 lg:pt-2 lg:pb-4 lg:px-3 2xl:pt-4 2xl:px-4"
-                >
-                  <h5 class="font-bold sm:text-xl 2xl:text-3xl">
-                    Digital Innovation
-                  </h5>
-                </div>
+                <figure class="sports-slide__figure">
+                  <img
+                    src="assets/basketbal-hoops.png"
+                    alt="Basketball hoop"
+                    class="sports-slide__img"
+                  />
+                </figure>
               </article>
 
-              <article class="metamovement-article">
-                <img
-                  src="src/assets/images/cultural-costume.webp"
-                  alt="Child in cultural costume"
-                />
-                <div
-                  class="pt-1 pb-3 px-2 lg:pt-2 lg:pb-4 lg:px-3 2xl:pt-4 2xl:px-4"
-                >
-                  <h5 class="font-bold sm:text-xl 2xl:text-3xl">
-                    Cultural Unity
-                  </h5>
+              <!--Slide 2-->
+              <article class="sports-slide" aria-label="Mind Sports">
+                <div class="sports-slide__content">
+                  <h3 class="sports-slide__title">Mind Sports</h3>
+                  <p class="sports-slide__subtitle">
+                    Chess, Scrabble, Sudoku, etc.
+                  </p>
+                  <a href="#" class="btn-sports-details">View Details</a>
                 </div>
+                <figure class="sports-slide__figure">
+                  <img
+                    src="assets/chess.png"
+                    alt="Mind Games"
+                    class="sports-slide__img"
+                  />
+                </figure>
               </article>
 
-              <article class="metamovement-article">
-                <img
-                  src="src/assets/images/children-playing.webp"
-                  alt="Children playing with paint on their hands"
-                />
-                <div
-                  class="pt-1 pb-3 px-2 lg:pt-2 lg:pb-4 lg:px-3 2xl:pt-4 2xl:px-4"
-                >
-                  <h5 class="font-bold sm:text-xl 2xl:text-3xl">
-                    Fair Play &amp; Inclusivity
-                  </h5>
+              <!--Slide 3-->
+              <article class="sports-slide" aria-label="ESports">
+                <div class="sports-slide__content">
+                  <h3 class="sports-slide__title">
+                    Electronic Sports (Esports)
+                  </h3>
+                  <p class="sports-slide__subtitle">
+                    MOBA, FPS, RTS, Fighting Games, BR, MMORPG
+                  </p>
+                  <a href="#" class="btn-sports-details">View Details</a>
                 </div>
+                <figure class="sports-slide__figure">
+                  <img
+                    src="assets/esports.jpg"
+                    alt="Chess board"
+                    class="sports-slide__img"
+                  />
+                </figure>
               </article>
 
-              <div
-                class="rounded-lg overflow-hidden h-full flex justify-center items-center bg-linear-to-tr from-blue-500/60 to-blue text-white xl:rounded-2xl"
+              <!--Slide 4-->
+              <article class="sports-slide" aria-label="VR Sports">
+                <div class="sports-slide__content">
+                  <h3 class="sports-slide__title">
+                    Digital &amp; Virtual Sports
+                  </h3>
+                  <p class="sports-slide__subtitle">
+                    Digital Motorsports <br />
+                    Digital Combat <br />
+                    VR &amp; AR sports
+                  </p>
+                  <a href="#" class="btn-sports-details">View Details</a>
+                </div>
+                <figure class="sports-slide__figure">
+                  <img
+                    src="assets/vr-headset.png"
+                    alt="Chess board"
+                    class="sports-slide__img"
+                  />
+                </figure>
+              </article>
+
+              <!--Slide 5-->
+              <article
+                class="sports-slide"
+                aria-label="Multi-Cultural and Indigenous sports"
               >
-                <a
-                  href="#"
-                  class="block text-2xl cursor-pointer sm:text-3xl 2xl:text-4xl 3xl:text-5xl"
-                  >View More</a
-                >
-              </div>
+                <div class="sports-slide__content">
+                  <h3 class="sports-slide__title">
+                    Multi-Cultural &amp; Indigenous Sports
+                  </h3>
+                  <p class="sports-slide__subtitle">
+                    Traditional games from different cultures
+                  </p>
+                  <a href="#" class="btn-sports-details">View Details</a>
+                </div>
+                <figure class="sports-slide__figure">
+                  <img
+                    src="assets/slide5.png"
+                    alt="Chess board"
+                    class="sports-slide__img"
+                  />
+                </figure>
+              </article>
             </div>
 
-            <div class="hidden xl:flex">
-              <!-- Left Arrow -->
-              <button class="slider-prev-btn">
-                <i class="ph ph-caret-left text-2xl 2xl:text-4xl"></i>
-              </button>
-              <!-- Right Arrow -->
-              <button class="slider-next-btn">
-                <i class="ph ph-caret-right text-2xl 2xl:text-4xl"></i>
-              </button>
+            <!-- Prev / Next Controls -->
+            <button
+              class="sports-carousel__btn sports-carousel__btn--prev"
+              aria-label="Previous slide"
+            >
+              &#8249;
+            </button>
+            <button
+              class="sports-carousel__btn sports-carousel__btn--next"
+              aria-label="Next slide"
+            >
+              &#8250;
+            </button>
+
+            <!-- Dot Indicators -->
+            <div
+              class="sports-carousel__dots"
+              role="tablist"
+              aria-label="Slide indicators"
+            >
+              <button
+                class="sports-dot active"
+                role="tab"
+                aria-selected="true"
+                aria-label="Slide 1"
+              ></button>
+              <button
+                class="sports-dot"
+                role="tab"
+                aria-selected="false"
+                aria-label="Slide 2"
+              ></button>
+              <button
+                class="sports-dot"
+                role="tab"
+                aria-selected="false"
+                aria-label="Slide 3"
+              ></button>
+              <button
+                class="sports-dot"
+                role="tab"
+                aria-selected="false"
+                aria-label="Slide 4"
+              ></button>
+              <button
+                class="sports-dot"
+                role="tab"
+                aria-selected="false"
+                aria-label="Slide 5"
+              ></button>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- WHO IS THIS FOR -->
+      <!-- The Meta Movement -->
       <section
-        class="flex flex-col gap-2 from-blue-900 to-blue bg-linear-to-r text-sky p-4 md:flex-row md:items-center md:justify-center md:gap-4 xl:px-8 xl:py-4 xl:gap-8 2xl:px-12"
+        class="meta-movement"
+        id="meta-movement"
+        aria-labelledby="meta-movement-heading"
       >
-        <h3 class="text-3xl font-bold lg:text-4xl 2xl:text-5xl">It's for:</h3>
-        <div
-          class="user-demographics flex items-center flex-wrap gap-2 text-2xl font-bold md:gap-3 lg:text-4xl xl:gap-4 2xl:text-5xl 3xl:gap-8"
-        >
-          <h5>Athletes</h5>
-          <h5>Gamers</h5>
-          <h5>Students</h5>
-          <h5>Professionals</h5>
-          <h5>Nations</h5>
+        <!-- Section Header with colored progress bar -->
+        <div class="meta-movement__header">
+          <h2 class="meta-movement__title" id="meta-movement-heading">
+            The Meta Movement
+          </h2>
+          <div class="meta-movement__bar" aria-hidden="true">
+            <span class="bar-segment bar-segment--green"></span>
+            <span class="bar-segment bar-segment--blue"></span>
+            <span class="bar-segment bar-segment--yellow"></span>
+            <span class="bar-segment bar-segment--red"></span>
+            <span class="bar-segment bar-segment--white"></span>
+            <span class="bar-segment bar-segment--black"></span>
+          </div>
         </div>
+
+        <div class="meta-movement__container">
+          <!-- Subtitle -->
+          <h3 class="meta-movement__subtitle">
+            The Rise of the Meta Movement (2025–2027)
+          </h3>
+
+          <!-- Carousel Wrapper -->
+          <div class="meta-carousel" aria-label="Meta Movement carousel">
+            <!-- Prev Button -->
+            <button
+              class="meta-carousel__btn meta-carousel__btn--prev"
+              aria-label="Previous slide"
+            >
+              &#8249;
+            </button>
+
+            <!-- Cards Grid (slides) -->
+            <div class="meta-carousel__track">
+              <!-- Slide 1 (active) -->
+              <div class="meta-slide active">
+                <div class="meta-grid">
+                  <!-- Large card (left) -->
+                  <article class="meta-card meta-card--large">
+                    <figure class="meta-card__figure">
+                      <img
+                        src="assets/watch.png"
+                        alt="Person wearing smartwatch with dumbbells"
+                        class="meta-card__img"
+                      />
+                    </figure>
+                    <div class="meta-card__caption">
+                      <h4 class="meta-card__title meta-card__title--highlight">
+                        Physical Fitness
+                      </h4>
+                      <p class="meta-card__desc">
+                        Promoting healthy, active lifestyles through sports and
+                        movement, encouraging people of all ages to stay strong,
+                        energized, and well.
+                      </p>
+                    </div>
+                  </article>
+
+                  <!-- Small cards (right column) -->
+                  <div class="meta-grid__right">
+                    <article class="meta-card meta-card--small">
+                      <figure class="meta-card__figure">
+                        <img
+                          src="assets/meta-vr-headset.png"
+                          alt="Person wearing AR headset"
+                          class="meta-card__img"
+                        />
+                      </figure>
+                      <div class="meta-card__caption">
+                        <h4 class="meta-card__title">Digital Innovation</h4>
+                      </div>
+                    </article>
+
+                    <article class="meta-card meta-card--small">
+                      <figure class="meta-card__figure">
+                        <img
+                          src="assets/girl.png"
+                          alt="Person in traditional cultural costume"
+                          class="meta-card__img"
+                        />
+                      </figure>
+                      <div class="meta-card__caption">
+                        <h4 class="meta-card__title">Cultural Unity</h4>
+                      </div>
+                    </article>
+
+                    <article class="meta-card meta-card--small">
+                      <figure class="meta-card__figure">
+                        <img
+                          src="assets/play-fair.png"
+                          alt="Children playing together"
+                          class="meta-card__img"
+                        />
+                      </figure>
+                      <div class="meta-card__caption">
+                        <h4 class="meta-card__title">
+                          Fair Play &amp; Inclusivity
+                        </h4>
+                      </div>
+                    </article>
+
+                    <!-- View More Card -->
+                    <div class="meta-card meta-card--view-more">
+                      <a href="#" class="meta-card__view-more-link"
+                        >View more</a
+                      >
+                    </div>
+                  </div>
+                  <!-- /.meta-grid__right -->
+                </div>
+                <!-- /.meta-grid -->
+              </div>
+              <!-- /.meta-slide -->
+
+              <!-- Slide 2 (add more slides here) -->
+              <div class="meta-slide">
+                <div class="meta-grid">
+                  <!-- Additional slides content goes here -->
+                </div>
+              </div>
+            </div>
+            <!-- /.meta-carousel__track -->
+
+            <!-- Next Button -->
+            <button
+              class="meta-carousel__btn meta-carousel__btn--next"
+              aria-label="Next slide"
+            >
+              &#8250;
+            </button>
+          </div>
+          <!-- /.meta-carousel -->
+        </div>
+        <!-- /.meta-movement__container -->
+
+        <!-- It's for: Audience Bar -->
+        <footer class="meta-movement__audience" aria-label="MetaGames is for">
+          <span class="audience-label">It's for:</span>
+          <nav class="audience-nav" aria-label="Audience categories">
+            <a href="#" class="audience-btn">Athletes</a>
+            <a href="#" class="audience-btn">Gamers</a>
+            <a href="#" class="audience-btn">Students</a>
+            <a href="#" class="audience-btn">Professionals</a>
+            <a href="#" class="audience-btn">Nations</a>
+          </nav>
+        </footer>
       </section>
 
-      <!-- METAGAMES EMBLEM & SYMBOLISM -->
-      <section
-        id="emblem-meaning"
-        class="bg-primary text-sky pt-4 pb-8 relative lg:pt-10 lg:pb-22 xl:pb-26 2xl:pb-28"
-      >
-        <h3
-          class="px-4 text-3xl font-bold 2xl:text-5xl xl:px-8 2xl:px-12 lg:absolute lg:top-12 lg:left-95 xl:text-4xl xl:top-14 xl:left-100 2xl:left-105"
-        >
-          MetaGames Emblem &amp; Symbolism
-        </h3>
+      <!--MetaGames Emblems-->
+      <section class="emblems" id="metagames-emblems">
+        <div class="emblems__container">
+          <h2 class="emblems__title">MetaGames Emblem & Symbolism</h2>
 
-        <!-- Mobile layout (< 768px): stacked, pointer at bottom -->
-        <div
-          class="mt-24 lg:hidden flex flex-col items-center text-center gap-2 px-6 mx-4 bg-linear-to-b from-blue-900 to-blue pt-18 py-8 relative overflow-visible rounded-2xl sm:mt-28"
-        >
-          <div
-            class="absolute left-1/2 top-0 -translate-x-1/2 -translate-y-1/2"
-          >
-            <div class="roulette relative w-48 h-48">
-              <div
-                id="wheel"
-                class="absolute inset-0 rounded-full shadow-2xl bg-[conic-gradient(#31aa68_0deg_51.4286deg,#217ec7_51.4286deg_102.8572deg,#f6d52d_102.8572deg_154.2858deg,#f33847_154.2858deg_205.7144deg,#ffffff_205.7144deg_257.143deg,#000000_257.143deg_308.5716deg,#9ca3af_308.5716deg_360deg)]"
-              ></div>
-              <div class="absolute inset-0 flex items-center justify-center">
-                <div
-                  class="size-35 relative overflow-hidden bg-white rounded-full shadow-lg z-10"
-                >
+          <div class="emblems__wrapper">
+            <div class="wheel-container">
+              <div class="wheel">
+                <div class="wheel__inner">
                   <img
-                    src="src/assets/images/eswf-metagames-logo.webp"
-                    alt="ESWF MetaGames Logo"
-                    class="absolute inset-0 size-25 object-cover left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"
+                    src="assets/eswf-metagames-logo.png"
+                    alt="MetaGames Logo"
+                    class="wheel__logo"
                   />
                 </div>
               </div>
-              <!-- Bottom pointer: house shape pointing down -->
-              <div
-                class="house-pointer absolute -bottom-5 left-1/2 -translate-x-1/2 z-20 bg-white h-8 w-10"
-              ></div>
+              <div class="wheel-pointer"></div>
             </div>
-          </div>
 
-          <h4 id="title-mobile" class="mt-16 text-3xl/7 font-bold md:text/4xl">
-            Green
-          </h4>
-          <p id="subtitle-mobile" class="sm:text-xl">Multi-Cultural Sports</p>
-          <p class="mt-4 font-bold italic text-xl md:text-2xl">
-            One symbol. Many sports. One global community
-          </p>
+            <article class="emblems__card">
+              <div class="emblems__text-content">
+                <h3 class="emblems__color-name">Green</h3>
+                <p class="emblems__description">Multi Cultural Sports</p>
+                <p class="emblems__motto">
+                  One symbol. Many sports. One global community.
+                </p>
+              </div>
 
-          <div class="mt-4 flex justify-center items-center gap-4">
-            <button
-              id="prevBtn-mobile"
-              class="cursor-pointer bg-sky hover:bg-blue-500 text-blue hover:text-sky size-10 p-3 flex items-center justify-center rounded-full xl:size-15 2xl:size-18"
-            >
-              <i class="ph ph-caret-left text-2xl 2xl:text-4xl"></i>
-            </button>
-            <button
-              id="nextBtn-mobile"
-              class="cursor-pointer bg-sky hover:bg-blue-500 text-blue hover:text-sky size-10 p-3 flex items-center justify-center rounded-full xl:size-15 2xl:size-18"
-            >
-              <i class="ph ph-caret-right text-2xl 2xl:text-4xl"></i>
-            </button>
+              <nav class="emblems__nav">
+                <button
+                  class="emblems__btn emblems__btn--prev"
+                  aria-label="Previous"
+                >
+                  &#8249;
+                </button>
+                <button
+                  class="emblems__btn emblems__btn--next"
+                  aria-label="Next"
+                >
+                  &#8250;
+                </button>
+              </nav>
+            </article>
           </div>
         </div>
+      </section>
 
-        <!-- Desktop layout (> 768px): flex, pointer at right -->
-        <div
-          class="mt-8 hidden relative items-center gap-8 px-6 mx-8 bg-linear-to-b from-blue-900 to-blue py-10 rounded-2xl sm:bg-linear-to-r lg:flex lg:py-0 lg:mt-18 xl:mt-24 2xl:pr-12 3xl:pr-14"
-        >
-          <!-- Wheel + right pointer (absolute, left-anchored) -->
-          <div class="absolute left-10 top-1/2 -translate-y-1/2">
-            <div class="relative shrink-0 flex items-center">
-              <div
-                class="roulette relative w-56 h-56 lg:size-75 xl:size-80 2xl:size-90"
-              >
-                <div
-                  id="wheel-desktop"
-                  class="absolute inset-0 rounded-full shadow-2xl bg-[conic-gradient(#31aa68_0deg_51.4286deg,#217ec7_51.4286deg_102.8572deg,#f6d52d_102.8572deg_154.2858deg,#f33847_154.2858deg_205.7144deg,#ffffff_205.7144deg_257.143deg,#000000_257.143deg_308.5716deg,#9ca3af_308.5716deg_360deg)]"
-                ></div>
-                <div class="absolute inset-0 flex items-center justify-center">
-                  <div
-                    class="w-24 h-24 relative overflow-hidden bg-white rounded-full shadow-lg z-10 lg:size-50 xl:size-55 2xl:size-60"
+      <section
+        class="theme-song"
+        id="theme-song"
+        aria-labelledby="theme-song-heading"
+      >
+        <div class="theme-song__container">
+          <h2 id="theme-song-heading" class="theme-song__title">
+            Official Theme Song
+          </h2>
+
+          <div class="theme-song__content">
+            <div class="theme-song__visual">
+              <figure class="theme-song__video-wrapper">
+                <div class="theme-song__placeholder">
+                  <img
+                    src="assets/theme-song.PNG"
+                    alt="Legends Rise in the Meta Games OST Poster"
+                  />
+                  <button
+                    class="theme-song__play-btn"
+                    aria-label="Play Theme Song"
                   >
-                    <img
-                      src="src/assets/images/eswf-metagames-logo.webp"
-                      alt="ESWF MetaGames Logo"
-                      class="absolute inset-0 size-30 object-cover left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 xl:size-35 2xl:size-40"
-                    />
-                  </div>
+                    <span class="play-icon"></span>
+                  </button>
+                </div>
+                <figcaption class="sr-only">
+                  Launching of the Official OST of Meta Games entitled: Legends
+                  Rise in the Meta Games
+                </figcaption>
+              </figure>
+            </div>
+
+            <article class="theme-song__details">
+              <header class="theme-song__header-info">
+                <h3 class="theme-song__ost-title">
+                  “Legends Rise in the Meta Games”
+                </h3>
+                <p class="theme-song__subtitle">Meta Games OST</p>
+              </header>
+
+              <div class="theme-song__lyrics-scroll">
+                <div class="lyrics__verse">
+                  <h4>Verse 1</h4>
+                  <p>
+                    Here is where we carve our name<br />
+                    this is more than just a game<br />
+                    We level up with each new quest<br />
+                    and prove ourselves as the very best.
+                  </p>
+                </div>
+
+                <div class="lyrics__verse">
+                  <h4>Verse 2</h4>
+                  <p>
+                    Our minds are sharp, our skills refined<br />
+                    our passion for victory enshrined<br />
+                    in this world where anything can be<br />
+                    We rise to challenge, wild and free
+                  </p>
+                </div>
+
+                <div class="lyrics__verse">
+                  <h4>Chorus</h4>
+                  <p>
+                    Legends rise, the battle's on,<br />
+                    Until the final victory is won.<br />
+                    Meta Games, where heroes play,<br />
+                    To lead the world in every way.
+                  </p>
                 </div>
               </div>
-              <!-- Right pointer -->
-              <div
-                class="house-pointer absolute -right-5 top-1/2 -translate-y-1/2 z-20 bg-sky w-8 h-10 rotate-270 lg:w-16 lg:h-14 lg:-right-8"
-              ></div>
-            </div>
-          </div>
-
-          <!-- Text + buttons: pl pushes content past the wheel -->
-          <div
-            class="flex flex-col gap-3 py-8 w-full relative pl-64 lg:pl-90 xl:pl-95 2xl:pl-108"
-          >
-            <div class="leading-2">
-              <h4
-                id="title-desktop"
-                class="text-3xl font-bold ml-4 lg:text-4xl xl:text-5xl"
-              >
-                Green
-              </h4>
-              <p
-                id="subtitle-desktop"
-                class="text-lg ml-4 xl:text-xl 2xl:text-3xl"
-              >
-                Multi-Cultural Sports
-              </p>
-            </div>
-            <p
-              class="font-bold italic text-xl lg:mt-2 xl:mt-4 xl:text-2xl 2xl:text-3xl 2xl:mt-8"
-            >
-              One symbol. Many sports. One global community
-            </p>
-            <div
-              class="mt-2 flex items-center gap-4 absolute top-7 right-6 lg:gap-6 xl:gap-8 2xl:gap-10"
-            >
-              <button
-                id="prevBtn-desktop"
-                class="cursor-pointer bg-sky hover:bg-blue-500 text-blue hover:text-sky size-10 p-3 flex items-center justify-center rounded-full xl:size-15 2xl:size-18"
-              >
-                <i class="ph ph-caret-left text-2xl 2xl:text-4xl"></i>
-              </button>
-              <button
-                id="nextBtn-desktop"
-                class="cursor-pointer bg-sky hover:bg-blue-500 text-blue hover:text-sky size-10 p-3 flex items-center justify-center rounded-full xl:size-15 2xl:size-18"
-              >
-                <i class="ph ph-caret-right text-2xl 2xl:text-4xl"></i>
-              </button>
-            </div>
+            </article>
           </div>
         </div>
       </section>
 
-      <!-- OFFICIAL THEME SONG -->
-      <section
-        id="official-theme-song"
-        class="px-4 pt-2 pb-6 bg-primary text-sky xl:px-8 xl:py-10 2xl:px-12 2xl:py-16 3xl:py-18"
-      >
-        <h3 class="text-3xl font-bold lg:text-4xl 2xl:text-5xl">
-          Official Theme Song
-        </h3>
-        <div
-          class="mt-4 grid grid-cols-1 gap-2 sm:gap-4 lg:grid-cols-[60%_40%] xl:gap-x-8 2xl:mt-8 3xl:gap-x-12"
-        >
-          <img
-            src="src/assets/images/official-mv.webp"
-            alt="ESWF MetaGames Music Video Thumbnal"
-            class="object-cover w-full h-50 aspect-4/3 rounded-2xl sm:aspect-video sm:h-80 lg:h-full"
-          />
+      <section class="host-section" id="host-section">
+        <header class="host-section__header">
+          <h2 class="host-section__title">Host Nations & Partners</h2>
+        </header>
 
-          <div
-            class="pt-2 flex flex-col justify-between gap-4 md:gap-6 xl:gap-6 xl:justify-start 3xl:gap-12 3xl:pt-8"
-          >
-            <div class="leading-4 sm:leading-5">
-              <h4
-                class="text-lg font-bold sm:text-3xl md:text-4xl lg:text-2xl xl:text-3xl 2xl:text-4xl"
-              >
-                <q>Legends Rise in the Meta Games</q>
-              </h4>
-              <p
-                class="font-bold sm:text-2xl md:text-3xl lg:text-xl xl:text-2xl 2xl:text-3xl"
-              >
-                Meta Games OST
-              </p>
+        <div class="host-section__container">
+          <p class="host-cities__label">Host Cities:</p>
+
+          <div class="host-cities__grid">
+            <div class="host-card">
+              <img src="assets/ph-flag.PNG" alt="Manila, Philippines" />
             </div>
+            <div class="host-card">
+              <img src="assets/china-flag.PNG" alt="Xinjiang, China" />
+            </div>
+          </div>
 
-            <div
-              class="lyrics custom-scroll overflow-y-auto h-80 flex flex-col gap-4 md:gap-6 md:w-[95%] lg:h-70 lg:w-[80%] 2xl:w-[90%] 2xl:h-90 3xl:h-120 3xl:gap-8 3xl:w-[90%]"
-            >
-              <div class="stanza">
-                <h5>Verse 1</h5>
-                <p>
-                  Here is where we carve our name<br />
-                  this is more than just a game<br />
-                  We level up with each new quest<br />
-                  and prove ourselves as the very best.
-                </p>
-              </div>
-
-              <div class="stanza">
-                <h5>Verse 2</h5>
-                <p>
-                  Our minds are sharp, our skills refined<br />
-                  our passion for victory enshrined<br />
-                  in this world where anything can be<br />
-                  We rise to the challenge, wild and free
-                </p>
-              </div>
-
-              <div class="stanza">
-                <h5>Chorus</h5>
-                <p>
-                  Welcome to the Meta Games<br />
-                  Where the brave ignite the flames<br />
-                  Every battle, every fight<br />
-                  We turn the darkness into light<br />
-                  Meta Games – we stand as one<br />
-                  Meta Games – the fight begun<br />
-                  Stronger, faster we proclaim:<br />
-                  Legends rise in the Meta Games!<br />
-                  (instrumental)
-                </p>
-              </div>
-
-              <div class="stanza">
-                <h5>Verse 3</h5>
-                <p>
-                  Step up to the line, the world is watching<br />
-                  hearts on fire, no thought of stopping<br />
-                  Legends are born in the battles we face<br />
-                  Victory lies in the valley of ones...<br />
-                  who live for the challenge!<br />
-                  (instrumental)
-                </p>
-              </div>
-
-              <div class="stanza">
-                <h5>Bridge</h5>
-                <p>
-                  Never retreat, no fear inside<br />
-                  with every step, we fight with pride<br />
-                  to reach for glory, to capture fame<br />
-                  will do our best in every game<br />
-                </p>
-              </div>
-
-              <div class="stanza">
-                <h5>Chorus</h5>
-                <p>
-                  Welcome to the Meta Games<br />
-                  Where the brave ignite the flames<br />
-                  Every battle, every fight<br />
-                  We turn the darkness into light<br />
-                  Meta Games – we stand as one<br />
-                  Meta Games – the fight begun<br />
-                  Stronger, faster we proclaim:<br />
-                  Legends rise in the Meta Games!<br />
-                </p>
-              </div>
-
-              <div class="stanza">
-                <h5>Coda</h5>
-                <p>
-                  Stronger, faster, we proclaim:<br />
-                  Legends rise in the Meta Games! (2x)<br />
-                  Legends rise in the Meta Games!
-                </p>
-              </div>
+          <div class="partners-block">
+            <h3 class="partners__title">Partners:</h3>
+            <div class="partners__logos">
+              <img src="assets/eswf.PNG" alt="ESWF" />
+              <img src="assets/gawse.png" alt="GAWSF" />
+              <img
+                src="assets/PSC-logo.PNG"
+                alt="Philippine Sports Commission"
+              />
             </div>
           </div>
         </div>
       </section>
-
-      <section class="bg-blue text-white px-4 py-2 sm:py-6">
-        <h3
-          class="text-2xl font-bold text-center sm:text-4xl lg:text-5xl 3xl:text-6xl"
-        >
-          Host Nations &amp; Partners
-        </h3>
-      </section>
-
-      <section
-        id="host-nations"
-        class="px-4 py-2 bg-primary text-sky xl:px-8 xl:py-10 2xl:px-12 2xl:py-16 3xl:py-18"
-      >
-        <h3 class="mt-4 text-3xl font-bold lg:text-4xl 2xl:text-5xl">
-          Host Cities:
-        </h3>
-
-        <div
-          class="grid grid-cols-1 gap-4 py-4 lg:grid-cols-2 2xl:gap-12 2xl:pt-10"
-        >
-          <div class="city">
-            <div
-              class="city-gradient-overlay from-blue absolute inset-0 z-20"
-            ></div>
-
-            <img
-              src="src/assets/images/philippine-flag.webp"
-              alt="Philippine Flag"
-            />
-
-            <div class="text">Manila, Philippines</div>
-          </div>
-
-          <div class="city">
-            <div
-              class="city-gradient-overlay from-rose absolute inset-0 z-20"
-            ></div>
-
-            <img
-              src="src/assets/images/chinese-flag.webp"
-              alt="Philippine Flag"
-            />
-
-            <div class="text">Xinjiang, China</div>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <!-- PARTNERS SECTION -->
-    <section
-      class="bg-white px-4 py-8 sm:py-10 xl:px-12 xl:py-14 2xl:px-20 2xl:py-18 3xl:px-28 3xl:py-24"
-    >
-      <h3
-        class="text-center text-2xl font-bold text-primary mb-8 sm:text-3xl lg:text-4xl 2xl:text-5xl 2xl:mb-12 3xl:text-6xl 3xl:mb-16"
-      >
-        Partners:
-      </h3>
-
-      <div
-        class="flex flex-wrap justify-center items-center gap-8 sm:gap-12 lg:gap-16 xl:gap-20 2xl:gap-28 3xl:gap-36"
-      >
-        <!-- ESWF -->
-        <div class="flex flex-col items-center gap-2 2xl:gap-4">
-          <div class="flex items-center gap-2 sm:gap-3 2xl:gap-4">
-            <div
-              class="size-14 sm:size-16 lg:size-18 xl:size-20 2xl:size-28 3xl:size-32 rounded-full bg-green flex items-center justify-center"
-            >
-              <i
-                class="ph ph-list text-white text-2xl sm:text-3xl xl:text-4xl 2xl:text-5xl"
-              ></i>
-            </div>
-            <div
-              class="size-14 sm:size-16 lg:size-18 xl:size-20 2xl:size-28 3xl:size-32 rounded-full bg-blue flex items-center justify-center"
-            >
-              <span
-                class="text-white font-bold text-2xl sm:text-3xl xl:text-4xl 2xl:text-5xl"
-                >S</span
-              >
-            </div>
-            <div
-              class="size-14 sm:size-16 lg:size-18 xl:size-20 2xl:size-28 3xl:size-32 rounded-full bg-yellow flex items-center justify-center"
-            >
-              <span
-                class="text-white font-bold text-2xl sm:text-3xl xl:text-4xl 2xl:text-5xl"
-                >W</span
-              >
-            </div>
-            <div
-              class="size-14 sm:size-16 lg:size-18 xl:size-20 2xl:size-28 3xl:size-32 rounded-full bg-rose flex items-center justify-center"
-            >
-              <span
-                class="text-white font-bold text-2xl sm:text-3xl xl:text-4xl 2xl:text-5xl"
-                >F</span
-              >
-            </div>
-          </div>
-          <p
-            class="font-narrow font-semibold tracking-widest text-xs sm:text-sm lg:text-base 2xl:text-lg 3xl:text-xl text-primary text-center"
-          >
-            ESPORTS WORLD FEDERATION
-          </p>
-        </div>
-
-        <!-- GAWSF -->
-        <div class="flex flex-col items-center gap-2 2xl:gap-4">
-          <img
-            src="src/assets/images/gawsf.png"
-            alt="GAWSF Logo"
-            class="h-20 sm:h-24 lg:h-28 xl:h-32 2xl:h-44 3xl:h-52 object-contain"
-          />
-        </div>
-
-        <!-- Philippine Sports Commission -->
-        <div class="flex flex-col items-center gap-2 2xl:gap-4">
-          <img
-            src="src/assets/images/psc.webp"
-            alt="Philippine Sports Commission Logo"
-            class="h-20 sm:h-24 lg:h-28 xl:h-32 2xl:h-44 3xl:h-52 object-contain"
-          />
-        </div>
-      </div>
-    </section>
-
-    <!-- FOOTER -->
-    <footer>
-      <!-- Quick Links Section -->
-      <div
-        class="bg-blue text-white px-6 py-8 sm:px-10 sm:py-10 xl:px-16 xl:py-12 2xl:px-24 2xl:py-16 3xl:px-32 3xl:py-20"
-      >
-        <div
-          class="flex flex-col gap-8 sm:flex-row sm:items-center sm:gap-12 lg:gap-16 xl:gap-20 2xl:gap-28 3xl:gap-36"
-        >
-          <!-- Logo -->
-          <div class="flex justify-center sm:justify-start shrink-0">
-            <img
-              src="src/assets/images/eswf-metagames-logo.webp"
-              alt="MetaGames Logo"
-              class="size-28 sm:size-32 xl:size-36 2xl:size-48 3xl:size-60 object-contain"
-            />
-          </div>
-
-          <!-- Quick Links -->
-          <div class="flex-1">
-            <h4
-              class="font-bold text-lg mb-4 sm:text-xl xl:text-2xl 2xl:text-3xl 3xl:text-4xl 2xl:mb-6"
-            >
-              Quick Links:
-            </h4>
-            <div
-              class="grid grid-cols-2 gap-y-2 gap-x-8 sm:gap-x-12 lg:grid-cols-3 xl:gap-x-16 2xl:gap-y-4 2xl:gap-x-20 3xl:gap-x-28"
-            >
-              <a
-                href="#home"
-                class="text-white/90 hover:text-white transition-colors text-sm sm:text-base xl:text-lg 2xl:text-xl 3xl:text-2xl"
-                >Home</a
-              >
-              <a
-                href="#sports-games"
-                class="text-white/90 hover:text-white transition-colors text-sm sm:text-base xl:text-lg 2xl:text-xl 3xl:text-2xl"
-                >Sports &amp; Games</a
-              >
-              <a
-                href="#official-theme-song"
-                class="text-white/90 hover:text-white transition-colors text-sm sm:text-base xl:text-lg 2xl:text-xl 3xl:text-2xl"
-                >Official Theme Song</a
-              >
-              <a
-                href="#what-are-metagames"
-                class="text-white/90 hover:text-white transition-colors text-sm sm:text-base xl:text-lg 2xl:text-xl 3xl:text-2xl"
-                >What Are MetaGames</a
-              >
-              <a
-                href="#meta-movement"
-                class="text-white/90 hover:text-white transition-colors text-sm sm:text-base xl:text-lg 2xl:text-xl 3xl:text-2xl"
-                >Meta Movement</a
-              >
-              <a
-                href="#host-nations"
-                class="text-white/90 hover:text-white transition-colors text-sm sm:text-base xl:text-lg 2xl:text-xl 3xl:text-2xl"
-                >Host Nations</a
-              >
-              <a
-                href="#news-updates"
-                class="text-white/90 hover:text-white transition-colors text-sm sm:text-base xl:text-lg 2xl:text-xl 3xl:text-2xl"
-                >News &amp; Updates</a
-              >
-              <a
-                href="#emblem-meaning"
-                class="text-white/90 hover:text-white transition-colors text-sm sm:text-base xl:text-lg 2xl:text-xl 3xl:text-2xl"
-                >Emblem &amp; Meaning</a
-              >
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Copyright Bar -->
-      <div
-        class="bg-primary text-sky/80 px-6 py-4 flex flex-col gap-2 items-center text-center sm:flex-row sm:justify-between sm:text-left sm:gap-0 xl:px-16 xl:py-5 2xl:px-24 2xl:py-6 3xl:px-32 3xl:py-7"
-      >
-        <p class="text-xs sm:text-sm xl:text-base 2xl:text-lg 3xl:text-xl">
-          &copy; 2025 MetaGames All Rights Reserved.
-        </p>
-        <p class="text-xs sm:text-sm xl:text-base 2xl:text-lg 3xl:text-xl">
-          Designed &amp; Developed by: BB 88 Advertising and Digital Solutions
-          Inc.
-        </p>
-      </div>
-    </footer>
-
-    <script type="module" src="src/main.js"></script>
-  </body>
-</html>
-=======
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MetaGames</title>
-    <link rel="stylesheet" href="style.css">
-
-    <!--Home Content Style-->
-    <link rel="stylesheet" href="home-content.css">
-
-
-    <!--Font Awesom-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-</head>
-<body>
-    <!-- Top Banner-->
-    <header class="top-banner">
-        <div class="banner-stripes-wrap">
-            <div class="stripe-group left">
-                <span></span><span></span><span></span><span></span><span></span><span></span>
-            </div>
-            <div class="stripe-group right">
-                <span></span><span></span><span></span><span></span><span></span><span></span>
-            </div>
-        </div>
-        <h1 class="banner-title">MetaGames</h1>
-    </header>
-
-    <!--Navbar-->
-    <nav class="navbar" id="navbar">
-        <div class="nav-inner">
-            <a href="#" class="nav-logo">
-                <img src="assets/eswf-metagames-logo.png" alt="logo" class="logo-img">
-            </a>
-
-            <ul class="nav-links" id="navLinks">
-                <li class="close-item">
-                    <button class="hamburger" id="hamburger" aria-label="Close menu">
-                        <i class="fa-solid fa-xmark"></i>
-                    </button>
-                </li>
-                <li><a href="#main-content" class="active">Home</a></li>
-                <li><a href="#what-are-metagames">What Are MetaGames</a></li>
-                <li><a href="#news-and-update">News &amp; Updates</a></li>
-                <li><a href="#sports-and-games">Sports &amp; Games</a></li>
-                <li><a href="#meta-movement">Meta Movement</a></li>
-                <li><a href="#metagames-emblems">Emblem &amp; Meaning</a></li> 
-                <li><a href="#theme-song">Official Theme Song</a></li>
-                <li><a href="#host-section">Host Nations</a></li>
-                <li class="join-item"><a href="#" class="btn-join-mobile">Join MetaGames</a></li>
-            </ul>
-
-            <a href="#" class="btn-join">Join MetaGames</a>
-
-            <button class="menu-open-btn" id="menuOpenBtn" aria-label="Open menu">
-                <i class="fa-solid fa-bars"></i>
-            </button>
-        </div>
-    </nav>
-
-    <!--Main Content-->
-    <main id="main-content">
-
-        <!--Hero Section-->
-        <section class="hero" aria-labelledby="hero-heading">
-            <div class="hero-bg-overlay" aria-hidden="true">
-                <img src="assets/Esports-arena-screens.webp" alt="">
-            </div>
-
-            <div class="hero-content">
-                <h2 class="hero-heading" id="hero-title">
-                    Welcome to the MetaGames
-                </h2>
-                <p class="hero-tagline"><em>Where Sports, Games, and Digital Worlds Unite</em></p>
-                <p class="hero-description">
-                    MetaGames is a global movement that brings together traditional sports, esports,
-                    digital sports, and virtual experiences into one unified international event.
-                </p>
-
-                <!--Quick Access Cards-->
-                <div class="hero-cards" role="list">
-                    <article class="hero-card" role="listitem">
-                        <figure class="hero-card__figure">
-                            <img src="assets/eswf-metagames-logo.png" alt="" class="hero-card__img">
-                        </figure>
-                        <a href="#What-are-metagames" class="btn-card">Learn What MetaGames</a>
-                    </article>
-
-                    <article class="hero-card" role="listitem">
-                        <figure class="hero-card__figure">
-                            <img src="assets/Untitled design - 2025-12-20T143313.530.png" alt="" class="hero-card__img">
-                        </figure>
-                        <a href="" class="btn-card">Explore Sports &amp; Games</a>
-                    </article>
-
-                    <article class="hero-card" role="listitem">
-                        <figure class="hero-card__figure">
-                            <img src="assets/puzzle.png" alt="" class="hero-card__img">
-                        </figure>
-                        <a href="" class="btn-card">Join the Movement</a>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <!--What Are MetaGames Section-->
-
-        <section class="what-are-metagames" id="what-are-metagames" aria-labelledby="wam-heading">
-            <div class="wam-container">
-                <div class="wam-inner">
-
-                    <div class="wam-text">
-                        <h2 id="wam-heading" class="wam-title">What are MetaGames?</h2>
-                        <p class="wam-description">
-                            MetaGames is not just one sport or one game. It is a combination of
-                            physical sports, esports, mind games, and digital competitions happening
-                            together under one global platform.
-                        </p>
-                    </div>
-
-                    <figure class="wam-background">
-                        <img src="assets/WAM-background.webp" alt="Athlete wearing an illuminated VR headset" class="wam-bg">
-                    </figure>
-
-                    <figure class="wam-visual" aria-label="Person wearing a VR headset">
-                        <img src="assets/vr-headset2.png" alt="Athlete wearing an illuminated VR headset" class="wam-img">
-                    </figure>
-
-                </div>
-
-            <!-- LIFE · TIME · GAME · META Pillars -->
-                <div class="pillars" role="list" aria-label="MetaGames pillars">
-                    <div class="pillar pillar--life" role="listitem">
-                        <span class="pillar__label">LIFE</span>
-                    </div>
-                    <div class="pillar pillar--time" role="listitem">
-                        <span class="pillar__label">TIME</span>
-                    </div>
-                    <div class="pillar pillar--game" role="listitem">
-                        <span class="pillar__label">GAME</span>
-                    </div>
-                    <div class="pillar pillar--meta" role="listitem">
-                        <span class="pillar__label">META</span>
-                    </div>
-                </div><!-- /.pillars -->
-            </div><!-- /.wam-container -->
-        </section>
-
-        <!--Infinite Slide Loop-->
-        <section class="infinite-slide-loop" id="infinite-slide-loop">
-            <p>Mastering the MetaGames of Life, One Move at a Time.</p>
-        </section>
-
-        <!--News and Update-->
-        <section class="news-and-update" id="news-and-update">
-            <h1 class="news-header">
-                    News &amp; Updates
-            </h1>
-            <div class="news-containter">
-                <img src="assets/News-and-Update.PNG" alt="">
-            </div>
-        </section>
-
-        <!--Sports and Games-->
-        <section class="sports-and-games" id="sports-and-games" aria-labelledby="sports-heading">
-            <div class="sports-games-container">
-                <h2 class="sports-header" id="sports-heading">
-                    Sports &amp; Games
-                </h2>
-
-                <!--Carousel Wrapper-->
-                <div class="sports-carousel" aria-labelledby="Sports and Games Carousel">
-
-                    <!--Track (slide move inside here)-->
-                    <div class="sports-carousel__track">
-
-                        <!--Slide 1-->
-                        <article class="sports-slide active" aria-label="Physical & Olympic-style sports">
-                            <div class="sports-slide__content">
-                                <h3 class="sports-slide__title">Sports &amp; Games</h3>
-                                <p class="sports-slide__subtitle">Physical &amp; Olympic-style sports</p>
-                                <a href="#" class="btn-sports-details">View Details</a>
-                            </div>
-                            <figure class="sports-slide__figure">
-                                <img src="assets/basketbal-hoops.png" alt="Basketball hoop" class="sports-slide__img">
-                            </figure>
-                        </article>
-
-                        <!--Slide 2-->
-                        <article class="sports-slide" aria-label="Mind Sports">
-                            <div class="sports-slide__content">
-                                <h3 class="sports-slide__title">Mind Sports</h3>
-                                <p class="sports-slide__subtitle">Chess, Scrabble, Sudoku, etc.</p>
-                                <a href="#" class="btn-sports-details">View Details</a>
-                            </div>
-                            <figure class="sports-slide__figure">
-                                <img src="assets/chess.png" alt="Mind Games" class="sports-slide__img">
-                            </figure>
-                        </article>
-
-                        <!--Slide 3-->
-                        <article class="sports-slide" aria-label="ESports">
-                            <div class="sports-slide__content">
-                                <h3 class="sports-slide__title">Electronic Sports (Esports) </h3>
-                                <p class="sports-slide__subtitle">MOBA, FPS, RTS, Fighting Games, BR, MMORPG</p>
-                                <a href="#" class="btn-sports-details">View Details</a>
-                            </div>
-                            <figure class="sports-slide__figure">
-                                <img src="assets/esports.jpg" alt="Chess board" class="sports-slide__img">
-                            </figure>
-                        </article>
-
-                        <!--Slide 4-->
-                        <article class="sports-slide" aria-label="VR Sports">
-                            <div class="sports-slide__content">
-                                <h3 class="sports-slide__title">Digital &amp; Virtual Sports </h3>
-                                <p class="sports-slide__subtitle">
-                                    Digital Motorsports <br>
-                                    Digital Combat <br>
-                                    VR &amp; AR sports
-                                </p>
-                                <a href="#" class="btn-sports-details">View Details</a>
-                            </div>
-                            <figure class="sports-slide__figure">
-                                <img src="assets/vr-headset.png" alt="Chess board" class="sports-slide__img">
-                            </figure>
-                        </article>
-
-                        <!--Slide 5-->
-                        <article class="sports-slide" aria-label="Multi-Cultural and Indigenous sports">
-                            <div class="sports-slide__content">
-                                <h3 class="sports-slide__title">Multi-Cultural &amp; Indigenous Sports</h3>
-                                <p class="sports-slide__subtitle">Traditional games from different cultures</p>
-                                <a href="#" class="btn-sports-details">View Details</a>
-                            </div>
-                            <figure class="sports-slide__figure">
-                                <img src="assets/slide5.png" alt="Chess board" class="sports-slide__img">
-                            </figure>
-                        </article>
-                    </div>
-
-                    <!-- Prev / Next Controls -->
-                    <button class="sports-carousel__btn sports-carousel__btn--prev" aria-label="Previous slide">
-                        &#8249;
-                    </button>
-                    <button class="sports-carousel__btn sports-carousel__btn--next" aria-label="Next slide">
-                        &#8250;
-                    </button>
-
-                    <!-- Dot Indicators -->
-                    <div class="sports-carousel__dots" role="tablist" aria-label="Slide indicators">
-                        <button class="sports-dot active" role="tab" aria-selected="true"  aria-label="Slide 1"></button>
-                        <button class="sports-dot"        role="tab" aria-selected="false" aria-label="Slide 2"></button>
-                        <button class="sports-dot"        role="tab" aria-selected="false" aria-label="Slide 3"></button>
-                        <button class="sports-dot"        role="tab" aria-selected="false" aria-label="Slide 4"></button>
-                        <button class="sports-dot"        role="tab" aria-selected="false" aria-label="Slide 5"></button>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- The Meta Movement -->
-        <section class="meta-movement" id="meta-movement" aria-labelledby="meta-movement-heading">
-
-            <!-- Section Header with colored progress bar -->
-            <div class="meta-movement__header">
-                <h2 class="meta-movement__title" id="meta-movement-heading">The Meta Movement</h2>
-                <div class="meta-movement__bar" aria-hidden="true">
-                    <span class="bar-segment bar-segment--green"></span>
-                    <span class="bar-segment bar-segment--blue"></span>
-                    <span class="bar-segment bar-segment--yellow"></span>
-                    <span class="bar-segment bar-segment--red"></span>
-                    <span class="bar-segment bar-segment--white"></span>
-                    <span class="bar-segment bar-segment--black"></span>
-                </div>
-            </div>
-
-            <div class="meta-movement__container">
-
-                <!-- Subtitle -->
-                <h3 class="meta-movement__subtitle">The Rise of the Meta Movement (2025–2027)</h3>
-
-                <!-- Carousel Wrapper -->
-                <div class="meta-carousel" aria-label="Meta Movement carousel">
-
-                    <!-- Prev Button -->
-                    <button class="meta-carousel__btn meta-carousel__btn--prev" aria-label="Previous slide">
-                        &#8249;
-                    </button>
-
-                    <!-- Cards Grid (slides) -->
-                    <div class="meta-carousel__track">
-
-                        <!-- Slide 1 (active) -->
-                        <div class="meta-slide active">
-                            <div class="meta-grid">
-
-                                <!-- Large card (left) -->
-                                <article class="meta-card meta-card--large">
-                                    <figure class="meta-card__figure">
-                                        <img src="assets/watch.png" alt="Person wearing smartwatch with dumbbells" class="meta-card__img">
-                                    </figure>
-                                    <div class="meta-card__caption">
-                                        <h4 class="meta-card__title meta-card__title--highlight">Physical Fitness</h4>
-                                        <p class="meta-card__desc">Promoting healthy, active lifestyles through sports and movement, encouraging people of all ages to stay strong, energized, and well.</p>
-                                    </div>
-                                </article>
-
-                                <!-- Small cards (right column) -->
-                                <div class="meta-grid__right">
-
-                                    <article class="meta-card meta-card--small">
-                                        <figure class="meta-card__figure">
-                                            <img src="assets/meta-vr-headset.png" alt="Person wearing AR headset" class="meta-card__img">
-                                        </figure>
-                                        <div class="meta-card__caption">
-                                            <h4 class="meta-card__title">Digital Innovation</h4>
-                                        </div>
-                                    </article>
-
-                                    <article class="meta-card meta-card--small">
-                                        <figure class="meta-card__figure">
-                                            <img src="assets/girl.png" alt="Person in traditional cultural costume" class="meta-card__img">
-                                        </figure>
-                                        <div class="meta-card__caption">
-                                            <h4 class="meta-card__title">Cultural Unity</h4>
-                                        </div>
-                                    </article>
-
-                                    <article class="meta-card meta-card--small">
-                                        <figure class="meta-card__figure">
-                                            <img src="assets/play-fair.png" alt="Children playing together" class="meta-card__img">
-                                        </figure>
-                                        <div class="meta-card__caption">
-                                            <h4 class="meta-card__title">Fair Play &amp; Inclusivity</h4>
-                                        </div>
-                                    </article>
-
-                                    <!-- View More Card -->
-                                    <div class="meta-card meta-card--view-more">
-                                        <a href="#" class="meta-card__view-more-link">View more</a>
-                                    </div>
-
-                                </div><!-- /.meta-grid__right -->
-
-                            </div><!-- /.meta-grid -->
-                        </div><!-- /.meta-slide -->
-
-                        <!-- Slide 2 (add more slides here) -->
-                        <div class="meta-slide">
-                            <div class="meta-grid">
-                                <!-- Additional slides content goes here -->
-                            </div>
-                        </div>
-
-                    </div><!-- /.meta-carousel__track -->
-
-                    <!-- Next Button -->
-                    <button class="meta-carousel__btn meta-carousel__btn--next" aria-label="Next slide">
-                        &#8250;
-                    </button>
-
-                </div><!-- /.meta-carousel -->
-
-            </div><!-- /.meta-movement__container -->
-
-            <!-- It's for: Audience Bar -->
-            <footer class="meta-movement__audience" aria-label="MetaGames is for">
-                <span class="audience-label">It's for:</span>
-                <nav class="audience-nav" aria-label="Audience categories">
-                    <a href="#" class="audience-btn">Athletes</a>
-                    <a href="#" class="audience-btn">Gamers</a>
-                    <a href="#" class="audience-btn">Students</a>
-                    <a href="#" class="audience-btn">Professionals</a>
-                    <a href="#" class="audience-btn">Nations</a>
-                </nav>
-            </footer>
-
-        </section>
-
-        <!--MetaGames Emblems-->
-        <section class="emblems" id="metagames-emblems">
-            <div class="emblems__container">
-                <h2 class="emblems__title">MetaGames Emblem & Symbolism</h2>
-
-                <div class="emblems__wrapper">
-                    <div class="wheel-container">
-                        <div class="wheel">
-                            <div class="wheel__inner">
-                                <img src="assets/eswf-metagames-logo.png" alt="MetaGames Logo" class="wheel__logo">
-                            </div>
-                        </div>
-                        <div class="wheel-pointer"></div>
-                    </div>
-
-                    <article class="emblems__card">
-                        <div class="emblems__text-content">
-                            <h3 class="emblems__color-name">Green</h3>
-                            <p class="emblems__description">Multi Cultural Sports</p>
-                            <p class="emblems__motto">One symbol. Many sports. One global community.</p>
-                        </div>
-
-                        <nav class="emblems__nav">
-                            <button class="emblems__btn emblems__btn--prev" aria-label="Previous">&#8249;</button>
-                            <button class="emblems__btn emblems__btn--next" aria-label="Next">&#8250;</button>
-                        </nav>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <section class="theme-song" id="theme-song" aria-labelledby="theme-song-heading">
-            <div class="theme-song__container">
-                
-                <h2 id="theme-song-heading" class="theme-song__title">Official Theme Song</h2>
-
-                <div class="theme-song__content">
-                    
-                    <div class="theme-song__visual">
-                        <figure class="theme-song__video-wrapper">
-                            <div class="theme-song__placeholder">
-                                <img src="assets/theme-song.PNG" alt="Legends Rise in the Meta Games OST Poster">
-                                <button class="theme-song__play-btn" aria-label="Play Theme Song">
-                                    <span class="play-icon"></span>
-                                </button>
-                            </div>
-                            <figcaption class="sr-only">Launching of the Official OST of Meta Games entitled: Legends Rise in the Meta Games</figcaption>
-                        </figure>
-                    </div>
-
-                   <article class="theme-song__details">
-                        <header class="theme-song__header-info">
-                            <h3 class="theme-song__ost-title">“Legends Rise in the Meta Games”</h3>
-                            <p class="theme-song__subtitle">Meta Games OST</p>
-                        </header>
-
-                        <div class="theme-song__lyrics-scroll">
-                            <div class="lyrics__verse">
-                                <h4>Verse 1</h4>
-                                <p>Here is where we carve our name<br>
-                                this is more than just a game<br>
-                                We level up with each new quest<br>
-                                and prove ourselves as the very best.</p>
-                            </div>
-
-                            <div class="lyrics__verse">
-                                <h4>Verse 2</h4>
-                                <p>Our minds are sharp, our skills refined<br>
-                                our passion for victory enshrined<br>
-                                in this world where anything can be<br>
-                                We rise to challenge, wild and free</p>
-                            </div>
-
-                            <div class="lyrics__verse">
-                                <h4>Chorus</h4>
-                                <p>Legends rise, the battle's on,<br>
-                                Until the final victory is won.<br>
-                                Meta Games, where heroes play,<br>
-                                To lead the world in every way.</p>
-                            </div>
-                        </div>
-                    </article>
-
-                </div>
-            </div>
-        </section>
-
-        <section class="host-section" id="host-section">
-            <header class="host-section__header">
-                <h2 class="host-section__title">Host Nations & Partners</h2>
-            </header>
-
-            <div class="host-section__container">
-                <p class="host-cities__label">Host Cities:</p>
-                
-                <div class="host-cities__grid">
-                    <div class="host-card">
-                        <img src="assets/ph-flag.PNG" alt="Manila, Philippines">
-                    </div>
-                    <div class="host-card">
-                        <img src="assets/china-flag.PNG" alt="Xinjiang, China">
-                    </div>
-                </div>
-
-                <div class="partners-block">
-                    <h3 class="partners__title">Partners:</h3>
-                    <div class="partners__logos">
-                        <img src="assets/eswf.PNG" alt="ESWF">
-                        <img src="assets/gawse.png" alt="GAWSF">
-                        <img src="assets/PSC-logo.PNG" alt="Philippine Sports Commission">
-                    </div>
-                </div>
-            </div>
-        </section>
     </main>
 
     <footer class="main-footer">
-        <div class="footer-top">
-            <div class="container footer-flex">
-                <div class="footer__branding">
-                    <img src="assets/eswf-metagames-logo.png" alt="MetaGames Logo">
-                </div>
+      <div class="footer-top">
+        <div class="container footer-flex">
+          <div class="footer__branding">
+            <img src="assets/eswf-metagames-logo.png" alt="MetaGames Logo" />
+          </div>
 
-                <div class="footer__links-wrapper">
-                    <nav class="footer-column">
-                        <h4>Quick Links:</h4>
-                        <ul>
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#">What Are MetaGames</a></li>
-                            <li><a href="#">News & Updates</a></li>
-                        </ul>
-                    </nav>
+          <div class="footer__links-wrapper">
+            <nav class="footer-column">
+              <h4>Quick Links:</h4>
+              <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">What Are MetaGames</a></li>
+                <li><a href="#">News & Updates</a></li>
+              </ul>
+            </nav>
 
-                    <nav class="footer-column">
-                        <ul class="no-title">
-                            <li><a href="#">Sports & Games</a></li>
-                            <li><a href="#">Meta Movement</a></li>
-                            <li><a href="#">Emblem & Meaning</a></li>
-                        </ul>
-                    </nav>
+            <nav class="footer-column">
+              <ul class="no-title">
+                <li><a href="#">Sports & Games</a></li>
+                <li><a href="#">Meta Movement</a></li>
+                <li><a href="#">Emblem & Meaning</a></li>
+              </ul>
+            </nav>
 
-                    <nav class="footer-column">
-                        <ul class="no-title">
-                            <li><a href="#">Official Theme Song</a></li>
-                            <li><a href="#">Host Nations</a></li>
-                        </ul>
-                    </nav>
-                </div>
-            </div>
+            <nav class="footer-column">
+              <ul class="no-title">
+                <li><a href="#">Official Theme Song</a></li>
+                <li><a href="#">Host Nations</a></li>
+              </ul>
+            </nav>
+          </div>
         </div>
+      </div>
 
-        <div class="footer-bottom">
-            <div class="container footer-bottom-flex">
-                <p>&copy; 2025 MetaGames All Rights Reserved.</p>
-                <p>Designed & Developed by: BB 88 Advertising and Digital Solutions Inc.</p>
-            </div>
+      <div class="footer-bottom">
+        <div class="container footer-bottom-flex">
+          <p>&copy; 2025 MetaGames All Rights Reserved.</p>
+          <p>
+            Designed & Developed by: BB 88 Advertising and Digital Solutions
+            Inc.
+          </p>
         </div>
+      </div>
     </footer>
 
     <script src="main.js"></script>
     <script src="color-wheel.js"></script>
-</body>
+  </body>
 </html>
->>>>>>> Jmark
