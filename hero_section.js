@@ -1,21 +1,22 @@
 const DATA_HERO = "./src/data/hero_section.json";
 
 const loadHeroSection = async () => {
-    try {
-        const response = await fetch(DATA_HERO);
-        if (!response.ok) throw new Error("Hero Section data not found.");
-        const data = await response.json();
-        renderHeroSection(data);
-    } catch (err) {
-        console.error("Hero Section Error:", err);
-    }
+  try {
+    const response = await fetch(DATA_HERO);
+    if (!response.ok) throw new Error("Hero Section data not found.");
+    const data = await response.json();
+    renderHeroSection(data);
+  } catch (err) {
+    console.error("Hero Section Error:", err);
+  }
 };
 
 const renderHeroSection = (data) => {
-    const hero = document.querySelector("#hero");
-    const { arena_image, logo, vr_image, puzzle_image, links, cta, catchphrase } = data;
+  const hero = document.querySelector("#hero");
+  const { arena_image, logo, vr_image, puzzle_image, links, cta, catchphrase } =
+    data;
 
-    hero.innerHTML = `
+  hero.innerHTML = `
         <div class="absolute inset-0 z-0" aria-hidden="true">
             <img src="${arena_image.src}" alt="${arena_image.alt}" class="w-full h-full object-cover object-top block absolute inset-0"/>
             <div class="absolute inset-0" style=" background: linear-gradient(to bottom, rgba(20, 27, 37, 0.6) 0%, rgba(20, 27, 37, 1) 100%);"></div>

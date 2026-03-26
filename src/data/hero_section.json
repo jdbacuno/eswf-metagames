@@ -1,30 +1,30 @@
 {
-    "arena_image": {
-        "src": "src/images/esports-arena.webp",
-        "alt": "Esports Arena"
-    },
-    "logo": {
-        "src": "src/images/eswf-metagames-logo.webp",
-        "alt": "ESWF MetaGames logo"
-    },
-    "vr_image": {
-        "src": "src/images/children-with-vr.webp",
-        "alt": "Children playing with VR"
-    },
-    "puzzle_image": {
-        "src": "src/images/puzzle.webp",
-        "alt": "Jigsaw puzzle"
-    },
-    "links": [
-        { "text": "Learn What MetaGames", "url": "#what-are-metagames" },
-        { "text": "Explore Sports & Games", "url": "#sports-and-games" },
-        { "text": "Join the Movement", "url": "#meta-movement" }
-    ],
-    "cta": {
-        "text": "Welcome to the MetaGames"
-    },
-    "catchphrase": {
-        "text": "Where Sports, Games, and Digital Worlds Unite",
-        "paragraph": "MetaGames is a global movement that brings together traditional sports, esports, digital sports, and virtual experiences into one unified international event."
-    }
+  "arena_image": {
+    "src": "src/images/esports-arena.webp",
+    "alt": "Esports Arena"
+  },
+  "logo": {
+    "src": "src/images/eswf-metagames-logo.webp",
+    "alt": "ESWF MetaGames logo"
+  },
+  "vr_image": {
+    "src": "src/images/children-with-vr.webp",
+    "alt": "Children playing with VR"
+  },
+  "puzzle_image": {
+    "src": "src/images/puzzle.webp",
+    "alt": "Jigsaw puzzle"
+  },
+  "links": [
+    { "text": "Learn What MetaGames", "url": "#what-are-metagames" },
+    { "text": "Explore Sports & Games", "url": "#sports-and-games" },
+    { "text": "Join the Movement", "url": "#meta-movement" }
+  ],
+  "cta": {
+    "text": "Welcome to the MetaGames"
+  },
+  "catchphrase": {
+    "text": "Where Sports, Games, and Digital Worlds Unite",
+    "paragraph": "MetaGames is a global movement that brings together traditional sports, esports, digital sports, and virtual experiences into one unified international event."
+  }
 }
