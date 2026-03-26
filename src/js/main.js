@@ -1,7 +1,7 @@
 document.querySelectorAll('.nav-links a').forEach((link) => {
   link.addEventListener('click', function (e) {
     const href = this.getAttribute('href');
-
+    
     // Check if it's an internal link (starts with #)
     if (href.startsWith('#')) {
       e.preventDefault(); // Stop the "snap" jump
@@ -31,79 +31,81 @@ document.querySelectorAll('.nav-links a').forEach((link) => {
   });
 });
 
-const navbar = document.getElementById('navbar');
-const menuOpenBtn = document.getElementById('menuOpenBtn');
-const hamburger = document.getElementById('hamburger');
-const navLinks = document.getElementById('navLinks');
+export function initNavInteractions() {
+  const navbar = document.getElementById('navbar');
+  const menuOpenBtn = document.getElementById('menuOpenBtn');
+  const hamburger = document.getElementById('hamburger');
+  const navLinks = document.getElementById('navLinks');
 
-window.addEventListener(
-  'scroll',
-  () => {
-    navbar.classList.toggle('scrolled', window.scrollY > 40);
-  },
-  { passive: true },
-);
+  window.addEventListener(
+    'scroll',
+    () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 40);
+    },
+    { passive: true },
+  );
 
-function triggerLinkAnimations() {
-  const delays = [0.05, 0.1, 0.15, 0.2, 0.25, 0.3, 0.35, 0.4, 0.45];
-  navLinks.querySelectorAll('li').forEach((li, i) => {
-    li.style.animation = 'none';
-    li.offsetHeight; // force reflow
-    li.style.animation = `linkSlideIn 0.3s ease ${delays[i] || 0}s both`;
-  });
-}
+  function triggerLinkAnimations() {
+    const delays = [0.05, 0.1, 0.15, 0.2, 0.25, 0.3, 0.35, 0.4, 0.45];
+    navLinks.querySelectorAll('li').forEach((li, i) => {
+      li.style.animation = 'none';
+      li.offsetHeight; // force reflow
+      li.style.animation = `linkSlideIn 0.3s ease ${delays[i] || 0}s both`;
+    });
+  }
 
-function closeMenu() {
-  navLinks.classList.remove('open');
-  const icon = menuOpenBtn.querySelector('i');
-  icon.classList.add('fa-bars');
-  icon.classList.remove('fa-xmark');
-
-  // Reset animations on close
-  navLinks.querySelectorAll('li').forEach((li) => {
-    li.style.animation = 'none';
-  });
-}
-
-// Wire the X button inside the drawer to close the menu
-if (hamburger) {
-  hamburger.addEventListener('click', (e) => {
-    e.stopPropagation();
-    closeMenu();
-  });
-}
-
-menuOpenBtn.addEventListener('click', (e) => {
-  e.stopPropagation();
-  const isOpen = navLinks.classList.contains('open');
-  if (isOpen) {
-    closeMenu();
-  } else {
-    navLinks.classList.add('open');
+  function closeMenu() {
+    navLinks.classList.remove('open');
     const icon = menuOpenBtn.querySelector('i');
-    icon.classList.remove('fa-bars');
-    icon.classList.add('fa-xmark');
-    triggerLinkAnimations(); // only runs when button is clicked
-  }
-});
+    icon.classList.add('fa-bars');
+    icon.classList.remove('fa-xmark');
 
-// Close menu when a link is clicked
-document.querySelectorAll('.nav-links a').forEach((link) => {
-  link.addEventListener('click', function () {
-    closeMenu();
+    // Reset animations on close
+    navLinks.querySelectorAll('li').forEach((li) => {
+      li.style.animation = 'none';
+    });
+  }
+
+  // Wire the X button inside the drawer to close the menu
+  if (hamburger) {
+    hamburger.addEventListener('click', (e) => {
+      e.stopPropagation();
+      closeMenu();
+    });
+  }
+
+  menuOpenBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    const isOpen = navLinks.classList.contains('open');
+    if (isOpen) {
+      closeMenu();
+    } else {
+      navLinks.classList.add('open');
+      const icon = menuOpenBtn.querySelector('i');
+      icon.classList.remove('fa-bars');
+      icon.classList.add('fa-xmark');
+      triggerLinkAnimations(); // only runs when button is clicked
+    }
   });
-});
 
-// Close menu when clicking outside
-document.addEventListener('click', (e) => {
-  const isOpen = navLinks.classList.contains('open');
-  const clickedInsideMenu = navLinks.contains(e.target);
-  const clickedOpenBtn = menuOpenBtn.contains(e.target);
+  // Close menu when a link is clicked
+  document.querySelectorAll('.nav-links a').forEach((link) => {
+    link.addEventListener('click', function () {
+      closeMenu();
+    });
+  });
 
-  if (isOpen && !clickedInsideMenu && !clickedOpenBtn) {
-    closeMenu();
-  }
-});
+  // Close menu when clicking outside
+  document.addEventListener('click', (e) => {
+    const isOpen = navLinks.classList.contains('open');
+    const clickedInsideMenu = navLinks.contains(e.target);
+    const clickedOpenBtn = menuOpenBtn.contains(e.target);
+
+    if (isOpen && !clickedInsideMenu && !clickedOpenBtn) {
+      closeMenu();
+    }
+  });
+};
 
 /* ── Scroll reveal for WAM section ── */
 const revealEls = document.querySelectorAll('.wam-inner, .pillars');
