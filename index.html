@@ -48,121 +48,9 @@
     <main id="main-content" class="max-w-full overflow-x-hidden">
       <!-- HERO -->
       <section
-        class="scroll-mt-20 relative flex items-center justify-center overflow-hidden text-center" id="hero"
+        class="scroll-mt-20 relative flex items-center justify-center overflow-hidden text-center min-h-[600px]" id="hero"
         aria-labelledby="hero-title"
-      >
-        <div class="absolute inset-0 z-0" aria-hidden="true">
-          <img
-            src="src/images/esports-arena.webp"
-            alt="Esports Arena"
-            class="w-full h-full object-cover object-top block absolute inset-0"
-          />
-          <div
-            class="absolute inset-0"
-            style="
-              background: linear-gradient(
-                to bottom,
-                rgba(20, 27, 37, 0.6) 0%,
-                rgba(20, 27, 37, 1) 100%
-              );
-            "
-          ></div>
-        </div>
-
-        <div
-          class="relative z-10 w-full px-6 pt-[100px] pb-10 flex flex-col items-center gap-2 max-lg:pt-20 max-md:px-4 max-md:pt-20 max-md:gap-[10px] max-[480px]:px-3 max-[480px]:pt-[70px] max-[480px]:pb-7"
-        >
-          <h2
-            id="hero-title"
-            class="hero-heading animate-fade-up-1 max-w-[780px] text-[clamp(1.8rem,4vw,2.8rem)] font-extrabold text-white leading-[1.15] tracking-[0.01em] [text-shadow:0_2px_12px_rgba(0,0,0,0.5)]"
-          >
-            Welcome to the MetaGames
-          </h2>
-
-          <p
-            class="animate-fade-up-2 max-w-[780px] text-[clamp(0.95rem,1.8vw,1.15rem)] italic font-semibold text-white tracking-[0.02em] mt-[2px]"
-          >
-            <em>Where Sports, Games, and Digital Worlds Unite</em>
-          </p>
-
-          <p
-            class="animate-fade-up-3 max-w-[480px] text-[clamp(0.82rem,1.4vw,0.93rem)] text-white/90 leading-[1.4] text-center mt-[2px]"
-          >
-            MetaGames is a global movement that brings together traditional
-            sports, esports, digital sports, and virtual experiences into one
-            unified international event.
-          </p>
-
-          <!-- Cards -->
-          <div
-            class="animate-fade-up-4 flex gap-4 mt-7 justify-center flex-nowrap w-full px-2 min-[1200px]:gap-8 max-[480px]:gap-2 max-[360px]:flex-wrap max-[360px]:justify-center"
-            role="list"
-          >
-            <article
-              class="animate-card-1 bg-white rounded-[10px] flex-1 min-w-0 flex flex-col items-center overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.45)] transition duration-200 hover:-translate-y-1 hover:shadow-[0_10px_30px_rgba(0,0,0,0.5)] max-[360px]:w-full max-[360px]:flex-none"
-              role="listitem"
-            >
-              <figure
-                class="w-full px-5 pt-6 pb-5 flex items-center justify-center bg-white min-h-[185px] max-lg:min-h-[150px] max-lg:px-3 max-md:min-h-[130px] max-md:px-3 max-md:pt-4 max-md:pb-3 max-[480px]:min-h-[110px] max-[480px]:px-2 max-[480px]:pt-3 max-[480px]:pb-[10px]"
-              >
-                <img
-                  src="src/images/eswf-metagames-logo.webp"
-                  alt="ESWF MetaGames logo"
-                  class="max-w-full max-h-[145px] object-contain block max-lg:max-h-[110px] max-md:max-h-[100px] max-[480px]:max-h-[80px]"
-                />
-              </figure>
-              <a
-                href="#what-are-metagames"
-                class="block w-[calc(100%-24px)] mx-3 mb-3 py-[11px] px-3 bg-brand-blue text-white text-[0.85rem] font-bold text-center no-underline tracking-[0.01em] rounded-[10px] transition-colors duration-200 hover:bg-[#1a6aab] max-lg:text-[0.78rem] max-lg:py-[9px] max-md:text-[0.75rem] max-md:py-[9px] max-md:px-2 max-[480px]:text-[0.68rem] max-[480px]:py-2 max-[480px]:px-[6px] max-[480px]:w-[calc(100%-12px)] max-[480px]:mx-[6px] max-[480px]:mb-2"
-              >
-                Learn What MetaGames
-              </a>
-            </article>
-
-            <article
-              class="animate-card-2 bg-white rounded-[10px] flex-1 min-w-0 flex flex-col items-center overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.45)] transition duration-200 hover:-translate-y-1 hover:shadow-[0_10px_30px_rgba(0,0,0,0.5)] max-[360px]:w-full max-[360px]:flex-none"
-              role="listitem"
-            >
-              <figure
-                class="w-full px-5 pt-6 pb-5 flex items-center justify-center bg-white min-h-[185px] max-lg:min-h-[150px] max-lg:px-3 max-md:min-h-[130px] max-md:px-3 max-md:pt-4 max-md:pb-3 max-[480px]:min-h-[110px] max-[480px]:px-2 max-[480px]:pt-3 max-[480px]:pb-[10px]"
-              >
-                <img
-                  src="src/images/children-with-vr.webp"
-                  alt="Children playing with VR"
-                  class="max-w-full max-h-[145px] object-contain block max-lg:max-h-[110px] max-md:max-h-[100px] max-[480px]:max-h-[80px]"
-                />
-              </figure>
-              <a
-                href="#sports-and-games"
-                class="block w-[calc(100%-24px)] mx-3 mb-3 py-[11px] px-3 bg-brand-blue text-white text-[0.85rem] font-bold text-center no-underline tracking-[0.01em] rounded-[10px] transition-colors duration-200 hover:bg-[#1a6aab] max-lg:text-[0.78rem] max-lg:py-[9px] max-md:text-[0.75rem] max-md:py-[9px] max-md:px-2 max-[480px]:text-[0.68rem] max-[480px]:py-2 max-[480px]:px-[6px] max-[480px]:w-[calc(100%-12px)] max-[480px]:mx-[6px] max-[480px]:mb-2"
-              >
-                Explore Sports &amp; Games
-              </a>
-            </article>
-
-            <article
-              class="animate-card-3 bg-white rounded-[10px] flex-1 min-w-0 flex flex-col items-center overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.45)] transition duration-200 hover:-translate-y-1 hover:shadow-[0_10px_30px_rgba(0,0,0,0.5)] max-[360px]:w-full max-[360px]:flex-none"
-              role="listitem"
-            >
-              <figure
-                class="w-full px-5 pt-6 pb-5 flex items-center justify-center bg-white min-h-[185px] max-lg:min-h-[150px] max-lg:px-3 max-md:min-h-[130px] max-md:px-3 max-md:pt-4 max-md:pb-3 max-[480px]:min-h-[110px] max-[480px]:px-2 max-[480px]:pt-3 max-[480px]:pb-[10px]"
-              >
-                <img
-                  src="src/images/puzzle.webp"
-                  alt="Jigsaw puzzle"
-                  class="max-w-full max-h-[145px] object-contain block max-lg:max-h-[110px] max-md:max-h-[100px] max-[480px]:max-h-[80px]"
-                />
-              </figure>
-              <a
-                href="#meta-movement"
-                class="block w-[calc(100%-24px)] mx-3 mb-3 py-[11px] px-3 bg-brand-blue text-white text-[0.85rem] font-bold text-center no-underline tracking-[0.01em] rounded-[10px] transition-colors duration-200 hover:bg-[#1a6aab] max-lg:text-[0.78rem] max-lg:py-[9px] max-md:text-[0.75rem] max-md:py-[9px] max-md:px-2 max-[480px]:text-[0.68rem] max-[480px]:py-2 max-[480px]:px-[6px] max-[480px]:w-[calc(100%-12px)] max-[480px]:mx-[6px] max-[480px]:mb-2"
-              >
-                Join the Movement
-              </a>
-            </article>
-          </div>
-        </div>
-      </section>
+      ></section>
 
       <!-- WHAT ARE METAGAMES -->
       <section
@@ -1171,6 +1059,7 @@
     <script type="module" src="app.js"></script>
     <script type="module" src="src/js/main.js"></script>
     <script type="module" src="navbar.js"></script>
+    <script type="module" src="hero_section.js"></script>
     <script src="src/js/color-wheel.js"></script>
   </body>
 </html>
