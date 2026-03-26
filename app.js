@@ -31,7 +31,7 @@ const renderHeader = (bannerData) => {
       </div>
 
       <div
-        // class="flex w-150 h-3 shrink-0 max-[1500px]:w-125 max-[1280px]:w-75 max-lg:w-57.5 max-md:w-37.5 max-md:h-2"
+        class="flex w-150 h-3 shrink-0 max-[1500px]:w-125 max-[1280px]:w-75 max-lg:w-57.5 max-md:w-37.5 max-md:h-2"
       >
         ${stripesHtml}
       </div>
