@@ -1,4 +1,4 @@
-import { initNavInteractions } from "./src/js/main.js";
+import { initNavInteractions, initNavLinks } from "./src/js/main.js";
 
 const DATA_NAV = "./src/data/navbar.json";
 
@@ -78,6 +78,7 @@ const renderNavbar = (data) => {
         </ul>
     `;
 
+  initNavLinks();
   initNavInteractions();
 };
 
