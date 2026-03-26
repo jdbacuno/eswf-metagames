@@ -1,35 +1,37 @@
-document.querySelectorAll('.nav-links a').forEach((link) => {
-  link.addEventListener('click', function (e) {
-    const href = this.getAttribute('href');
-    
-    // Check if it's an internal link (starts with #)
-    if (href.startsWith('#')) {
-      e.preventDefault(); // Stop the "snap" jump
+export function initNavLinks() {
+  document.querySelectorAll('.nav-links a').forEach((link) => {
+    link.addEventListener('click', function (e) {
+      const href = this.getAttribute('href');
+      
+      // Check if it's an internal link (starts with #)
+      if (href.startsWith('#')) {
+        e.preventDefault(); // Stop the "snap" jump
 
-      const targetId = href.substring(1);
-      const targetElement = document.getElementById(targetId);
+        const targetId = href.substring(1);
+        const targetElement = document.getElementById(targetId);
 
-      if (targetElement) {
-        // Get navbar height to avoid covering the section title
-        const navHeight = navbar.offsetHeight || 80;
-        const elementPosition = targetElement.getBoundingClientRect().top;
-        const offsetPosition = elementPosition + window.pageYOffset - navHeight;
+        if (targetElement) {
+          // Get navbar height to avoid covering the section title
+          const navHeight = navbar.offsetHeight || 80;
+          const elementPosition = targetElement.getBoundingClientRect().top;
+          const offsetPosition = elementPosition + window.pageYOffset - navHeight;
 
-        // Smooth scroll to the offset position
-        window.scrollTo({
-          top: offsetPosition,
-          behavior: 'smooth',
-        });
+          // Smooth scroll to the offset position
+          window.scrollTo({
+            top: offsetPosition,
+            behavior: 'smooth',
+          });
+        }
+
+        // UI: Handle active states
+        document
+          .querySelectorAll('.nav-links a')
+          .forEach((l) => l.classList.remove('active'));
+        this.classList.add('active');
       }
-
-      // UI: Handle active states
-      document
-        .querySelectorAll('.nav-links a')
-        .forEach((l) => l.classList.remove('active'));
-      this.classList.add('active');
-    }
+    });
   });
-});
+}
 
 export function initNavInteractions() {
   const navbar = document.getElementById('navbar');
