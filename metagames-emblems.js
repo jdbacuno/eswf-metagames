@@ -1,8 +1,31 @@
-<div class="max-w-[1100px] my-[60px] mx-auto px-10 max-[480px]:px-4">
+import  {initColorwheel } from "./src/js/color-wheel.js";
+const DATA_METAMOVEMENT = "/src/data/metagames-emblems.json";
+
+const loadMetagamesEmblems = async () => {
+  try {
+    const response = await fetch(DATA_METAMOVEMENT);
+    if (!response.ok) throw new Error("Data not found.");
+    const data = await response.json();
+    renderMetagamesEmblems(data);
+  } catch (err) {
+    console.error("Error:", err);
+  }
+}
+
+    const renderMetagamesEmblems = (data) => {
+        const metagamesemblems = document.querySelector("#metagames-emblems");
+        const { logo, title } = data;
+
+    
+
+metagamesemblems.innerHtml = `
+
+<div
+    class="max-w-[1100px] my-[60px] mx-auto px-10 max-[480px]:px-4">
           <h2
             class="text-[1.8rem] font-extrabold mb-10 max-[480px]:text-[1.4rem]"
           >
-            MetaGames Emblem &amp; Symbolism
+           ${title}
           </h2>
           <div
             class="relative flex items-center mt-[50px] pl-[200px] max-[1023px]:pl-[165px] max-[767px]:pl-[80px] max-[639px]:pl-0 max-[639px]:flex-col max-[639px]:mt-5"
@@ -17,8 +40,8 @@
                   class="bg-white rounded-full flex items-center justify-center border-[3px] border-black w-[120px] h-[120px] max-[1023px]:w-[106px] max-[1023px]:h-[106px] max-[767px]:w-[74px] max-[767px]:h-[74px] max-[639px]:w-[74px] max-[639px]:h-[74px]"
                 >
                   <img
-                    src="src/images/eswf-metagames-logo.webp"
-                    alt="MetaGames Logo"
+                    src="${logo.src}"
+                    alt="${logo.alt}"
                     class="w-[75%] h-auto -rotate-[60deg]"
                   />
                 </div>
@@ -65,3 +88,9 @@
             </article>
           </div>
         </div>
+`;
+
+initColorwheel();
+    }
+    
+loadMetagamesEmblems();
