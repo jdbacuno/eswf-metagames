@@ -1,6 +1,6 @@
 const DATA_MARQUEE = './src/data/marquee.json';
 
-const loadMarqueeSection = async () => {
+export const loadMarqueeSection = async () => {
   try {
     const response = await fetch(DATA_MARQUEE);
     if (!response.ok) throw new Error('Cannot find the file');
@@ -19,5 +19,3 @@ const renderMarqueeSection = (data) => {
     <p class="marquee-text inline-block animate-marquee text-[2rem] font-semibold text-white tracking-[0.03rem] max-md:text-[1.4rem] max-[480px]:text-[1.1rem]">${text}</p>
   `;
 }
-
-loadMarqueeSection();

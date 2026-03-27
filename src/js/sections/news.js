@@ -1,7 +1,7 @@
-import { initNewsUpdateInteractions } from './src/js/main.js';
+import { initNewsUpdateInteractions } from '../main.js';
 const DATA_NEWSUPDATE = './src/data/news.json';
 
-const loadNewsUpdateSection = async () => {
+export const loadNewsUpdateSection = async () => {
   try {
     const response = await fetch(DATA_NEWSUPDATE);
     if (!response.ok) throw new Error('File not found');
@@ -33,5 +33,3 @@ const renderNewsUpdateSection = data => {
 
   initNewsUpdateInteractions();
 }
-
-loadNewsUpdateSection();

@@ -1,7 +1,7 @@
-import  {initColorwheel } from "./src/js/color-wheel.js";
+import { initColorwheel } from "../color-wheel.js";
 const DATA_METAMOVEMENT = "./src/data/metagames-emblems.json";
 
-const loadMetagamesEmblems = async () => {
+export const loadMetagamesEmblems = async () => {
   try {
     const response = await fetch(DATA_METAMOVEMENT);
     if (!response.ok) throw new Error("Data not found.");
@@ -10,15 +10,13 @@ const loadMetagamesEmblems = async () => {
   } catch (err) {
     console.error("Error:", err);
   }
-}
+};
 
-    const renderMetagamesEmblems = (data) => {
-        const metagamesemblems = document.querySelector("#metagames-emblems");
-        const { logo, title } = data;
+const renderMetagamesEmblems = (data) => {
+  const metagamesemblems = document.querySelector("#metagames-emblems");
+  const { logo, title } = data;
 
-    
-
-metagamesemblems.innerHTML = `
+  metagamesemblems.innerHTML = `
 
 <div
     class="max-w-[1100px] my-[60px] mx-auto px-10 max-[480px]:px-4">
@@ -90,7 +88,5 @@ metagamesemblems.innerHTML = `
         </div>
 `;
 
-initColorwheel();
-    }
-    
-loadMetagamesEmblems();
+  initColorwheel();
+};

@@ -1,6 +1,6 @@
 const DATA_HEADER = './src/data/header.json';
 
-const loadHeaderSection = async () => {
+export const loadHeaderSection = async () => {
   try {
     const response = await fetch(DATA_HEADER);
     if (!response.ok) throw new Error('Could not find the data file');
@@ -41,7 +41,6 @@ const renderHeader = (bannerData) => {
     >
       ${title}
     </h1>
-  </div>`;
+  
+  `;
 }
-
-loadHeaderSection();

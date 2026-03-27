@@ -1,6 +1,6 @@
 const DATA_HERO = "./src/data/hero.json";
 
-const loadHeroSection = async () => {
+export const loadHeroSection = async () => {
   try {
     const response = await fetch(DATA_HERO);
     if (!response.ok) throw new Error("Hero Section data not found.");
@@ -9,7 +9,7 @@ const loadHeroSection = async () => {
   } catch (err) {
     console.error("Hero Section Error:", err);
   }
-};
+}
 
 const renderHeroSection = (data) => {
   const hero = document.querySelector("#hero");
@@ -57,6 +57,4 @@ const renderHeroSection = (data) => {
             </div>
         </div>
     `;
-};
-
-loadHeroSection();
+}

@@ -1,37 +1,41 @@
-const DATA_HOSTNATION = './src/data/host-nation.json';
+const DATA_HOSTNATION = "./src/data/host-nation.json";
 
-const loadHostNationSection = async () => {
+export const loadHostNationSection = async () => {
   try {
     const response = await fetch(DATA_HOSTNATION);
-    if (!response.ok) throw new Error('File not found.');
+    if (!response.ok) throw new Error("File not found.");
     const data = await response.json();
     renderHostNationSection(data);
   } catch (err) {
-    console.log('Error:', err);
+    console.log("Error:", err);
   }
-}
+};
 
 const renderHostNationSection = (data) => {
-  const hostSection = document.querySelector('#host-section');
+  const hostSection = document.querySelector("#host-section");
   const { title, subtitle, flagImages, partnerImages } = data;
 
-  const flagsHtml = flagImages.map(flagImg => {
-    return `<div>
+  const flagsHtml = flagImages
+    .map((flagImg) => {
+      return `<div>
               <img
                 src="${flagImg.src}"
                 alt="${flagImg.alt}"
                 class="w-full h-auto rounded-[15px] block shadow-[0_4px_20px_rgba(0,0,0,0.4)]"
               />
             </div>`;
-  }).join('');
+    })
+    .join("");
 
-  const partnersHtml = partnerImages.map(partnerImg => {
-    return `<img
+  const partnersHtml = partnerImages
+    .map((partnerImg) => {
+      return `<img
               src="${partnerImg.src}"
               alt="${partnerImg.alt}"
               class="h-auto max-h-[80px] w-auto max-w-[180px] object-contain transition-transform duration-300 max-lg:max-h-[60px] max-[480px]:max-h-[50px] max-[480px]:max-w-[40%]"
             />`;
-  }).join('');
+    })
+    .join("");
 
   hostSection.innerHTML = `
         <header class="bg-brand-blue w-full py-[15px] text-center mb-10">
@@ -60,7 +64,6 @@ const renderHostNationSection = (data) => {
               </div>
             </div>
           </div>
-        </div>`;
-}
-
-loadHostNationSection();
+        </div>
+      `;
+};

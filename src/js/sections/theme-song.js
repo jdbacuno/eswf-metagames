@@ -1,70 +1,63 @@
-const DATA_THEME_SONG = './src/data/theme-song.json';
+const DATA_THEME_SONG = "./src/data/theme-song.json";
 
 const fallbackData = {
-  heading: 'Official Theme Song',
+  heading: "Official Theme Song",
   title: '"Legends Rise in the Meta Games"',
-  subtitle: 'Meta Games OST',
+  subtitle: "Meta Games OST",
   poster: {
-    src: 'src/images/theme-song.webp',
-    alt: 'Legends Rise in the Meta Games OST Poster',
+    src: "src/images/theme-song.webp",
+    alt: "Legends Rise in the Meta Games OST Poster",
   },
   caption:
-    'Launching of the Official OST of Meta Games entitled: Legends Rise in the Meta Games',
+    "Launching of the Official OST of Meta Games entitled: Legends Rise in the Meta Games",
   lyrics: [
     {
-      label: 'Verse 1',
+      label: "Verse 1",
       text: [
-        'Here is where we carve our name',
-        'this is more than just a game',
-        'We level up with each new quest',
-        'and prove ourselves as the very best.',
+        "Here is where we carve our name",
+        "this is more than just a game",
+        "We level up with each new quest",
+        "and prove ourselves as the very best.",
       ],
     },
     {
-      label: 'Verse 2',
+      label: "Verse 2",
       text: [
-        'Our minds are sharp, our skills refined',
-        'our passion for victory enshrined',
-        'in this world where anything can be',
-        'We rise to challenge, wild and free',
+        "Our minds are sharp, our skills refined",
+        "our passion for victory enshrined",
+        "in this world where anything can be",
+        "We rise to challenge, wild and free",
       ],
     },
     {
-      label: 'Chorus',
+      label: "Chorus",
       text: [
         "Legends rise, the battle's on,",
-        'Until the final victory is won.',
-        'Meta Games, where heroes play,',
-        'To lead the world in every way.',
+        "Until the final victory is won.",
+        "Meta Games, where heroes play,",
+        "To lead the world in every way.",
       ],
     },
   ],
 };
 
-const loadThemeSongSection = async () => {
+export const loadThemeSongSection = async () => {
   try {
     const response = await fetch(DATA_THEME_SONG);
-    if (!response.ok) throw new Error('Theme song data not found.');
+    if (!response.ok) throw new Error("Theme song data not found.");
     const data = await response.json();
     renderThemeSongSection(data);
   } catch (err) {
-    console.error('Theme song error:', err);
+    console.error("Theme song error:", err);
     renderThemeSongSection(fallbackData);
   }
 };
 
 const renderThemeSongSection = (data) => {
-  const themeSong = document.querySelector('#theme-song');
+  const themeSong = document.querySelector("#theme-song");
   if (!themeSong) return;
 
-  const {
-    heading,
-    title,
-    subtitle,
-    poster,
-    caption,
-    lyrics = [],
-  } = data;
+  const { heading, title, subtitle, poster, caption, lyrics = [] } = data;
 
   const lyricsHtml = lyrics
     .map(
@@ -72,12 +65,12 @@ const renderThemeSongSection = (data) => {
         <div>
           <h4 class="text-[1.1rem] font-bold mb-2 text-white">${part.label}</h4>
           <p class="text-[1rem] leading-[1.6] text-white/80">
-            ${part.text.join('<br />')}
+            ${part.text.join("<br />")}
           </p>
         </div>
       `,
     )
-    .join('');
+    .join("");
 
   themeSong.innerHTML = `
     <div class="max-w-[1100px] mx-auto">
@@ -124,7 +117,4 @@ const renderThemeSongSection = (data) => {
       </div>
     </div>
   `;
-
 };
-
-loadThemeSongSection();
