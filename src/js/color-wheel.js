@@ -1,5 +1,5 @@
 export function initColorwheel() {
-  document.addEventListener('DOMContentLoaded', () => {
+  const initialize = () => {
       const emblemData = [
         {
           color: 'Green',
@@ -35,6 +35,10 @@ export function initColorwheel() {
       const colorDesc = document.querySelector('.emblems__description');
       const nextBtn = document.querySelector('.emblems__btn--next');
       const prevBtn = document.querySelector('.emblems__btn--prev');
+
+      if (!wheel || !card || !colorName || !colorDesc || !nextBtn || !prevBtn) {
+        return;
+      }
 
       function updateEmblem(index) {
         currentIndex = (index + emblemData.length) % emblemData.length;
@@ -85,5 +89,11 @@ export function initColorwheel() {
 
       updateEmblem(0);
       window.addEventListener('resize', () => updateEmblem(currentIndex));
-    });
+    };
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initialize);
+  } else {
+    initialize();
+  }
 }

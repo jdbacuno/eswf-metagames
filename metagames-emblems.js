@@ -1,5 +1,5 @@
 import  {initColorwheel } from "./src/js/color-wheel.js";
-const DATA_METAMOVEMENT = "/src/data/metagames-emblems.json";
+const DATA_METAMOVEMENT = "./src/data/metagames-emblems.json";
 
 const loadMetagamesEmblems = async () => {
   try {
@@ -18,7 +18,7 @@ const loadMetagamesEmblems = async () => {
 
     
 
-metagamesemblems.innerHtml = `
+metagamesemblems.innerHTML = `
 
 <div
     class="max-w-[1100px] my-[60px] mx-auto px-10 max-[480px]:px-4">
