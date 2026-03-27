@@ -129,21 +129,23 @@ export function initWAMInteractions() {
 }
 
 /* ── Scroll reveal for News & Updates section ── */
-const newsEls = document.querySelectorAll('.news-header, .news-containter img');
+export function initNewsUpdateInteractions() {
+  const newsEls = document.querySelectorAll('.news-header, .news-containter img');
 
-const newsObserver = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('is-visible');
-        newsObserver.unobserve(entry.target);
-      }
-    });
-  },
-  { threshold: 0.15 },
-);
+  const newsObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          newsObserver.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.15 },
+  );
 
-newsEls.forEach((el) => newsObserver.observe(el));
+  newsEls.forEach((el) => newsObserver.observe(el));
+}
 
 /* ── Sports & Games Carousel ── */
 (function () {
