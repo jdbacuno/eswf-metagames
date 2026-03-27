@@ -18,7 +18,7 @@ const loadMetagamesEmblems = async () => {
 
     
 
-metagamesemblems.innerHtml = `
+metagamesemblems.innerHTML = `
 
 <div
     class="max-w-[1100px] my-[60px] mx-auto px-10 max-[480px]:px-4">
