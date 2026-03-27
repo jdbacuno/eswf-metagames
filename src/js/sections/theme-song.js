@@ -1,46 +1,5 @@
 const DATA_THEME_SONG = "./src/data/theme-song.json";
 
-const fallbackData = {
-  heading: "Official Theme Song",
-  title: '"Legends Rise in the Meta Games"',
-  subtitle: "Meta Games OST",
-  poster: {
-    src: "src/images/theme-song.webp",
-    alt: "Legends Rise in the Meta Games OST Poster",
-  },
-  caption:
-    "Launching of the Official OST of Meta Games entitled: Legends Rise in the Meta Games",
-  lyrics: [
-    {
-      label: "Verse 1",
-      text: [
-        "Here is where we carve our name",
-        "this is more than just a game",
-        "We level up with each new quest",
-        "and prove ourselves as the very best.",
-      ],
-    },
-    {
-      label: "Verse 2",
-      text: [
-        "Our minds are sharp, our skills refined",
-        "our passion for victory enshrined",
-        "in this world where anything can be",
-        "We rise to challenge, wild and free",
-      ],
-    },
-    {
-      label: "Chorus",
-      text: [
-        "Legends rise, the battle's on,",
-        "Until the final victory is won.",
-        "Meta Games, where heroes play,",
-        "To lead the world in every way.",
-      ],
-    },
-  ],
-};
-
 export const loadThemeSongSection = async () => {
   try {
     const response = await fetch(DATA_THEME_SONG);
@@ -49,7 +8,6 @@ export const loadThemeSongSection = async () => {
     renderThemeSongSection(data);
   } catch (err) {
     console.error("Theme song error:", err);
-    renderThemeSongSection(fallbackData);
   }
 };
 
