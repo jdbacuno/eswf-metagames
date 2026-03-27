@@ -1,4 +1,4 @@
-<div class="max-w-[1100px] my-[60px] mx-auto px-10 max-[480px]:px-4">
+{/* <div class="max-w-[1100px] my-[60px] mx-auto px-10 max-[480px]:px-4">
           <h2
             class="text-[1.8rem] font-extrabold mb-10 max-[480px]:text-[1.4rem]"
           >
@@ -64,4 +64,4 @@
               </nav>
             </article>
           </div>
-        </div>
+        </div> */}
