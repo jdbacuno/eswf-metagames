@@ -8,8 +8,6 @@ const fallbackData = {
     src: 'src/images/theme-song.webp',
     alt: 'Legends Rise in the Meta Games OST Poster',
   },
-  videoUrl:
-    'https://www.youtube.com/results?search_query=Legends+Rise+in+the+Meta+Games+OST',
   caption:
     'Launching of the Official OST of Meta Games entitled: Legends Rise in the Meta Games',
   lyrics: [
@@ -64,7 +62,6 @@ const renderThemeSongSection = (data) => {
     title,
     subtitle,
     poster,
-    videoUrl = '',
     caption,
     lyrics = [],
   } = data;
@@ -81,8 +78,6 @@ const renderThemeSongSection = (data) => {
       `,
     )
     .join('');
-
-  const isPlayable = Boolean(videoUrl && String(videoUrl).trim());
 
   themeSong.innerHTML = `
     <div class="max-w-[1100px] mx-auto">
@@ -105,14 +100,6 @@ const renderThemeSongSection = (data) => {
                 alt="${poster.alt}"
                 class="w-full h-full object-cover opacity-80"
               />
-              <button
-                class="theme-song__play-btn absolute inset-0 flex items-center justify-center"
-                aria-label="Play Theme Song"
-                data-video-url="${isPlayable ? videoUrl : ''}"
-                ${isPlayable ? '' : 'disabled'}
-              >
-                <span class="play-icon"></span>
-              </button>
             </div>
             <figcaption class="sr-only">${caption}</figcaption>
           </figure>
@@ -138,19 +125,6 @@ const renderThemeSongSection = (data) => {
     </div>
   `;
 
-  initThemeSongInteractions(themeSong);
-};
-
-const initThemeSongInteractions = (root) => {
-  const playBtn = root.querySelector('.theme-song__play-btn');
-  if (!playBtn) return;
-
-  const videoUrl = playBtn.getAttribute('data-video-url');
-  if (!videoUrl) return;
-
-  playBtn.addEventListener('click', () => {
-    window.open(videoUrl, '_blank', 'noopener,noreferrer');
-  });
 };
 
 loadThemeSongSection();
