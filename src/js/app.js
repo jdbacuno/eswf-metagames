@@ -11,23 +11,15 @@ import { loadThemeSongSection } from "./sections/theme-song.js";
 import { loadHostNationSection } from "./sections/host-nation.js";
 import { loadFooterSection } from "./sections/footer.js";
 
-const loadAllSections = async () => {
-    try {
-        await loadHeaderSection();
-        await loadNavbarSection();
-        await loadHeroSection();
-        await loadWhatAreMetaGamesSection();
-        await loadMarqueeSection();
-        await loadNewsUpdateSection();
-        await loadSportsAndGames();
-        await loadMetaMovement();
-        await loadMetagamesEmblems();
-        await loadThemeSongSection();
-        await loadHostNationSection();
-        await loadFooterSection();
-    } catch (err) {
-        console.error("Failed to load sections:", err);
-    }
-};
-
-loadAllSections();
+loadHeaderSection();
+loadNavbarSection();
+loadHeroSection();
+loadWhatAreMetaGamesSection();
+loadMarqueeSection();
+loadNewsUpdateSection();
+loadSportsAndGames();
+loadMetaMovement();
+loadMetagamesEmblems();
+loadThemeSongSection();
+loadHostNationSection();
+loadFooterSection();
