@@ -1,5 +1,5 @@
 {
-  "arena_image": {
+  "arenaImage": {
     "src": "src/images/esports-arena.webp",
     "alt": "Esports Arena"
   },
@@ -7,11 +7,11 @@
     "src": "src/images/eswf-metagames-logo.webp",
     "alt": "ESWF MetaGames logo"
   },
-  "vr_image": {
+  "vrImage": {
     "src": "src/images/children-with-vr.webp",
     "alt": "Children playing with VR"
   },
-  "puzzle_image": {
+  "puzzleImage": {
     "src": "src/images/puzzle.webp",
     "alt": "Jigsaw puzzle"
   },
