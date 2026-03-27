@@ -1,4 +1,4 @@
-const DATA_HERO = "./src/data/hero_section.json";
+const DATA_HERO = "./src/data/hero.json";
 
 const loadHeroSection = async () => {
   try {
@@ -13,12 +13,12 @@ const loadHeroSection = async () => {
 
 const renderHeroSection = (data) => {
   const hero = document.querySelector("#hero");
-  const { arena_image, logo, vr_image, puzzle_image, links, cta, catchphrase } =
+  const { arenaImage, logo, vrImage, puzzleImage, links, cta, catchphrase } =
     data;
 
   hero.innerHTML = `
         <div class="absolute inset-0 z-0" aria-hidden="true">
-            <img src="${arena_image.src}" alt="${arena_image.alt}" class="w-full h-full object-cover object-top block absolute inset-0"/>
+            <img src="${arenaImage.src}" alt="${arenaImage.alt}" class="w-full h-full object-cover object-top block absolute inset-0"/>
             <div class="absolute inset-0" style=" background: linear-gradient(to bottom, rgba(20, 27, 37, 0.6) 0%, rgba(20, 27, 37, 1) 100%);"></div>
         </div>
 
@@ -51,7 +51,7 @@ const renderHeroSection = (data) => {
 
                 <article class="animate-card-2 bg-white rounded-[10px] flex-1 min-w-0 flex flex-col items-center overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.45)] transition duration-200 hover:-translate-y-1 hover:shadow-[0_10px_30px_rgba(0,0,0,0.5)] max-[360px]:w-full max-[360px]:flex-none" role="listitem">
                     <figure class="w-full px-5 pt-6 pb-5 flex items-center justify-center bg-white min-h-[185px] max-lg:min-h-[150px] max-lg:px-3 max-md:min-h-[130px] max-md:px-3 max-md:pt-4 max-md:pb-3 max-[480px]:min-h-[110px] max-[480px]:px-2 max-[480px]:pt-3 max-[480px]:pb-[10px]">
-                        <img src="${vr_image.src}" alt="${vr_image.alt}"
+                        <img src="${vrImage.src}" alt="${vrImage.alt}"
                             class="max-w-full max-h-[145px] object-contain block max-lg:max-h-[110px] max-md:max-h-[100px] max-[480px]:max-h-[80px]"/>
                     </figure>
                     
@@ -62,7 +62,7 @@ const renderHeroSection = (data) => {
 
                 <article class="animate-card-3 bg-white rounded-[10px] flex-1 min-w-0 flex flex-col items-center overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.45)] transition duration-200 hover:-translate-y-1 hover:shadow-[0_10px_30px_rgba(0,0,0,0.5)] max-[360px]:w-full max-[360px]:flex-none" role="listitem">
                     <figure class="w-full px-5 pt-6 pb-5 flex items-center justify-center bg-white min-h-[185px] max-lg:min-h-[150px] max-lg:px-3 max-md:min-h-[130px] max-md:px-3 max-md:pt-4 max-md:pb-3 max-[480px]:min-h-[110px] max-[480px]:px-2 max-[480px]:pt-3 max-[480px]:pb-[10px]">
-                        <img src="${puzzle_image.src}" alt="${puzzle_image.alt}"
+                        <img src="${puzzleImage.src}" alt="${puzzleImage.alt}"
                             class="max-w-full max-h-[145px] object-contain block max-lg:max-h-[110px] max-md:max-h-[100px] max-[480px]:max-h-[80px]"/>
                     </figure>
                     

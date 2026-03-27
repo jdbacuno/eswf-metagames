@@ -110,21 +110,23 @@ export function initNavInteractions() {
 };
 
 /* ── Scroll reveal for WAM section ── */
-const revealEls = document.querySelectorAll('.wam-inner, .pillars');
+export function initWAMInteractions() {
+  const revealEls = document.querySelectorAll('.wam-inner, .pillars');
 
-const observer = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('is-visible');
-        observer.unobserve(entry.target);
-      }
-    });
-  },
-  { threshold: 0.15 },
-);
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.15 },
+  );
 
-revealEls.forEach((el) => observer.observe(el));
+  revealEls.forEach((el) => observer.observe(el));
+}
 
 /* ── Scroll reveal for News & Updates section ── */
 const newsEls = document.querySelectorAll('.news-header, .news-containter img');
