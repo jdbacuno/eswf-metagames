@@ -22,7 +22,7 @@ const renderWhatAreMetaGamesSection = (data) => {
                 class="text-[clamp(0.95rem,2vw,1.3rem)] font-black text-white tracking-[0.1em] uppercase max-md:text-[0.85rem] max-[480px]:text-[0.75rem] max-[360px]:text-[0.65rem]"
                 >${pillar.text}</span>
             </div>`;
-  }).join('')
+  }).join('');
 
   whatAreMetaGames.innerHTML = `
     <div class="max-w-[1100px] mx-auto">

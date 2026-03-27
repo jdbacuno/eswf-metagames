@@ -25,9 +25,9 @@ const renderMetaMovement = (data) => {
               ${text}
               </a>
               `
-            ).join('')
+            ).join('');
 
-  metaMovement.innerHtml = `
+  metaMovement.innerHTML = `
      <div
           class="flex items-center gap-5 pt-5 px-10 max-md:pt-4 max-md:px-5 max-[480px]:pt-[14px] max-[480px]:px-[14px]"
         >
@@ -217,7 +217,7 @@ const renderMetaMovement = (data) => {
           <nav
             class="flex gap-3 flex-1 justify-between max-md:gap-2 max-md:flex-wrap max-[480px]:w-full max-[480px]:gap-2"
           >
-            ${audienceBar}
+            ${audienceBarHtml}
           </nav>
         </footer>
   `
