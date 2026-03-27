@@ -1,8 +1,9 @@
+import { initSportsGamesInteractions } from './src/js/main.js';
 const DATA_SPORTSANDGAMES = "./src/data/sports-and-games.json";
 
 const loadSportsAndGames = async () => {
   try {
-    const reponse = await fetch(DATA_SPORTSANDGAMES);
+    const response = await fetch(DATA_SPORTSANDGAMES);
     if (!response.ok) throw new Error("Data not found.");
     const data = await response.json();
     renderSportsAndGames(data);
@@ -129,6 +130,8 @@ const renderSportsAndGames = (data) => {
       </div>
     </div>
   `;
+
+  initSportsGamesInteractions();
 }
 
 loadSportsAndGames();

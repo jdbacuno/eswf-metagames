@@ -13,12 +13,29 @@ const loadHeroSection = async () => {
 
 const renderHeroSection = (data) => {
   const hero = document.querySelector("#hero");
-  const { arenaImage, logo, vrImage, puzzleImage, links, cta, catchphrase } =
-    data;
+  const { backgroundImage, cards, cta, catchphrase } = data;
 
+  const cardsHtml = cards.map(card => {
+      const { image, text, url } = card
+      return `
+        <article class="animate-card-1 bg-white rounded-[10px] flex-1 min-w-0 flex flex-col items-center overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.45)] transition duration-200 hover:-translate-y-1 hover:shadow-[0_10px_30px_rgba(0,0,0,0.5)] max-[360px]:w-full max-[360px]:flex-none" role="listitem">
+                
+            <figure class="w-full px-5 pt-6 pb-5 flex items-center justify-center bg-white min-h-[185px] max-lg:min-h-[150px] max-lg:px-3 max-md:min-h-[130px] max-md:px-3 max-md:pt-4 max-md:pb-3 max-[480px]:min-h-[110px] max-[480px]:px-2 max-[480px]:pt-3 max-[480px]:pb-[10px]">
+                <img src="${image.src}" alt="${image.alt}"
+                    class="max-w-full max-h-[145px] object-contain block max-lg:max-h-[110px] max-md:max-h-[100px] max-[480px]:max-h-[80px]"/>
+            </figure>
+            
+            <a href="${url}" class="block w-[calc(100%-24px)] mx-3 mb-3 py-[11px] px-3 bg-brand-blue text-white text-[0.85rem] font-bold text-center no-underline tracking-[0.01em] rounded-[10px] transition-colors duration-200 hover:bg-[#1a6aab] max-lg:text-[0.78rem] max-lg:py-[9px] max-md:text-[0.75rem] max-md:py-[9px] max-md:px-2 max-[480px]:text-[0.68rem] max-[480px]:py-2 max-[480px]:px-[6px] max-[480px]:w-[calc(100%-12px)] max-[480px]:mx-[6px] max-[480px]:mb-2">
+                ${text}
+            </a>
+
+        </article>
+      `
+  })
+  
   hero.innerHTML = `
         <div class="absolute inset-0 z-0" aria-hidden="true">
-            <img src="${arenaImage.src}" alt="${arenaImage.alt}" class="w-full h-full object-cover object-top block absolute inset-0"/>
+            <img src="${backgroundImage.src}" alt="${backgroundImage.alt}" class="w-full h-full object-cover object-top block absolute inset-0"/>
             <div class="absolute inset-0" style=" background: linear-gradient(to bottom, rgba(20, 27, 37, 0.6) 0%, rgba(20, 27, 37, 1) 100%);"></div>
         </div>
 
@@ -36,40 +53,7 @@ const renderHeroSection = (data) => {
             </p>
 
             <div class="animate-fade-up-4 flex gap-4 mt-7 justify-center flex-nowrap w-full px-2 min-[1200px]:gap-8 max-[480px]:gap-2 max-[360px]:flex-wrap max-[360px]:justify-center" role="list">
-                <article class="animate-card-1 bg-white rounded-[10px] flex-1 min-w-0 flex flex-col items-center overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.45)] transition duration-200 hover:-translate-y-1 hover:shadow-[0_10px_30px_rgba(0,0,0,0.5)] max-[360px]:w-full max-[360px]:flex-none" role="listitem">
-                
-                    <figure class="w-full px-5 pt-6 pb-5 flex items-center justify-center bg-white min-h-[185px] max-lg:min-h-[150px] max-lg:px-3 max-md:min-h-[130px] max-md:px-3 max-md:pt-4 max-md:pb-3 max-[480px]:min-h-[110px] max-[480px]:px-2 max-[480px]:pt-3 max-[480px]:pb-[10px]">
-                        <img src="${logo.src}" alt="${logo.alt}"
-                            class="max-w-full max-h-[145px] object-contain block max-lg:max-h-[110px] max-md:max-h-[100px] max-[480px]:max-h-[80px]"/>
-                    </figure>
-                    
-                    <a href="${links[0].url}" class="block w-[calc(100%-24px)] mx-3 mb-3 py-[11px] px-3 bg-brand-blue text-white text-[0.85rem] font-bold text-center no-underline tracking-[0.01em] rounded-[10px] transition-colors duration-200 hover:bg-[#1a6aab] max-lg:text-[0.78rem] max-lg:py-[9px] max-md:text-[0.75rem] max-md:py-[9px] max-md:px-2 max-[480px]:text-[0.68rem] max-[480px]:py-2 max-[480px]:px-[6px] max-[480px]:w-[calc(100%-12px)] max-[480px]:mx-[6px] max-[480px]:mb-2">
-                        ${links[0].text}
-                    </a>
-
-                </article>
-
-                <article class="animate-card-2 bg-white rounded-[10px] flex-1 min-w-0 flex flex-col items-center overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.45)] transition duration-200 hover:-translate-y-1 hover:shadow-[0_10px_30px_rgba(0,0,0,0.5)] max-[360px]:w-full max-[360px]:flex-none" role="listitem">
-                    <figure class="w-full px-5 pt-6 pb-5 flex items-center justify-center bg-white min-h-[185px] max-lg:min-h-[150px] max-lg:px-3 max-md:min-h-[130px] max-md:px-3 max-md:pt-4 max-md:pb-3 max-[480px]:min-h-[110px] max-[480px]:px-2 max-[480px]:pt-3 max-[480px]:pb-[10px]">
-                        <img src="${vrImage.src}" alt="${vrImage.alt}"
-                            class="max-w-full max-h-[145px] object-contain block max-lg:max-h-[110px] max-md:max-h-[100px] max-[480px]:max-h-[80px]"/>
-                    </figure>
-                    
-                    <a href="${links[1].url}" class="block w-[calc(100%-24px)] mx-3 mb-3 py-[11px] px-3 bg-brand-blue text-white text-[0.85rem] font-bold text-center no-underline tracking-[0.01em] rounded-[10px] transition-colors duration-200 hover:bg-[#1a6aab] max-lg:text-[0.78rem] max-lg:py-[9px] max-md:text-[0.75rem] max-md:py-[9px] max-md:px-2 max-[480px]:text-[0.68rem] max-[480px]:py-2 max-[480px]:px-[6px] max-[480px]:w-[calc(100%-12px)] max-[480px]:mx-[6px] max-[480px]:mb-2">
-                        ${links[1].text}
-                    </a>
-                </article>
-
-                <article class="animate-card-3 bg-white rounded-[10px] flex-1 min-w-0 flex flex-col items-center overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.45)] transition duration-200 hover:-translate-y-1 hover:shadow-[0_10px_30px_rgba(0,0,0,0.5)] max-[360px]:w-full max-[360px]:flex-none" role="listitem">
-                    <figure class="w-full px-5 pt-6 pb-5 flex items-center justify-center bg-white min-h-[185px] max-lg:min-h-[150px] max-lg:px-3 max-md:min-h-[130px] max-md:px-3 max-md:pt-4 max-md:pb-3 max-[480px]:min-h-[110px] max-[480px]:px-2 max-[480px]:pt-3 max-[480px]:pb-[10px]">
-                        <img src="${puzzleImage.src}" alt="${puzzleImage.alt}"
-                            class="max-w-full max-h-[145px] object-contain block max-lg:max-h-[110px] max-md:max-h-[100px] max-[480px]:max-h-[80px]"/>
-                    </figure>
-                    
-                    <a href="${links[2].url}" class="block w-[calc(100%-24px)] mx-3 mb-3 py-[11px] px-3 bg-brand-blue text-white text-[0.85rem] font-bold text-center no-underline tracking-[0.01em] rounded-[10px] transition-colors duration-200 hover:bg-[#1a6aab] max-lg:text-[0.78rem] max-lg:py-[9px] max-md:text-[0.75rem] max-md:py-[9px] max-md:px-2 max-[480px]:text-[0.68rem] max-[480px]:py-2 max-[480px]:px-[6px] max-[480px]:w-[calc(100%-12px)] max-[480px]:mx-[6px] max-[480px]:mb-2">
-                        ${links[2].text}
-                    </a>
-                </article>
+            ${cardsHtml}
             </div>
         </div>
     `;
