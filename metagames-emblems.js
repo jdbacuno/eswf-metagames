@@ -1,5 +1,5 @@
 import  {initColorwheel } from "./src/js/color-wheel.js";
-const DATA_METAMOVEMENT = "/src/data/metagames-emblems.json";
+const DATA_METAMOVEMENT = "./src/data/metagames-emblems.json";
 
 const loadMetagamesEmblems = async () => {
   try {
