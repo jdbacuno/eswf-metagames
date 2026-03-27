@@ -16,7 +16,7 @@ const renderMetaMovement = (data) => {
   const { title, subtitle, colors, watchCard, vrheadsetCard, girlCostumeCard, playFairCard, audienceBar } = data;
 
   // Color Loop
-  const colorHtml = colors.map(color => `<span class="flex-1 ${color}"></span>`)
+  const colorHtml = colors.map(color => `<span class="flex-1 ${color}"></span>`).join('')
 
   // Audience Bar Loop
   const audienceBarHtml = audienceBar.map(text => `<a
@@ -25,7 +25,7 @@ const renderMetaMovement = (data) => {
               ${text}
               </a>
               `
-            )
+            ).join('')
 
   metaMovement.innerHtml = `
      <div
