@@ -1,7 +1,7 @@
-import { initWAMInteractions } from './src/js/main.js';
+import { initWAMInteractions } from '../main.js';
 const DATA_WHATAREMETAGAMES = './src/data/what-are-metagames.json';
 
-const loadWhatAreMetaGamesSection = async () => {
+export const loadWhatAreMetaGamesSection = async () => {
   try {
     const response = await fetch(DATA_WHATAREMETAGAMES);
     if (!response.ok) throw new Error("File data not found.");
@@ -88,5 +88,3 @@ const renderWhatAreMetaGamesSection = (data) => {
 
   initWAMInteractions();
 }
-
-loadWhatAreMetaGamesSection();

@@ -1,56 +1,56 @@
-const DATA_FOOTER = './src/data/footer.json';
+const DATA_FOOTER = "./src/data/footer.json";
 
 const fallbackFooterData = {
   logo: {
-    src: 'src/images/eswf-metagames-logo.webp',
-    alt: 'MetaGames Logo',
+    src: "src/images/eswf-metagames-logo.webp",
+    alt: "MetaGames Logo",
   },
   columns: [
     {
-      title: 'Quick Links:',
+      title: "Quick Links:",
       links: [
-        { text: 'Home', url: '#main-content' },
-        { text: 'What Are MetaGames', url: '#what-are-metagames' },
-        { text: 'News & Updates', url: '#news-and-update' },
+        { text: "Home", url: "#main-content" },
+        { text: "What Are MetaGames", url: "#what-are-metagames" },
+        { text: "News & Updates", url: "#news-and-update" },
       ],
     },
     {
-      title: '',
+      title: "",
       links: [
-        { text: 'Sports & Games', url: '#sports-and-games' },
-        { text: 'Meta Movement', url: '#meta-movement' },
-        { text: 'Emblem & Meaning', url: '#metagames-emblems' },
+        { text: "Sports & Games", url: "#sports-and-games" },
+        { text: "Meta Movement", url: "#meta-movement" },
+        { text: "Emblem & Meaning", url: "#metagames-emblems" },
       ],
     },
     {
-      title: '',
+      title: "",
       links: [
-        { text: 'Official Theme Song', url: '#theme-song' },
-        { text: 'Host Nations', url: '#host-section' },
+        { text: "Official Theme Song", url: "#theme-song" },
+        { text: "Host Nations", url: "#host-section" },
       ],
     },
   ],
   bottomBar: {
-    copyright: '© 2025 MetaGames All Rights Reserved.',
+    copyright: "© 2025 MetaGames All Rights Reserved.",
     credit:
-      'Designed & Developed by: BB 88 Advertising and Digital Solutions Inc.',
+      "Designed & Developed by: BB 88 Advertising and Digital Solutions Inc.",
   },
 };
 
-const loadFooterSection = async () => {
+export const loadFooterSection = async () => {
   try {
     const response = await fetch(DATA_FOOTER);
-    if (!response.ok) throw new Error('Footer data not found.');
+    if (!response.ok) throw new Error("Footer data not found.");
     const data = await response.json();
     renderFooter(data);
   } catch (err) {
-    console.error('Footer Error:', err);
+    console.error("Footer Error:", err);
     renderFooter(fallbackFooterData);
   }
 };
 
 const renderFooter = (data) => {
-  const footer = document.querySelector('#footer');
+  const footer = document.querySelector("#footer");
   if (!footer) return;
 
   const { logo, columns = [], bottomBar = {} } = data;
@@ -61,18 +61,18 @@ const renderFooter = (data) => {
         .map(
           (link) => `
             <li class="text-[0.9rem] leading-[1.6] max-[480px]:text-[0.8rem]">
-              <a class="text-white no-underline hover:underline" href="${link.url || '#'}">${link.text || ''}</a>
+              <a class="text-white no-underline hover:underline" href="${link.url || "#"}">${link.text || ""}</a>
             </li>
           `,
         )
-        .join('');
+        .join("");
 
       return `
         <nav class="max-md:text-center max-[480px]:flex-[1_1_calc(50%-20px)] max-[480px]:min-w-[120px] max-[360px]:flex-none max-[360px]:w-full">
           ${
             column.title
               ? `<h4 class="text-[1rem] mb-[10px] max-[480px]:text-[0.9rem] max-[480px]:mb-[5px]">${column.title}</h4>`
-              : ''
+              : ""
           }
           <ul class="list-none p-0 m-0">
             ${linksHtml}
@@ -80,7 +80,7 @@ const renderFooter = (data) => {
         </nav>
       `;
     })
-    .join('');
+    .join("");
 
   footer.innerHTML = `
     <div class="bg-[#217ec7] py-[30px] px-[60px] text-white max-lg:py-7 max-lg:px-10 max-md:py-6 max-md:px-6 max-[480px]:py-5 max-[480px]:px-4">
@@ -101,5 +101,3 @@ const renderFooter = (data) => {
     </div>
   `;
 };
-
-loadFooterSection();

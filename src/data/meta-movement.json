@@ -23,5 +23,11 @@
     "alt": "Children playing together",
     "text": "Fair Play & Inclusivity"
   },
-  "audienceBar": [ "Athletes", "Gamers", "Students", "Professionals", "Nations" ]
+  "audienceBar": [ 
+    "Athletes",
+    "Gamers",
+    "Students",
+    "Professionals",
+    "Nations"
+  ]
 }

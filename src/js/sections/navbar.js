@@ -1,9 +1,9 @@
-import { initNavInteractions, initNavLinks } from "./src/js/main.js";
+import { initNavInteractions, initNavLinks } from "../main.js";
 const DATA_NAV = "./src/data/navbar.json";
 
 // initNavLinks();
 
-const loadNavbarSection = async () => {
+export const loadNavbarSection = async () => {
   try {
     const response = await fetch(DATA_NAV);
     if (!response.ok) throw new Error("Navbar data not found.");
@@ -82,5 +82,3 @@ const renderNavbar = (data) => {
     initNavLinks();
     initNavInteractions();
   };
-  
-  loadNavbarSection();

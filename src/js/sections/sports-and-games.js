@@ -1,7 +1,7 @@
-import { initSportsGamesInteractions } from './src/js/main.js';
+import { initSportsGamesInteractions } from '../main.js';
 const DATA_SPORTSANDGAMES = "./src/data/sports-and-games.json";
 
-const loadSportsAndGames = async () => {
+export const loadSportsAndGames = async () => {
   try {
     const response = await fetch(DATA_SPORTSANDGAMES);
     if (!response.ok) throw new Error("Data not found.");
@@ -133,5 +133,3 @@ const renderSportsAndGames = (data) => {
 
   initSportsGamesInteractions();
 }
-
-loadSportsAndGames();

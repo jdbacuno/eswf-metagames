@@ -1,6 +1,6 @@
 const DATA_METAMOVEMENT = "./src/data/meta-movement.json";
 
-const loadMetaMovement = async () => {
+export const loadMetaMovement = async () => {
   try {
     const response = await fetch(DATA_METAMOVEMENT);
     if (!response.ok) throw new Error("Data not found.");
@@ -9,17 +9,27 @@ const loadMetaMovement = async () => {
   } catch (err) {
     console.error("Error:", err);
   }
-}
+};
 
 const renderMetaMovement = (data) => {
   const metaMovement = document.querySelector("#meta-movement");
-  const { title, subtitle, colors, watchCard, vrheadsetCard, girlCostumeCard, playFairCard, audienceBar } = data;
+  const {
+    title,
+    subtitle,
+    colors,
+    watchCard,
+    vrheadsetCard,
+    girlCostumeCard,
+    playFairCard,
+    audienceBar,
+  } = data;
 
   // Color Loop
   const colorHtml = colors.map(color => `<span class="flex-1 ${color}"></span>`).join('')
 
   // Audience Bar Loop
-  const audienceBarHtml = audienceBar.map(text => `<a
+  const audienceBarHtml = audienceBar.map(
+    (text) => `<a
               href="#"
               class="inline-block flex-1 py-[7px] border-2 border-white rounded-md text-white text-center text-[clamp(0.8rem,1.3vw,0.92rem)] font-semibold no-underline whitespace-nowrap transition-all duration-200 hover:bg-white hover:text-brand-blue max-[480px]:flex-[1_1_calc(50%-8px)] max-[480px]:py-[10px] max-[480px]:px-1 max-[480px]:text-[0.75rem] max-[480px]:whitespace-normal">
               ${text}
@@ -220,8 +230,5 @@ const renderMetaMovement = (data) => {
             ${audienceBarHtml}
           </nav>
         </footer>
-  `
-
-}
-
-loadMetaMovement();
+  `;
+};
