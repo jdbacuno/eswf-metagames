@@ -63,7 +63,7 @@ const renderSportsAndGames = (data) => {
             </figure>
           </article>
     `;
-  });
+  }).join('');
   
 
   sportsAndGames.innerHTML = `
