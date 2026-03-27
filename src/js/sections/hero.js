@@ -31,7 +31,7 @@ const renderHeroSection = (data) => {
 
         </article>
       `
-  })
+  }).join('');
   
   hero.innerHTML = `
         <div class="absolute inset-0 z-0" aria-hidden="true">

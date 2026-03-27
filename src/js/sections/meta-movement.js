@@ -25,9 +25,7 @@ const renderMetaMovement = (data) => {
   } = data;
 
   // Color Loop
-  const colorHtml = colors.map(
-    (color) => `<span class="flex-1 ${color}"></span>`
-  ).join("");
+  const colorHtml = colors.map(color => `<span class="flex-1 ${color}"></span>`).join('')
 
   // Audience Bar Loop
   const audienceBarHtml = audienceBar.map(
@@ -37,7 +35,7 @@ const renderMetaMovement = (data) => {
               ${text}
               </a>
               `
-  ).join("");
+            ).join('');
 
   metaMovement.innerHTML = `
      <div
