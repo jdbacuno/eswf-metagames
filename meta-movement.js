@@ -1,4 +1,4 @@
-const DATA_METAMOVEMENT = "/src/data/meta-movement.json";
+const DATA_METAMOVEMENT = "./src/data/meta-movement.json";
 
 const loadMetaMovement = async () => {
   try {
@@ -13,7 +13,7 @@ const loadMetaMovement = async () => {
 
 const renderMetaMovement = (data) => {
   const metaMovement = document.querySelector("#meta-movement");
-  const { title, colors, watchCard, vrheadsetCard, girlCostumeCard, playFairCard, audienceBar } = data;
+  const { title, subtitle, colors, watchCard, vrheadsetCard, girlCostumeCard, playFairCard, audienceBar } = data;
 
   // Color Loop
   const colorHtml = colors.map(color => `<span class="flex-1 ${color}"></span>`)

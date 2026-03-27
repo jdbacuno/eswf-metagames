@@ -148,7 +148,7 @@ export function initNewsUpdateInteractions() {
 }
 
 /* ── Sports & Games Carousel ── */
-(function () {
+export function initSportsGamesInteractions() {
   const track = document.querySelector('.sports-carousel__track');
   const slides = document.querySelectorAll('.sports-slide');
   const dots = document.querySelectorAll('.sports-dot');
@@ -217,4 +217,6 @@ export function initNewsUpdateInteractions() {
   });
 
   startAuto();
-})();
+}
+
+initSportsGamesInteractions();

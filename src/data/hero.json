@@ -1,24 +1,33 @@
 {
-  "arenaImage": {
+  "backgroundImage": {
     "src": "src/images/esports-arena.webp",
     "alt": "Esports Arena"
   },
-  "logo": {
-    "src": "src/images/eswf-metagames-logo.webp",
-    "alt": "ESWF MetaGames logo"
-  },
-  "vrImage": {
-    "src": "src/images/children-with-vr.webp",
-    "alt": "Children playing with VR"
-  },
-  "puzzleImage": {
-    "src": "src/images/puzzle.webp",
-    "alt": "Jigsaw puzzle"
-  },
-  "links": [
-    { "text": "Learn What MetaGames", "url": "#what-are-metagames" },
-    { "text": "Explore Sports & Games", "url": "#sports-and-games" },
-    { "text": "Join the Movement", "url": "#meta-movement" }
+  "cards": [
+    { 
+     "image": {
+        "src": "src/images/eswf-metagames-logo.webp",
+        "alt": "ESWF MetaGames logo"
+      },
+      "text": "Learn What MetaGames", 
+      "url": "#what-are-metagames" 
+    },
+    { 
+      "image": {
+        "src": "src/images/children-with-vr.webp",
+        "alt": "Children playing with VR"
+      }, 
+      "text": "Explore Sports & Games", 
+      "url": "#sports-and-games" 
+    },
+    { 
+      "image": {
+        "src": "src/images/puzzle.webp",
+        "alt": "Jigsaw puzzle"
+      }, 
+      "text": "Join the Movement", 
+      "url": "#meta-movement" 
+    }
   ],
   "cta": {
     "text": "Welcome to the MetaGames"
